@@ -6,31 +6,27 @@ class Authentication {
 	
 	protected $sandbox = NULL;
 	
-	protected $package = NULL;
-	
-	protected $user = NULL;
-	
-	protected $URI = NULL;
-	
 	protected $portal = NULL;
-	
+		
+	protected $user = NULL;
+		
 	public function __construct(&$sandbox) {
 		$this->sandbox = &$sandbox;
-		$this->sandbox->listen('routing.passed', 'init', $this);
+		$this->user = $this->sandbox->getService('user');
+		$this->sandbox->listen('aliasing.passed', 'init', $this);
 	}
 	
-	public function init($data = NULL){
-		$this->portal = &$data['portal'];
-		require_once("$this->base/base/User.php");
-		$this->user = new User(&$sandbox);
+	public function init($data){
+		$this->portal = &$this->sandbox->getMeta('portal');
 		if(!$this->shieldPortal()) {
-			$this->sandbox->fire('authentication.failed', $data);
-			return;
+			$message = "Access to portal not allowed";
+			return $this->sandbox->fire('authentication.failed', $message);
 		}
 		if($this->shieldPortlets()){
-			$this->sandbox->fire('authentication.passed', $data);
+			$this->sandbox->setMeta('portal', $this->portal);
+			$this->sandbox->fire('authentication.passed', $this->portal);
 		} else {
-			$this->sandbox->fire('authentication.failed', $data);
+			$this->sandbox->fire('authentication.failed', "Access to portlets not allowed");
 		}
 	}
 	
@@ -43,23 +39,20 @@ class Authentication {
 	}
 	
 	protected function shieldPortlets(){
-		$success = false;
-		foreach($this->portal->portlet as $portlet){
+		foreach($this->portal->portlet as $key => $portlet){
 			if(isset($portlet->access)){
-				if($this->attestUser($portlet->access) || $this->attestRole($portlet->access)) {
-					$success = true;
-					$data['portlet'] = &$portlet;
-					$data['user'] = $this->user;
-					$this->sandbox->fire('portlet.authentication.passed', $data);
+				if(!$this->attestUser($portlet->access) && !$this->attestRole($portlet->access)) {
+					unset($this->portal->portlet[$key]);
 				}
 			}
 		}
-		return $success;
+		return count($this->portal->portlet) ? true : false;
 	}
 	
 	protected function attestUser($access){
 		if(isset($access->user)){
 			foreach($access->user as $user){
+				if((string) $user === "everyone") return true;
 				if($this->user->getLogin() === (string) $user) return true;
 			}
 			return false;
@@ -71,6 +64,7 @@ class Authentication {
 	protected function attestRole($access){
 		if(isset($access->role)){
 			foreach($access->role as $role){
+				if((string) $role === "everyone") return true;
 				if(in_array((string) $role, $this->user->getRoles())) return true;
 			}
 			return false;

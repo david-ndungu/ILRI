@@ -2,7 +2,7 @@
 
 namespace base;
 
-require_once('StorageException.php');
+require_once('BaseException.php');
 
 class Storage {
 	
@@ -20,22 +20,25 @@ class Storage {
 	
 	protected $columns = NULL;
 	
-	public function __construct($defaults = NULL) {
-		if(is_null($defaults)) return;
+	public function __construct(&$sandbox) {
+		if(is_null($sandbox->settings)) {
+			throw new BaseException("Please provide mysql connection settings");
+		}
+		$defaults = $sandbox->settings;
 		$this->host = is_string($defaults['host']) ? $defaults['host'] : $this->host;
 		$this->user = is_string($defaults['user']) ? $defaults['user'] : $this->user;
 		$this->password = is_string($defaults['password']) ? $defaults['password'] : $this->password;
 		$this->schema = is_string($defaults['schema']) ? $defaults['schema'] : $this->schema;
 		$this->resource = @new \mysqli($this->host, $this->user, $this->password, $this->schema);
 		if($this->resource->connect_error) {
-			throw new StorageException($this->resource->connect_error);
+			throw new BaseException($this->resource->connect_error);
 		}
 	}
 	
 	public function query($sql){
 		$this->result = $this->resource->query($sql);
-		if(!$this->result && strlen($this->resource->error)){
-			throw new StorageException($this->resource->error." : ".$sql);
+		if(strlen($this->resource->error)){
+			throw new BaseException($this->resource->error." : ".$sql);
 		}
 		if($this->result instanceof \mysqli_result) {
 			return $this->fetch();
@@ -50,9 +53,9 @@ class Storage {
 		foreach($arguments['content'] as $key => $value){
 			$parameters[]  = array($key, $value);
 		}
-		$this->bind(&$statement, $parameters);
+		$this->bind($statement, $parameters);
 		if(!$statement->execute()){
-			throw new StorageException($this->resource->error);
+			throw new BaseException($this->resource->error);
 		}
 	}
 		
@@ -118,19 +121,19 @@ class Storage {
 		foreach($arguments['constraints'] as $key => $value){
 			$parameters[] = array($key, $value);
 		}
-		$this->bind(&$statement, $parameters);
+		$this->bind($statement, $parameters);
 		if(!$statement->execute()){
-			throw new StorageException($this->resource->error);
+			throw new BaseException($this->resource->error);
 		}
 	}
 	
 	protected function updateStatement($arguments){
 		$query = sprintf("UPDATE `%s` SET", $arguments['table']);
 		if(!array_key_exists('content', $arguments)){
-			throw new StorageException("Please provide table fields to update ".$arguments['table']);
+			throw new BaseException("Please provide table fields to update ".$arguments['table']);
 		}
 		if(!array_key_exists('constraints', $arguments)){
-			throw new StorageException("Please provide constraints for updating ".$arguments['table']);
+			throw new BaseException("Please provide constraints for updating ".$arguments['table']);
 		}
 		foreach($arguments['content'] as $key => $value){
 			$columns[] = sprintf(" `$key` = ?");
@@ -139,7 +142,7 @@ class Storage {
 		$query .= $this->whereCondition($arguments);
 		$statement = $this->resource->prepare($query);
 		if(!$statement){
-			throw new StorageException($this->resource->error." : ".$query);
+			throw new BaseException($this->resource->error." : ".$query);
 		}
 		return $statement;
 	}
@@ -154,10 +157,14 @@ class Storage {
 		}
 		$query .= $condition;
 		$statement = $this->prepare($query);
-		$this->bind(&$statement, $arguments['constraints']);
+		$this->bind($statement, $arguments['constraints']);
 		if(!$statement->execute()){
-			throw new StorageException($this->resource->error);
+			throw new BaseException($this->resource->error);
 		}
+	}
+	
+	public function getInsertID(){
+		return $this->resource->insert_id;
 	}
 	
 	public function sanitize($value){
@@ -187,29 +194,33 @@ class Storage {
 
 	
 	protected function fetch(){
-		if($this->result->num_rows === 0) return NULL;
+		if($this->result->num_rows === 0) return array();
 		while($row = $this->result->fetch_assoc()){
 			$rows[] = $row;
 		}
-		return $rows;
+		return (count($rows) === 1) ? $rows[0] : $rows;
 	}
 	
 	protected function prepare($query){
 		$statement = $this->resource->prepare($query);
 		if(!$statement) {
-			throw new StorageException($this->resource->error." : ".$query);
+			throw new BaseException($this->resource->error." : ".$query);
 		}
 		return $statement;
 	}
 	
-	protected function bind(&$statement, $parameters){
+	protected function bindParameters($parameters){
 		foreach($parameters as $value){
 			$values[] = &$value[1];
 			$types[] = $this->columns[$value[0]]['typeCharacter'];
 		}
 		array_unshift($values, join("", $types));
-		if(!call_user_func_array(array(&$statement, "bind_param"), &$values)) {
-			throw new StorageException($this->resource->error." : ".json_encode($parameters));
+		return $values;
+	}
+	
+	protected function bind(&$statement, $parameters){
+		if(!call_user_func_array(array($statement, "bind_param"), $this->bindParameters($parameters))) {
+			throw new BaseException($this->resource->error." : ".json_encode($parameters));
 		}
 	}
 	

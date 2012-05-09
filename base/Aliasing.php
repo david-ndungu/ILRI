@@ -12,44 +12,56 @@ class Aliasing {
 	}
 	
 	public function init($data) {
-		$site = $this->getSite();
-		if(is_null($site)) return;
-		$settings = $this->getSettings($site[0]);
-		if(is_null($settings)) return;
 		try {
-			$portal = $this->getPortal($site[0]);
-		} catch (AliasingException $e) {
-			return $this->sandbox->fire('aliasing.failed', $e->getTraceAsString());
+			$site = $this->getSite();
+			$settings = $this->getSettings($site);
+			$this->sandbox->setMeta('settings', $settings);
+			$portal = $this->matchPortal($site);
+			$this->sandbox->setMeta('portal', $portal);
+		} catch (BaseException $e) {
+			$message = $e->getMessage();
+			return $this->sandbox->fire('aliasing.failed', $message);
 		}
-		$this->sandbox->setMeta('portal', &$portal);
-		$this->fire('aliasing.passed', NULL);
+		$this->sandbox->fire('aliasing.passed', $this->getAlias());
 	}
 	
-	protected function getSite($site){
+	protected function getSite(){
 		$sql = sprintf("SELECT `site`, `source` FROM `alias` LEFT JOIN `site` ON `alias`.`site` = `site`.`ID` WHERE `title` = '%s' LIMIT 1", $this->getAlias());
 		try {
-			$site = $this->sandbox->getGlobalStorage()->query($sql);
+			return $this->sandbox->getService('storage')->query($sql);
 		} catch(StorageException $e) {
-			return $this->sandbox->fire('aliasing.failed', $e->getTraceAsString());
+			throw new BaseException($e->getMessage());
 		}
 	}
 	
-	protected function getSettings($data){
-		$sql = sprintf("SELECT * FROM `setting` WHERE `site` = %d", $site['ID']);
+	protected function getSettings($site){
 		try {
-			$settings = $this->sandbox->getGlobalStorage()->query($sql);
+			$sql = sprintf("SELECT * FROM `setting` WHERE `site` = %d", $site['site']);
+			$settings = $this->sandbox->getService('storage')->query($sql);
 		} catch(StorageException $e) {
-			return $this->sandbox->fire('aliasing.failed', $e->getTraceAsString());
+			throw new BaseException($e->getMessage());
 		}
 	}
 	
-	protected function getPortal($site){
-		$URI = $this->sandbox->getMeta('URI');
-		$package = $site['package'];
-		if(!file_exists($package) || is_readable($package)) {
-			throw new AliasingException("Alias package '$package' does not exists");
+	protected function matchPortal($site){
+		if(!file_exists($site['source'])) {
+			throw new BaseException("Alias package '".$site['source']."' does not exists");
 		}
-		$package = simplexml_load_file($package);
+		if(!is_readable($site['source'])){
+			throw new BaseException("Alias package '".$site['source']."' file is not readable");
+		}
+		$package = simplexml_load_file($site['source']);
+		$this->sandbox->setMeta('package', $package);
+		$portal = $this->findPortalMatch($package);
+		if(is_null($portal)) {
+			throw new BaseException("Portal does not exists for URI : ".$this->sandbox->getMeta('URI'));
+		} else {
+			return $portal;
+		}
+	}
+	
+	protected function findPortalMatch($package){
+		$URI = $this->sandbox->getMeta('URI');
 		foreach($package->portal as $portal){
 			foreach($portal->match as $match){
 				$match = (string) $match;
@@ -63,7 +75,7 @@ class Aliasing {
 				}
 			}
 		}
-		throw new AliasingException("Portal does not exists for URI '$URI'");
+		return NULL;
 	}
 	
 	public function getAlias(){

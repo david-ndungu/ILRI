@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language code="en_GB">
+    <label index="recorder.label">Recorder name</label>
+    <label index="recorder.placeholder">Enter the recorders name</label>
+    <label index=""></label>
+</language>

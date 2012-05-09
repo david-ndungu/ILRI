@@ -18,20 +18,26 @@ class User {
 	
 	public function __construct(&$sandbox) {
 		$this->sandbox = &$sandbox;
-		$user = $this->sandbox->getSession()->read('user');
+		$user = $this->sandbox->getService('session')->read('user');
 		if(is_null($user)){
 			$user = $this->createGuest();
 		}
 		$this->update($user);
+		$this->sandbox->getService('session')->write('user', $this->getUser());
 	}
 	
 	protected function createGuest() {
 		$user = array(
 					'IP' => $_SERVER['REMOTE_ADDR'],
-					'hash' => $this->sandbox->getSession()->getHash(),
+					'hash' => $this->sandbox->getService('session')->getHash(),
 					'creationTime' => time()
 				);
-		
+		$this->sandbox->getService('storage')->insert(array('table' => 'guest', 'content' => $user));
+		$user['ID'] = $this->sandbox->getService('storage')->getInsertID();
+		$user['login'] = 'guest-'.$user['ID'];
+		$user['roles'] = NULL;
+		$user['isGuest'] = "Yes";
+		return $user;
 	}
 	
 	protected function update($user){
@@ -39,9 +45,10 @@ class User {
 		$this->setLogin($user['login']);
 		$this->setRoles($user['roles']);
 		$this->setCreationTime($user['creationTime']);
+		$this->isGuest($user['isGuest'] === "Yes" ? true : false);
 	}
 	
-	public function setID() {
+	public function setID($ID) {
 		$this->ID = $ID;
 	}
 
@@ -59,7 +66,7 @@ class User {
 		}
 	}
 	
-	public function setLogin() {
+	public function setLogin($login) {
 		$this->login = $login;
 	}
 	
@@ -67,7 +74,7 @@ class User {
 		return $this->login;
 	}
 	
-	public function setCreationTime() {
+	public function setCreationTime($creationTime) {
 		$this->creationTime = $creationTime;
 	}
 
@@ -93,7 +100,7 @@ class User {
 					'login' => $this->getLogin(),
 					'roles' => $this->getRoles(),
 					'creationTime' => $this->getCreationTime(),
-					'isGuest' => $this->isGuest()
+					'isGuest' => ($this->isGuest() ? 'Yes' : 'No')
 				);
 		return $user;
 	}

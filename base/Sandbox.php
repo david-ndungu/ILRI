@@ -7,22 +7,26 @@ class Sandbox {
 	protected $meta = NULL;
 	
 	protected $storage = NULL;
-		
-	protected $helpers = NULL;
-	
+			
 	protected $events = NULL;
 	
 	protected $services = NULL;
 	
-	public function __construct() {
+	public $settings = NULL;
+	
+	public function __construct(&$settings) {
+		$this->settings = &$settings;
 		$this->setBase();
 		$this->setURI();
 		$this->setMethod();
+		$this->initService("Storage");
+		$this->initService("Session");
+		$this->initService("User");
+		$this->initService("Logging");
 		$this->initService("Aliasing");
-		$this->initService("Routing");
 		$this->initService("Authentication");
-		$this->initService("Dispatch");
-		$this->helpers['session'] = new Session();
+		$this->initService("Routing");
+		$this->initService("Assembly");
 	}
 	
 	public function listen($types = NULL, $method = NULL, $instance = NULL){
@@ -37,7 +41,8 @@ class Sandbox {
 		$listeners = $this->events[$type];
 		foreach($listeners as $listener){
 			$callback = is_null($listener['instance']) ? $listener['method'] : array($listener['instance'], $listener['method']);
-			call_user_func_array($callback, &$data);
+			$parameter = is_array($data) ? $data : array(&$data);
+			call_user_func_array($callback, $parameter);
 		}
 		return NULL;
 	}
@@ -45,9 +50,9 @@ class Sandbox {
 	protected function initService($service){
 		try {
 			$class = "base\\$service";
-			$base = $this->getBase();
+			$base = $this->getMeta('base');
 			require_once("$base/base/$service.php");
-			$this->services[$service] = new $class(&$this);
+			$this->services[strtolower($service)] = new $class($this);
 		}catch(Exception $e){
 			$this->sandbox->fire('sandbox.error', $e->getTraceAsString());
 		}
@@ -56,27 +61,7 @@ class Sandbox {
 	public function getService($service){
 		return $this->services[$service];
 	}
-	
-	public function setGlobalStorage($settings){
-		$this->storage['global'] = new Storage($settings);
-	}
-	
-	public function getGlobalStorage() {
-		return $this->storage['global'];
-	}
-	
-	public function setLocalStorage($settings){
-		$this->storage['local'] = new Storage($settings);
-	}
-	
-	public function getLocalStorage(){
-		return $this->storage['local'];
-	}
-	
-	public function getSession() {
-		return $this->helpers['session'];
-	}
-				
+						
 	protected function setBase(){
 		$this->meta['base'] = str_replace('/html', '', getcwd());;
 	}
@@ -89,11 +74,7 @@ class Sandbox {
 	protected function setMethod(){
 		$this->meta['method'] = $_SERVER['REQUEST_METHOD'] == "GET" ? "doGet" : "doPost";
 	}
-	
-	public function getMethod(){
-		return $this->meta['method'];
-	}
-	
+		
 	public function setMeta($key, &$value){
 		$this->meta[$key] = $value;
 	}

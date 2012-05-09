@@ -10,47 +10,38 @@ SYSTEM CORE - LOOSE COUPLING
 	1.2 Triggers
 		1.2.1 request.passed
 		1.2.2 response.passed
+
 2. Aliasing
 	2.1 Subscriptions
 		2.1.1 request.passed
 	2.2 Triggers
 		2.2.1 aliasing.passed
 		2.2.2 aliasing.failed
+
 3. Authentication
 	3.1 Subscriptions
-		3.1.1 routing.passed
+		3.1.1 aliasing.passed
 	3.2 Triggers
 		3.2.1 authentication.passed
 		3.2.2 authentication.failed
-		3.2.3 portlet.authentication.passed
+
 4. Routing
 	4.1 Subscriptions
 		4.1.1 portlet.authentication.passed
 	4.2 Triggers
 		4.2.1 routing.passed
 		4.2.2 routing.failed
+
 5. Assembly
 	5.1 Subscriptions
 		5.1.1 dispatch.passed
 	5.2 Triggers
 		5.2.1 assembly.passed
 		5.2.2 assembly.failed
-//5. Caching
-//	5.1 Subscriptions
-//		5.1.1 routing.passed
-//	5.2 Triggers
-//		5.2.1 cache.exists
-//		5.2.1 cache.unset		
-		
-Type	Field Properties
-primary_key		DEFAULT NULL auto_increment
-string			varchar(255)
-text			text
-integer			int(11)
-float			float
-datetime		datetime
-timestamp		datetime
-time			time
-date			date
-binary			blob
-boolean			tinyint(1)		
+
+@TODO x. Caching
+@TODO 	5.1 Subscriptions
+@TODO 		5.1.1 routing.passed
+@TODO 	5.2 Triggers
+@TODO 		5.2.1 cache.exists
+@TODO 		5.2.1 cache.unset
