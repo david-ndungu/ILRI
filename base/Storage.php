@@ -21,10 +21,10 @@ class Storage {
 	protected $columns = NULL;
 	
 	public function __construct(&$sandbox) {
-		if(is_null($sandbox->settings)) {
-			throw new BaseException("Please provide mysql connection settings");
+		$defaults = $sandbox->getMeta('settings');
+		if(is_null($defaults)) {
+			throw new BaseException("Please provide mysql connection defaults");
 		}
-		$defaults = $sandbox->settings;
 		$this->host = is_string($defaults['host']) ? $defaults['host'] : $this->host;
 		$this->user = is_string($defaults['user']) ? $defaults['user'] : $this->user;
 		$this->password = is_string($defaults['password']) ? $defaults['password'] : $this->password;

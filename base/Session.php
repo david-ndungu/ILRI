@@ -19,13 +19,14 @@ class Session {
 	}
 	
 	public function read($key) {
-		if($this->hash != $_SESSION['hash']);
+		if(!array_key_exists("hash", $_SESSION)) return NULL;
+		if($this->hash != $_SESSION['hash']) return NULL; 
 		return isset($_SESSION[$key]) ? unserialize($_SESSION[$key]) : NULL;
 	}
 	
 	protected function setHash(){
 		$this->hash = $this->generateHash();
-		if(!isset($_SESSION['hash'])) {
+		if(!array_key_exists("hash", $_SESSION)) {
 			$this->write("hash", $this->hash);
 		}
 	}
@@ -47,13 +48,18 @@ class Session {
 	
 	
 	protected function setSeed(){
-		$pool = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		$i = 0;
-		$j = strlen($pool) - 1;
-		while($i++ < 8){
-			$seed[] = substr($pool, mt_rand(0, $j), 1);
+		if(is_null($this->read("seed"))) {
+			$pool = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			$i = 0;
+			$j = strlen($pool) - 1;
+			while($i++ < 8){
+				$seed[] = substr($pool, mt_rand(0, $j), 1);
+			}
+			$this->seed = join("", $seed);
+			$this->write("seed", $this->seed);
+		} else {
+			$this->seed = $this->read("seed");
 		}
-		$this->seed = join("", $seed);
 	}
 	
 	public function getSeed(){

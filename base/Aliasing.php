@@ -38,15 +38,17 @@ class Aliasing {
 		try {
 			$sql = sprintf("SELECT * FROM `setting` WHERE `site` = %d", $site['site']);
 			$settings = $this->sandbox->getService('storage')->query($sql);
+			$result = NULL;
+			foreach($settings as $setting){
+				$result[$setting['key']] = $setting['value'];
+			}
+			return $result;
 		} catch(StorageException $e) {
 			throw new BaseException($e->getMessage());
 		}
 	}
 	
 	protected function matchPortal($site){
-		if(!file_exists($site['source'])) {
-			throw new BaseException("Alias package '".$site['source']."' does not exists");
-		}
 		if(!is_readable($site['source'])){
 			throw new BaseException("Alias package '".$site['source']."' file is not readable");
 		}

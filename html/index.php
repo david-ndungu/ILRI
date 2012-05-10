@@ -12,6 +12,7 @@ namespace html {
 	require_once("../settings.php");
 	$sandbox = new \base\Sandbox($settings);
 	require_once '../base/Controller.php';
+	require_once '../base/Response.php';
 	$control = new \base\Controller($sandbox);
 	$latency = (microtime(true) - $start)*1000;
 	$control->log($latency);

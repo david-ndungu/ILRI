@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
 	<theme>sometheme</theme>
-	<portal type="json">
-		<match>/</match>
-		<portlet module="core" controller="signup">
+	<portal type="raw">
+		<match>/studio/form*</match>
+		<portlet module="studio" controller="formController">
 			<access>
 				<user>everyone</user>
 			</access>
@@ -13,8 +13,8 @@
 		</access>
 	</portal>
 	<portal type="json" template="template.xsl">
-		<match>/something</match>
-		<portlet module="modulename1" controller="processor1">
+		<match>/</match>
+		<portlet module="core" controller="signup">
 			<access>
 				<user>user1</user>
 				<role>role1</role>

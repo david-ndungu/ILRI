@@ -21,39 +21,17 @@ class Controller {
 	}
 	
 	public function sendHeader403(){
-		return $this->sendHeader(403);
+		return Response::sendHeader(403);
 	}
 	
 	public function sendHeader404(){
-		return $this->sendHeader(404);
+		return Response::sendHeader(404);
 	}
 
 	public function sendHeader500(){
-		return $this->sendHeader(500);
+		return Response::sendHeader(500);
 	}
-	
-	protected function sendHeader($code){
- 		ob_clean();
-		switch($code){
-			case 204:
-				header("HTTP/1.1 204 No Content");
-				break;
-			case 402:
-				header("HTTP/1.1 403 Payment Required");
-				break;
-			case 403:
-				header("HTTP/1.1 403 Forbidden");
-				break;
-			case 404:
-				header("HTTP/1.1 404 Not Found");
-				break;
-			case 500:
-				header("HTTP/1.1 500 Internal Server Error");
-				break;
-		}
-		exit;
-	}
-	
+		
 	public function log($latency){
 		return $this->sandbox->fire('latency.log', $latency);
 	}

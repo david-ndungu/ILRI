@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <language code="en_GB">
+    <label index="assethead.label">Inventory of assets</label>
     <label index="recorder.label">Recorder name</label>
-    <label index="recorder.placeholder">Enter the recorders name</label>
-    <label index=""></label>
+    <label index="recorder.placeholder">e.g John Smith</label>
+    <label index="subvillage.label">e.g Some sub illage name</label>
+    <label index="subvillage.placeholder">e.g Kinoo</label>
+    <label index="district.label">Districts name</label>
+    <label index="village.label">Village name</label>
+    <label index="ward.label">Ward name</label>
+    <label index="ward.placeholder">e.g Some ward</label>
+    <label index="supp_name.label">Name of supplier</label>
+    <label index="equip_name.label">Name of equipment</label>
+    <label index="prch_date.label">Date of purchase</label>
+    <label index="qty_prch.label">Quantity purchased</label>
+    <label index="prch_price.label">Purchase price</label>
+    <label index="asset_value.label">Value</label>
+    <label index="allocated_to.label">Allocated to</label>
+    <label index="assetcond_id.label">Condition of the asset</label>
+    <label index="asset_location.label">Location</label>
+    <label index="received_by.label">Received by</label>
+    <label index="date_received.label">Date received</label>
+    <label index="disposed.label">Disposed of</label>
+    <label index="assetdetail_id.label">Asset detail</label>
+    <label index="action.submit">Submit</label>
+    <label index="action.reset">Reset</label>
 </language>

@@ -16,6 +16,9 @@ class Assembly {
 	public function init($data) {
 		$this->content = $data;
 		switch((string) $this->sandbox->getMeta('portal')->attributes()->type){
+			case "raw":
+				return $this->sandbox->fire('assembly.passed', $this->getContent());
+				break;
 			case "json":
 				return $this->sandbox->fire('assembly.passed', $this->toJSON());
 				break;
@@ -30,6 +33,10 @@ class Assembly {
 				}
 				break;							
 		}
+	}
+	
+	public function getContent(){
+		return join("", $this->content);
 	}
 	
 	protected function toJSON(){

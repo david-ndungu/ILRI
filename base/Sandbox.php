@@ -15,7 +15,7 @@ class Sandbox {
 	public $settings = NULL;
 	
 	public function __construct(&$settings) {
-		$this->settings = &$settings;
+		$this->setMeta('settings', $settings);
 		$this->setBase();
 		$this->setURI();
 		$this->setMethod();
@@ -49,7 +49,7 @@ class Sandbox {
 	
 	protected function initService($service){
 		try {
-			$class = "base\\$service";
+			$class = "\base\\$service";
 			$base = $this->getMeta('base');
 			require_once("$base/base/$service.php");
 			$this->services[strtolower($service)] = new $class($this);
