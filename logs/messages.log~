@@ -1,0 +1,585 @@
+[09-May-2012 13:35:06 UTC] PHP Fatal error:  Class 'apps\Sandbox' not found in /var/www/ILRI/base/Routing.php on line 17
+[09-May-2012 13:35:06 UTC] PHP Stack trace:
+[09-May-2012 13:35:06 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:35:06 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:35:06 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:35:06 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:35:06 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:35:06 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:35:06 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:35:06 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:35:06 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:35:06 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:35:06 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:35:07 UTC] PHP Fatal error:  Class 'apps\Sandbox' not found in /var/www/ILRI/base/Routing.php on line 17
+[09-May-2012 13:35:07 UTC] PHP Stack trace:
+[09-May-2012 13:35:07 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:35:07 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:35:07 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:35:07 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:35:07 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:35:07 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:35:07 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:35:07 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:35:07 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:35:07 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:35:07 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:37:56 UTC] PHP Stack trace:
+[09-May-2012 13:37:56 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:37:56 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:37:56 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:37:56 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:37:56 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:37:56 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:37:56 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:37:56 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:37:56 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:37:56 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:37:56 UTC] PHP Stack trace:
+[09-May-2012 13:37:56 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:37:56 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:37:56 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:37:56 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:37:56 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:37:56 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:37:56 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:37:56 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:37:56 UTC] PHP Stack trace:
+[09-May-2012 13:37:56 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:37:56 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:37:56 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:37:56 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:37:56 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:37:56 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:37:56 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:37:56 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:37:56 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:38:23 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:38:23 UTC] PHP Stack trace:
+[09-May-2012 13:38:23 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:38:23 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:38:23 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:38:23 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:38:23 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:38:23 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:38:23 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:38:23 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:38:23 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:38:23 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:38:23 UTC] PHP Stack trace:
+[09-May-2012 13:38:23 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:38:23 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:38:23 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:38:23 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:38:23 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:38:23 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:38:23 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:38:23 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:38:23 UTC] PHP Stack trace:
+[09-May-2012 13:38:23 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:38:23 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:38:23 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:38:23 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:38:23 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:38:23 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:23 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:23 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:38:23 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:38:46 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:38:46 UTC] PHP Stack trace:
+[09-May-2012 13:38:46 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:38:46 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:38:46 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:38:46 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:38:46 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:38:46 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:38:46 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:38:46 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:38:46 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:38:46 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:38:46 UTC] PHP Stack trace:
+[09-May-2012 13:38:46 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:38:46 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:38:46 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:38:46 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:38:46 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:38:46 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:38:46 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:38:46 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:38:46 UTC] PHP Stack trace:
+[09-May-2012 13:38:46 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:38:46 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:38:46 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:38:46 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:38:46 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:38:46 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:38:46 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:38:46 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:38:46 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:26 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:26 UTC] PHP Stack trace:
+[09-May-2012 13:39:26 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:26 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:26 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:26 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:26 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:26 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:26 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:26 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:26 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:26 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:26 UTC] PHP Stack trace:
+[09-May-2012 13:39:26 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:26 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:26 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:26 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:26 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:26 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:26 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:26 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:26 UTC] PHP Stack trace:
+[09-May-2012 13:39:26 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:26 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:26 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:26 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:26 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:26 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:26 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:26 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:26 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:27 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:27 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:27 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:27 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:27 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:27 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:27 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:27 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:27 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:27 UTC] PHP Stack trace:
+[09-May-2012 13:39:27 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:27 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:27 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:27 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:27 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:27 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:27 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:27 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:27 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:28 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:28 UTC] PHP Stack trace:
+[09-May-2012 13:39:28 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:28 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:28 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:28 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:28 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:28 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:28 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:28 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:28 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:28 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:28 UTC] PHP Stack trace:
+[09-May-2012 13:39:28 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:28 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:28 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:28 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:28 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:28 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:28 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:28 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:28 UTC] PHP Stack trace:
+[09-May-2012 13:39:28 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:28 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:28 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:28 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:28 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:28 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:28 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:28 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:28 UTC] PHP Stack trace:
+[09-May-2012 13:39:28 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:28 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:28 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:28 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:28 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:28 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:28 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:28 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:28 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:28 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:28 UTC] PHP Stack trace:
+[09-May-2012 13:39:28 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:28 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:28 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:28 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:28 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:28 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:28 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:28 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:28 UTC] PHP Stack trace:
+[09-May-2012 13:39:28 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:28 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:28 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:28 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:28 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:28 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:28 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:28 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:28 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:43 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /var/www/ILRI/base/Sandbox.php on line 83
+[09-May-2012 13:39:43 UTC] PHP Stack trace:
+[09-May-2012 13:39:43 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:43 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:43 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:43 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:43 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:43 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:43 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:43 UTC] PHP  14. base\Sandbox->getMeta() /var/www/ILRI/base/Sandbox.php:53
+[09-May-2012 13:39:43 UTC] PHP  15. array_key_exists() /var/www/ILRI/base/Sandbox.php:83
+[09-May-2012 13:39:43 UTC] PHP Warning:  require_once(/base/Storage.php): failed to open stream: No such file or directory in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:43 UTC] PHP Stack trace:
+[09-May-2012 13:39:43 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:43 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:43 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:43 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:43 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:43 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:43 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:39:43 UTC] PHP Fatal error:  require_once(): Failed opening required '/base/Storage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/base/Sandbox.php on line 54
+[09-May-2012 13:39:43 UTC] PHP Stack trace:
+[09-May-2012 13:39:43 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:39:43 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:39:43 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:39:43 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:39:43 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:39:43 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:39:43 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:39:43 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:39:43 UTC] PHP  13. base\Sandbox->initService() /var/www/ILRI/apps/Sandbox.php:9
+[09-May-2012 13:43:02 UTC] PHP Notice:  Undefined variable: base in /var/www/ILRI/apps/Sandbox.php on line 10
+[09-May-2012 13:43:02 UTC] PHP Stack trace:
+[09-May-2012 13:43:02 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:43:02 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:43:02 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:43:02 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:02 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:02 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:43:02 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:02 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:02 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:43:02 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:02 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:02 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:43:08 UTC] PHP Notice:  Undefined variable: base in /var/www/ILRI/apps/Sandbox.php on line 10
+[09-May-2012 13:43:08 UTC] PHP Stack trace:
+[09-May-2012 13:43:08 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:43:08 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:43:08 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:43:08 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:08 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:08 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:43:08 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:08 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:08 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:43:08 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:08 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:08 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
+[09-May-2012 13:43:22 UTC] PHP Notice:  Undefined property: apps\Sandbox::$getMeta in /var/www/ILRI/apps/Sandbox.php on line 10
+[09-May-2012 13:43:22 UTC] PHP Stack trace:
+[09-May-2012 13:43:22 UTC] PHP   1. {main}() /var/www/ILRI/html/index.php:0
+[09-May-2012 13:43:22 UTC] PHP   2. base\Controller->__construct() /var/www/ILRI/html/index.php:15
+[09-May-2012 13:43:22 UTC] PHP   3. base\Sandbox->fire() /var/www/ILRI/base/Controller.php:16
+[09-May-2012 13:43:22 UTC] PHP   4. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:22 UTC] PHP   5. base\Aliasing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:22 UTC] PHP   6. base\Sandbox->fire() /var/www/ILRI/base/Aliasing.php:25
+[09-May-2012 13:43:22 UTC] PHP   7. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:22 UTC] PHP   8. base\Authentication->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:22 UTC] PHP   9. base\Sandbox->fire() /var/www/ILRI/base/Authentication.php:27
+[09-May-2012 13:43:22 UTC] PHP  10. call_user_func_array() /var/www/ILRI/base/Sandbox.php:45
+[09-May-2012 13:43:22 UTC] PHP  11. base\Routing->init() /var/www/ILRI/base/Sandbox.php:0
+[09-May-2012 13:43:22 UTC] PHP  12. apps\Sandbox->__construct() /var/www/ILRI/base/Routing.php:19
