@@ -2,6 +2,8 @@
 
 namespace base;
 
+use apps\ApplicationException;
+
 class Translation {
 	
 	protected $sandbox = NULL;
@@ -12,14 +14,16 @@ class Translation {
 	
 	public function __construct(&$sandbox) {
 		$this->sandbox = &$sandbox;
-		$this->init();
+		$this->sandbox->listen('authentication.passed', 'init', $this);
 	}
 	
 	public function translate($index=NULL){
-		return is_null($index) ? NULL : $this->translations[$index];
+		$key = (string) $index;
+		if(strlen($key)<1) return NULL;
+		return (string) @$this->translations[$key];
 	}
 	
-	protected function init(){
+	public function init($data){
 		$settings = $this->sandbox->getMeta('settings');
 		$base = $this->sandbox->getMeta('base');
 		$filename = "$base/locale/".$settings['locale'].".xml";

@@ -22,7 +22,8 @@ class Aliasing {
 			$message = $e->getMessage();
 			return $this->sandbox->fire('aliasing.failed', $message);
 		}
-		$this->sandbox->fire('aliasing.passed', $this->getAlias());
+		$alias = $this->getAlias();
+		$this->sandbox->fire('aliasing.passed', $alias);
 	}
 	
 	protected function getSite(){
@@ -64,6 +65,7 @@ class Aliasing {
 	
 	protected function findPortalMatch($package){
 		$URI = $this->sandbox->getMeta('URI');
+		$handler = NULL;
 		foreach($package->portal as $portal){
 			foreach($portal->match as $match){
 				$match = (string) $match;
@@ -72,12 +74,12 @@ class Aliasing {
 				}
 				if($match[strlen($match)-1] === "*") {
 					if(substr_count($URI, rtrim($match, "*")) > 0){
-						return $portal;
+						$handler = $portal;
 					}
 				}
 			}
 		}
-		return NULL;
+		return $handler;
 	}
 	
 	public function getAlias(){

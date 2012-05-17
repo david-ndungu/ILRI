@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <language code="en_GB">
+    <label index="signup">Sign Up</label>
+    <label index="signin">Sign In</label>
+    <label index="resetpassword">Reset Password</label>
+    <label index="changepassword">Change Password</label>
+    <label index="login.label">Username</label>
+    <label index="login.placeholder">Please choose a username</label>
+    <label index="email.label">E-mail</label>
+    <label index="email.placeholder">Please enter your email address</label>
+    <label index="password.label">Password</label>
+    <label index="password.placeholder"></label>
+    <label index="password.label">Password</label>
+    <label index="password.confirm.label">Confirm Password</label>
     <label index="assethead.label">Inventory of assets</label>
+    <label index="assethead.form">Inventory of assets form</label>
     <label index="recorder.label">Recorder name</label>
     <label index="recorder.placeholder">e.g John Smith</label>
-    <label index="subvillage.label">e.g Some sub illage name</label>
+    <label index="upload_date.label">Upload date</label>
+    <label index="subvillage.label">Sub village name</label>
     <label index="subvillage.placeholder">e.g Kinoo</label>
-    <label index="district.label">Districts name</label>
+    <label index="district.label">District</label>
+    <label index="district.placeholder">Select district</label>
     <label index="village.label">Village name</label>
     <label index="ward.label">Ward name</label>
     <label index="ward.placeholder">e.g Some ward</label>
@@ -24,4 +39,13 @@
     <label index="assetdetail_id.label">Asset detail</label>
     <label index="action.submit">Submit</label>
     <label index="action.reset">Reset</label>
+    <label index="action.signup">Sign Up</label>
+    <label index="action.signin">Sign In</label>
+    <label index="action.resetpassword">Reset Password</label>
+    <label index="action.changepassword">Change Password</label>
+    <label index="pagination.legend">Showing {{rowOffset}} to {{rowLimit}} of {{rowCount}} entries</label>
+    <label index="pagination.first">first</label>
+    <label index="pagination.previous">previous</label>
+    <label index="pagination.next">next</label>
+    <label index="pagination.last">last</label>
 </language>

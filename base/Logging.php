@@ -8,6 +8,7 @@ class Logging {
 	
 	public function __construct(&$sandbox) {
 		$this->sandbox = &$sandbox;
+		$this->sandbox->listen('application.error', 'logError', $this);
 		$this->sandbox->listen('latency.log', 'logAccess', $this);
 		$this->sandbox->listen('aliasing.failed', 'logError', $this);
 		$this->sandbox->listen('authentication.failed', 'logError', $this);

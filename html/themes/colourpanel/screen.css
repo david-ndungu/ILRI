@@ -1,0 +1,48 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: inherit;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	behavior: url(/themes/colourpanel/pie.htc);
+}
+
+body {
+	height:100%;
+	width:100%;
+	font-size: 100%;
+	background: url(images/bg.png) 0 0 repeat scroll #f8f8f8;
+	background: url(images/bg.png) 0 0 repeat scroll #666;
+/* 	background: #fdfdfd; */
+}
+
+fieldset {
+	border:0 none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+	font-family: 'Cuprum', Arial, sans-serif;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size:1.25em;
+}
+
+h3 {
+	font-size:1.125em;
+}
+
+h4 {
+	font-size:1em;
+}
+
+h5 {
+	font-size:.875em;
+}

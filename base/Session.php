@@ -6,66 +6,59 @@ class Session {
 	
 	protected $hash = NULL;
 	
-	protected $seed = NULL;
+	protected $seed = "5yeQmfaNRp7Bs46V";
 
 	public function __construct() {
-		session_name("SESSION");
+		session_name("gereji");
 		session_start();
+		$this->generateHash();
 		$this->setHash();
 	}
 	
 	public function write($key, $value) {
-		$_SESSION[$key] = serialize($value);
+		$_SESSION[$key] = $value;
 	}
 	
 	public function read($key) {
-		if(!array_key_exists("hash", $_SESSION)) return NULL;
-		if($this->hash != $_SESSION['hash']) return NULL; 
-		return isset($_SESSION[$key]) ? unserialize($_SESSION[$key]) : NULL;
+		if(!array_key_exists($key, $_SESSION) || !$this->verifyHash()) {
+			return NULL;
+		} else {
+			return $_SESSION[$key];
+		}
 	}
 	
-	protected function setHash(){
-		$this->hash = $this->generateHash();
-		if(!array_key_exists("hash", $_SESSION)) {
-			$this->write("hash", $this->hash);
+	protected function verifyHash(){
+		if(is_null($_SESSION["hash"])) {
+			return false;
+		} else {
+			if($this->getHash() == $_SESSION["hash"]) {
+				return true;
+			} else {
+				return false;
+			}
 		}
 	}
 	
 	protected function generateHash(){
-		$this->setSeed();
 		$hash = $this->seed;
 		$hash .= $_SERVER['HTTP_USER_AGENT'];
 		$blocks = explode('.', isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : "127.0.0.1");
 		for($i = 0; $i < 4; $i++){
 			$hash .= $blocks[$i];
 		}
-		return md5($hash);
+		$hash = md5($hash);
+		$this->hash = $hash;
+	}
+
+	protected function setHash(){
+		if(array_key_exists("hash", $_SESSION)) return;
+		$this->write("hash", $this->hash);
 	}
 	
 	public function getHash(){
 		return $this->hash;
 	}
-	
-	
-	protected function setSeed(){
-		if(is_null($this->read("seed"))) {
-			$pool = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			$i = 0;
-			$j = strlen($pool) - 1;
-			while($i++ < 8){
-				$seed[] = substr($pool, mt_rand(0, $j), 1);
-			}
-			$this->seed = join("", $seed);
-			$this->write("seed", $this->seed);
-		} else {
-			$this->seed = $this->read("seed");
-		}
-	}
-	
-	public function getSeed(){
-		return $this->seed;
-	}
-	
+		
 }
 
 ?>

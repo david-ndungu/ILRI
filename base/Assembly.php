@@ -6,7 +6,7 @@ class Assembly {
 	
 	protected $sandbox = NULL;
 	
-	protected $content = NULL;
+	protected $response = NULL;
 	
 	public function __construct(&$sandbox) {
 		$this->sandbox = &$sandbox;
@@ -14,60 +14,71 @@ class Assembly {
 	}
 	
 	public function init($data) {
-		$this->content = $data;
-		switch((string) $this->sandbox->getMeta('portal')->attributes()->type){
-			case "raw":
-				return $this->sandbox->fire('assembly.passed', $this->getContent());
-				break;
-			case "json":
-				return $this->sandbox->fire('assembly.passed', $this->toJSON());
-				break;
-			case "xml":
-				return $this->sandbox->fire('assembly.passed', $this->toXML());
-				break;
-			case "html":
-				try {
-					return $this->sandbox->fire('assembly.passed', $this->toHTML());
-				}catch (BaseException $e) {
-					return $this->sandbox->fire('assembly.failed', $e->getTraceAsString());
-				}
-				break;							
+		$this->response = $data;
+		try {
+			switch((string) $this->sandbox->getMeta('portal')->attributes()->type){
+				case "raw":
+					$output = "";
+					foreach($this->response as $response){
+						$output .= $response['content'];
+					}
+					break;
+				case "json":
+					$output = $this->toJSON();
+					break;
+				case "xml":
+					$output = $this->toXML();
+					break;
+				case "html":
+					$output = $this->toHTML();
+					break;
+			}
+		}catch(BaseException $e){
+			return $this->sandbox->fire('assembly.failed', $e->getMessage());
 		}
+		return $this->sandbox->fire('assembly.passed', $output);
 	}
-	
-	public function getContent(){
-		return join("", $this->content);
-	}
-	
+		
 	protected function toJSON(){
-		return json_encode($this->content);
+		return json_encode($this->response);
 	}
 	
-	protected function toXML($models = null, &$xml = null){
+	protected function toXML($response = null, &$xml = null){
 		if(is_null($xml)) {
 			$xml = new \SimpleXMLElement("<?xml version='1.0'?><response></response>");
 		}
-		if(is_null($models)) {
-			$models = $this->content;
+		if(is_null($response)) {
+			$response = $this->response;
 		}
-		foreach($models as $key => $value){
-			$node = is_numeric($key) ? "node-$key" : $key;
-			if(is_array($value)){
-				$this->toXML($value, $xml->addChild($node));
-			}else{
-				$xml->addChild($node, $value);
-			}
+		if(is_array($response) || is_object($response)){
+			$this->buildXML($response, $xml);
 		}
 		return $xml->asXML();
 	}
 	
+	protected function buildXML(&$content, &$xml){
+		foreach($content as $key => $value){
+			$node = is_numeric($key) ? "node-$key" : $key;
+			if(is_array($value) || is_object($value)){
+				$child = $xml->addChild($node);
+				$this->toXML($value, $child);
+			}else{
+				$xml->addChild($node, $value);
+			}
+		}
+	}
+	
 	protected function toHTML(){
 		try {
-			$template = (string) $this->sandbox->getMeta('portal')->getPortal()->attributes()->template;
-			$theme = (string) $this->sandbox->getMeta('package')->theme;
-			$xslt = new XsltProcessor();
-			$xslt->importStylesheet(simplexml_load_file("../$theme/$template"));
-			$html = $xp->transformToXML($this->toXML());
+			$template = (string) $this->sandbox->getMeta('portal')->attributes()->template;
+			$settings = $this->sandbox->getMeta('settings');
+			$base = $this->sandbox->getMeta('base');
+			$theme = $settings['theme'];
+			$xslt = new \XsltProcessor();
+			$xslt->importStylesheet(simplexml_load_file("$base/themes/$theme/$template"));
+			$data = simplexml_load_string($this->toXML());
+			$html = $xslt->transformToXML($data);
+			return $html;
 		} catch (\Exception $e) {
 			throw new BaseException($e->getTraceAsString());
 		} 

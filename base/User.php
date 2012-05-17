@@ -10,6 +10,10 @@ class User {
 	
 	protected $login = NULL;
 	
+	protected $email = NULL;
+	
+	protected $password = NULL;
+	
 	protected $creationTime = NULL;
 	
 	protected $roles = NULL;
@@ -22,14 +26,14 @@ class User {
 		if(is_null($user)){
 			$user = $this->createGuest();
 		}
-		$this->update($user);
+		$this->setUser($user);
 		$this->sandbox->getService('session')->write('user', $this->getUser());
 	}
 	
 	protected function createGuest() {
 		$user = array(
 					'IP' => $_SERVER['REMOTE_ADDR'],
-					'hash' => $this->sandbox->getService('session')->getHash(),
+					'hash' => $this->sandbox->getService('session')->read("hash"),
 					'creationTime' => time()
 				);
 		$this->sandbox->getService('storage')->insert(array('table' => 'guest', 'content' => $user));
@@ -40,7 +44,7 @@ class User {
 		return $user;
 	}
 	
-	protected function update($user){
+	protected function setUser($user){
 		$this->setID($user['ID']);
 		$this->setLogin($user['login']);
 		$this->setRoles($user['roles']);
@@ -72,6 +76,22 @@ class User {
 	
 	public function getLogin() {
 		return $this->login;
+	}
+
+	public function setEmail($email) {
+		$this->email = $email;
+	}
+	
+	public function getEmail() {
+		return $this->email;
+	}
+
+	public function setPassword($password) {
+		$this->password = $password;
+	}
+	
+	public function getPassword() {
+		return $this->password;
 	}
 	
 	public function setCreationTime($creationTime) {

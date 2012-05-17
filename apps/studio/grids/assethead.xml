@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="assethead" title="assethead.label">
+    <browseQuery>Select * from assethead</browseQuery>
+    <searchQuery>Select * from assethead</searchQuery>
+    <columns key="assetshead_id">
+        <column name="recorder_name" title="recorder.label" class="grid2of10 column"></column>
+        <column name="ward_name" title="ward.label" class="grid2of10 column"></column>
+        <column name="subvillage_name" title="subvillage.label" class="grid2of10 column"></column>
+        <column name="district_des" title="district.label" class="grid2of10 column"></column>
+        <column name="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+    </columns>
+</grid>

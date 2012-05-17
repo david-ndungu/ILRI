@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
-    <fieldset name="assetdetail">
+    <fieldset name="assetdetail" legend="assetdetail.label">
         <field name="assethead_id" type="int">
             <element name="assetshead_id" type="select" label="asset.head" lookup="assetshead"></element>
         </field>

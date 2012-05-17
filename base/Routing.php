@@ -14,15 +14,12 @@ class Routing {
 	public function init($portal) {
 		try {
 			$base = $this->sandbox->getMeta("base");
-			require_once("$base/apps/Application.php");
-			require_once("$base/apps/Sandbox.php");
-			$settings = $this->sandbox->getMeta("settings");
-			$sandbox = new \apps\Sandbox($settings);
-			$sandbox->setService('session', $this->sandbox->getService('session'));
+			require_once("$base/base/Application.php");
 			foreach($portal->portlet as $portlet){
 				$module = (string) $portlet->attributes()->module;
 				$controller = (string) $portlet->attributes()->controller;
-				$response[$module] = array($controller => $this->route($module, $controller, $sandbox));
+				$content = $this->route($module, $controller);
+				$response[] = array("module" => $module, "controller" => $controller, "content" => $content);
 			}
 			$this->sandbox->fire('routing.passed', $response);
 		} catch(BaseException $e) {
@@ -45,14 +42,14 @@ class Routing {
 		return $source;
 	}
 	
-	protected function route($module, $controller, &$sandbox) {
+	protected function route($module, $controller) {
 		$source = $this->sourceFile($module, $controller);
 		require_once($source);
 		$portlet = "apps\\$module\\$controller";
 		if(!class_exists($portlet)) {
 			throw new BaseException("Portlet controller '$portlet' class does not exist");
 		}
-		$instance = new $portlet($sandbox);
+		$instance = new $portlet($this->sandbox);
 		$method = $this->sandbox->getMeta('method');
 		if(!method_exists($instance, $method)) {
 			throw new BaseException("Portlet controller '$method' method does not exist");

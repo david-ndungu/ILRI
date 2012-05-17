@@ -13,7 +13,8 @@ class Controller {
 		$this->sandbox->listen('routing.failed', 'sendHeader500', $this);
 		$this->sandbox->listen('assembly.failed', 'sendHeader500', $this);
 		$this->sandbox->listen('assembly.passed', 'sendContent', $this);
-		$this->sandbox->fire('request.passed', $this->sandbox->getMeta('URI'));
+		$URI = $this->sandbox->getMeta('URI');
+		$this->sandbox->fire('request.passed', $URI);
 	}
 			
 	public function sendContent(&$content){

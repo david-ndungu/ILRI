@@ -17,7 +17,7 @@ class Authentication {
 	}
 	
 	public function init($data){
-		$this->portal = &$this->sandbox->getMeta('portal');
+		$this->portal = $this->sandbox->getMeta('portal');
 		if(!$this->shieldPortal()) {
 			$message = "Access to portal not allowed";
 			return $this->sandbox->fire('authentication.failed', $message);

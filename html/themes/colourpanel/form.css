@@ -1,0 +1,67 @@
+label {
+	padding: 10px 0;
+	display: block;
+	width: 100%;
+}
+
+label[name="submit"],label[name="reset"] {
+	display: inline-block;
+	width: auto;
+}
+
+label>span {
+	text-align: right;
+	display: inline-block;
+}
+
+label[name="submit"] span,label[name="reset"] span {
+	width: auto;
+}
+
+input[type="submit"],input[type="reset"],.button {
+	cursor: pointer;
+	border: 1px solid #cccccc;
+	padding: 6px 12px;
+	text-align: center;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background:transparent;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fafafa), to(#dddddd) );
+	background: -webkit-linear-gradient(#fafafa, #dddddd);
+	background: -moz-linear-gradient(#fafafa, #dddddd);
+	background: -ms-linear-gradient(#fafafa, #dddddd);
+	background: -o-linear-gradient(#fafafa, #dddddd);
+	background: linear-gradient(#fafafa, #dddddd);
+	-pie-background: linear-gradient(#fafafa, #dddddd);
+	behavior: url(/PIE.htc);
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover,.button:hover {
+	-webkit-box-shadow: #dddddd 0px 2px 3px;
+	-moz-box-shadow: #dddddd 0px 2px 3px;
+	box-shadow: #dddddd 0px 2px 3px;
+	border-color: #aaaaaa;
+	background:transparent;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f5f5f5),to(#e8e8e8) );
+	background: -webkit-linear-gradient(#f5f5f5, #e8e8e8);
+	background: -moz-linear-gradient(#f5f5f5, #e8e8e8);
+	background: -ms-linear-gradient(#f5f5f5, #e8e8e8);
+	background: -o-linear-gradient(#f5f5f5, #e8e8e8);
+	background: linear-gradient(#f5f5f5, #e8e8e8);
+	-pie-background: linear-gradient(#f5f5f5, #e8e8e8);
+}
+
+input[type="text"],input[type="password"] {
+	border: 1px solid #cccccc;
+	padding: 6px;
+	background: #f5f5f5;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f5f5f5), to(#fff) );
+	background: -webkit-linear-gradient(#f5f5f5, #fff);
+	background: -moz-linear-gradient(#f5f5f5, #fff);
+	background: -ms-linear-gradient(#f5f5f5, #fff);
+	background: -o-linear-gradient(#f5f5f5, #fff);
+	background: linear-gradient(#f5f5f5, #fff);
+	-pie-background: linear-gradient(#f5f5f5, #fff);
+	behavior: url(style/PIE.htc);
+}

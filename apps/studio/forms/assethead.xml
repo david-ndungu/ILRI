@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form>
-    <fieldset name="assethead">
+<form name="assetheads">
+    <fieldset name="assetheads" legend="assethead.form">
 	    <field name="recorder_name" type="varchar" length="120">
 	        <element name="recorder_name" type="text" label="recorder.label" placeholder="recorder.placeholder"></element>
 	    </field>
@@ -13,7 +13,7 @@
 	        </element>
 	    </field>
 	    <field name="district_id" type="int">
-	        <element name="district_id" type="select" label="district.label" lookup="lkpdistrict"></element>
+	        <element name="district_id" type="select" label="district.label" placeholder="district.placeholder" lookup="lkpdistrict" value="district_id" display="district_des"></element>
 	    </field>
 	    <field name="village_id" type="int">
 	        <element name="village_id" type="select" label="village.label" lookup="lkpvillage"></element>

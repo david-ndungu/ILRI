@@ -21,6 +21,7 @@ class Sandbox {
 		$this->setMethod();
 		$this->initService("Storage");
 		$this->initService("Session");
+		$this->initService("Translation");
 		$this->initService("User");
 		$this->initService("Logging");
 		$this->initService("Aliasing");
@@ -39,10 +40,10 @@ class Sandbox {
 	public function fire($type = NULL, &$data = NULL){
 		if(is_null($type) || !array_key_exists($type, $this->events)) return;
 		$listeners = $this->events[$type];
+		$parameter = is_array($data) ? ($data) : array(&$data);
 		foreach($listeners as $listener){
 			$callback = is_null($listener['instance']) ? $listener['method'] : array($listener['instance'], $listener['method']);
-			$parameter = is_array($data) ? $data : array(&$data);
-			call_user_func_array($callback, $parameter);
+			call_user_func_array($callback, array(&$data));
 		}
 		return NULL;
 	}

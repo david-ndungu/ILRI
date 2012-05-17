@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+	<portal type="raw">
+		<match>/studio/form/*</match>
+		<portlet module="studio" controller="FormController">
+			<access>
+				<user>everyone</user>
+			</access>
+		</portlet>
+		<access>
+			<user>everyone</user>
+		</access>
+	</portal>
+	<portal type="raw">
+		<match>/studio/grid/*</match>
+		<portlet module="studio" controller="GridTemplateController">
+			<access>
+				<user>everyone</user>
+			</access>
+		</portlet>
+		<access>
+			<user>everyone</user>
+		</access>
+	</portal>	
+	<portal type="html" template="authentication.xsl">
+	    <match>/signin</match>
+	    <portlet module="studio" controller="SignInController">
+		    <access>
+		        <user>everyone</user>
+		    </access>	        	        
+	    </portlet>
+	    <access>
+	        <user>everyone</user>
+	    </access>
+	</portal>
+	<portal type="html" template="authentication.xsl">
+	    <match>/signup</match>
+	    <portlet module="studio" controller="SignUpController">
+		    <access>
+		        <user>everyone</user>
+		    </access>	        	        
+	    </portlet>
+	    <access>
+	        <user>everyone</user>
+	    </access>
+	</portal>
+	<portal type="html" template="authentication.xsl">
+	    <match>/changepassword</match>
+	    <portlet module="studio" controller="ChangePasswordController">
+		    <access>
+		        <user>everyone</user>
+		    </access>	        	        
+	    </portlet>
+	    <access>
+	        <user>everyone</user>
+	    </access>
+	</portal>
+	<portal type="html" template="authentication.xsl">
+	    <match>/resetpassword</match>
+	    <portlet module="studio" controller="ResetPasswordController">
+		    <access>
+		        <user>everyone</user>
+		    </access>	        	        
+	    </portlet>
+	    <access>
+	        <user>everyone</user>
+	    </access>
+	</portal>
+		
+</package>

@@ -1,0 +1,296 @@
+[11-May-2012 19:24:49 UTC] PHP Fatal error:  Call to undefined method base\Sandbox::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:25:23 UTC] PHP Fatal error:  Call to undefined method apps\studio\formBuilder::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:25:49 UTC] PHP Fatal error:  Call to undefined method apps\studio\formBuilder::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:25:50 UTC] PHP Fatal error:  Call to undefined method apps\studio\formBuilder::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:25:50 UTC] PHP Fatal error:  Call to undefined method apps\studio\formBuilder::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:25:50 UTC] PHP Fatal error:  Call to undefined method apps\studio\formBuilder::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:25:50 UTC] PHP Fatal error:  Call to undefined method apps\studio\formBuilder::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:27:50 UTC] PHP Warning:  Missing argument 2 for apps\studio\formBuilder::__construct(), called in /var/www/ILRI/apps/studio/formController.php on line 10 and defined in /var/www/ILRI/apps/studio/formBuilder.php on line 17
+[11-May-2012 19:27:50 UTC] PHP Notice:  Undefined property: apps\studio\formBuilder::$sandbox in /var/www/ILRI/apps/studio/formBuilder.php on line 25
+[11-May-2012 19:27:50 UTC] PHP Fatal error:  Call to a member function getMeta() on a non-object in /var/www/ILRI/apps/studio/formBuilder.php on line 25
+[11-May-2012 19:30:07 UTC] PHP Fatal error:  Call to undefined method apps\studio\formBuilder::getStorage() in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:30:44 UTC] PHP Fatal error:  Call to private method apps\Application::getStorage() from context 'apps\studio\formBuilder' in /var/www/ILRI/apps/studio/formBuilder.php on line 123
+[11-May-2012 19:31:01 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:31:01 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:31:58 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:31:58 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:31:58 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Storage.php on line 57
+[11-May-2012 19:32:35 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:32:35 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:35 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:32:36 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:32:36 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:33:00 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:33:00 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:33:00 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Serialization of 'SimpleXMLElement' is not allowed' in /var/www/ILRI/base/Logging.php:28
+Stack trace:
+#0 /var/www/ILRI/base/Logging.php(28): serialize(Array)
+#1 [internal function]: base\Logging->logError('You have an err...')
+#2 /var/www/ILRI/base/Sandbox.php(46): call_user_func_array(Array, Array)
+#3 /var/www/ILRI/base/Routing.php(25): base\Sandbox->fire('routing.failed', 'You have an err...')
+#4 [internal function]: base\Routing->init(Object(SimpleXMLElement))
+#5 /var/www/ILRI/base/Sandbox.php(46): call_user_func_array(Array, Array)
+#6 /var/www/ILRI/base/Authentication.php(27): base\Sandbox->fire('authentication....', Object(SimpleXMLElement))
+#7 [internal function]: base\Authentication->init('mes.ilri.org')
+#8 /var/www/ILRI/base/Sandbox.php(46): call_user_func_array(Array, Array)
+#9 /var/www/ILRI/base/Aliasing.php(26): base\Sandbox->fire('aliasing.passed', 'mes.ilri.org')
+#10 [internal function]: base\Aliasing->init('/studio/form/as...')
+#11 /var/www/ILRI/base/ in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:33:01 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:33:01 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:33:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Serialization of 'SimpleXMLElement' is not allowed' in /var/www/ILRI/base/Logging.php:28
+Stack trace:
+#0 /var/www/ILRI/base/Logging.php(28): serialize(Array)
+#1 [internal function]: base\Logging->logError('You have an err...')
+#2 /var/www/ILRI/base/Sandbox.php(46): call_user_func_array(Array, Array)
+#3 /var/www/ILRI/base/Routing.php(25): base\Sandbox->fire('routing.failed', 'You have an err...')
+#4 [internal function]: base\Routing->init(Object(SimpleXMLElement))
+#5 /var/www/ILRI/base/Sandbox.php(46): call_user_func_array(Array, Array)
+#6 /var/www/ILRI/base/Authentication.php(27): base\Sandbox->fire('authentication....', Object(SimpleXMLElement))
+#7 [internal function]: base\Authentication->init('mes.ilri.org')
+#8 /var/www/ILRI/base/Sandbox.php(46): call_user_func_array(Array, Array)
+#9 /var/www/ILRI/base/Aliasing.php(26): base\Sandbox->fire('aliasing.passed', 'mes.ilri.org')
+#10 [internal function]: base\Aliasing->init('/studio/form/as...')
+#11 /var/www/ILRI/base/ in /var/www/ILRI/base/Logging.php on line 28
+[11-May-2012 19:33:27 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:33:27 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:33:44 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:33:44 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:35:12 UTC] PHP Notice:  Undefined index: table in /var/www/ILRI/base/Storage.php on line 71
+[11-May-2012 19:35:53 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:37:15 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:39:04 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:39:05 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:41:14 UTC] PHP Warning:  apps\studio\formBuilder::asHTML(): Node no longer exists in /var/www/ILRI/apps/studio/formBuilder.php on line 38
+[11-May-2012 19:41:14 UTC] PHP Warning:  apps\studio\formBuilder::asHTML(): Node no longer exists in /var/www/ILRI/apps/studio/formBuilder.php on line 38
+[11-May-2012 19:41:14 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[11-May-2012 19:41:24 UTC] PHP Warning:  apps\studio\formBuilder::asHTML(): Node no longer exists in /var/www/ILRI/apps/studio/formBuilder.php on line 38
+[11-May-2012 19:41:24 UTC] PHP Warning:  apps\studio\formBuilder::asHTML(): Node no longer exists in /var/www/ILRI/apps/studio/formBuilder.php on line 38
+[11-May-2012 20:00:02 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 127
+[11-May-2012 20:00:02 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 127
+[11-May-2012 20:00:02 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 127
+[11-May-2012 20:00:02 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 127
+[11-May-2012 20:00:14 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 128
+[11-May-2012 20:00:14 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 128
+[11-May-2012 20:00:14 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 128
+[11-May-2012 20:00:14 UTC] PHP Notice:  Undefined index:  in /var/www/ILRI/apps/studio/formBuilder.php on line 128
+[11-May-2012 20:06:02 UTC] PHP Warning:  simplexml_load_file(): /var/www/ILRI/apps/studio/forms/assethead.xml:16: parser error : Attribute label redefined in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:02 UTC] PHP Warning:  simplexml_load_file(): ict.placeholder&quot; lookup=&quot;lkpdistrict&quot; value=&quot;district_id&quot; display=&quot;district_des&quot; in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:02 UTC] PHP Warning:  simplexml_load_file():                                                                                ^ in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:02 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/formBuilder.php on line 38
+[11-May-2012 20:06:11 UTC] PHP Warning:  simplexml_load_file(): /var/www/ILRI/apps/studio/forms/assethead.xml:16: parser error : Attribute label redefined in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:11 UTC] PHP Warning:  simplexml_load_file(): ict.placeholder&quot; lookup=&quot;lkpdistrict&quot; value=&quot;district_id&quot; display=&quot;district_des&quot; in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:11 UTC] PHP Warning:  simplexml_load_file():                                                                                ^ in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:11 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/formBuilder.php on line 38
+[11-May-2012 20:06:24 UTC] PHP Warning:  simplexml_load_file(): /var/www/ILRI/apps/studio/forms/assethead.xml:16: parser error : Attribute label redefined in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:24 UTC] PHP Warning:  simplexml_load_file(): ict.placeholder&quot; lookup=&quot;lkpdistrict&quot; value=&quot;district_id&quot; display=&quot;district_des&quot; in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:24 UTC] PHP Warning:  simplexml_load_file():                                                                                ^ in /var/www/ILRI/apps/studio/formBuilder.php on line 30
+[11-May-2012 20:06:24 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/formBuilder.php on line 38
+[11-May-2012 20:08:26 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:26 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:43 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:43 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:44 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:50 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:50 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:51 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:51 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:52 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:52 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:52 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:52 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:52 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:08:52 UTC] PHP Notice:  Undefined variable: placeholder in /var/www/ILRI/apps/studio/formBuilder.php on line 124
+[11-May-2012 20:17:27 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 08:51:27 UTC] PHP Warning:  require_once(models/formBuilder.php): failed to open stream: No such file or directory in /var/www/ILRI/apps/studio/formController.php on line 9
+[13-May-2012 08:51:27 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/formBuilder.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/apps/studio/formController.php on line 9
+[13-May-2012 10:00:53 UTC] PHP Warning:  base\Aliasing::findPortalMatch(): Cannot add element match number 12 when only 0 such elements exist in /var/www/ILRI/base/Aliasing.php on line 78
+[13-May-2012 10:00:53 UTC] PHP Warning:  base\Aliasing::findPortalMatch(): Cannot add element match number 5 when only 0 such elements exist in /var/www/ILRI/base/Aliasing.php on line 78
+[13-May-2012 10:01:21 UTC] PHP Warning:  base\Aliasing::findPortalMatch(): Cannot add element match number 12 when only 0 such elements exist in /var/www/ILRI/base/Aliasing.php on line 78
+[13-May-2012 10:01:21 UTC] PHP Warning:  base\Aliasing::findPortalMatch(): Cannot add element match number 5 when only 0 such elements exist in /var/www/ILRI/base/Aliasing.php on line 78
+[13-May-2012 10:01:25 UTC] PHP Warning:  base\Aliasing::findPortalMatch(): Cannot add element match number 12 when only 0 such elements exist in /var/www/ILRI/base/Aliasing.php on line 78
+[13-May-2012 10:01:25 UTC] PHP Warning:  base\Aliasing::findPortalMatch(): Cannot add element match number 5 when only 0 such elements exist in /var/www/ILRI/base/Aliasing.php on line 78
+[13-May-2012 10:14:02 UTC] PHP Fatal error:  Call to private method apps\Application::onError() from context 'apps\studio\formController' in /var/www/ILRI/apps/studio/formController.php on line 13
+[13-May-2012 10:14:13 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Application.php on line 30
+[13-May-2012 10:21:03 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:04 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:04 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:05 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:05 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:05 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:05 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:05 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:05 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:05 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:21:06 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:22:28 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 49
+[13-May-2012 10:26:40 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 40
+[13-May-2012 10:30:29 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Application.php on line 30
+[13-May-2012 10:32:21 UTC] PHP Fatal error:  Cannot pass parameter 2 by reference in /var/www/ILRI/base/Authentication.php on line 29
+[13-May-2012 10:32:43 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:33:11 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:33:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:33:58 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:34:22 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:34:43 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:10 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:11 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:11 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:11 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:35:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 25
+[13-May-2012 10:36:23 UTC] PHP Fatal error:  Call to undefined method apps\studio\SignUpController::getSandbox() in /var/www/ILRI/apps/studio/models/formModel.php on line 29
+[13-May-2012 10:36:34 UTC] PHP Fatal error:  Call to undefined method SimpleXMLElement::getPortal() in /var/www/ILRI/base/Assembly.php on line 67
+[13-May-2012 10:37:06 UTC] PHP Fatal error:  Class 'base\XsltProcessor' not found in /var/www/ILRI/base/Assembly.php on line 69
+[13-May-2012 10:37:14 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../sometheme/&quot; in /var/www/ILRI/base/Assembly.php on line 70
+[13-May-2012 10:37:14 UTC] PHP Warning:  XSLTProcessor::importStylesheet() expects parameter 1 to be object, boolean given in /var/www/ILRI/base/Assembly.php on line 70
+[13-May-2012 10:37:14 UTC] PHP Notice:  Undefined variable: xp in /var/www/ILRI/base/Assembly.php on line 71
+[13-May-2012 10:37:14 UTC] PHP Fatal error:  Call to a member function transformToXML() on a non-object in /var/www/ILRI/base/Assembly.php on line 71
+[13-May-2012 10:39:55 UTC] PHP Notice:  Undefined variable: xp in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 10:39:55 UTC] PHP Fatal error:  Call to a member function transformToXML() on a non-object in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 10:40:12 UTC] PHP Warning:  XSLTProcessor::transformToXml() expects parameter 1 to be object, string given in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 10:40:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 31
+[13-May-2012 10:41:03 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 31
+[13-May-2012 10:41:23 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 31
+[13-May-2012 10:41:24 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 31
+[13-May-2012 10:41:31 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 31
+[13-May-2012 10:41:47 UTC] PHP Fatal error:  Can't use method return value in write context in /var/www/ILRI/base/Assembly.php on line 31
+[13-May-2012 10:43:16 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;/var/www/ILRI/themes/colourpanel/authenticaion.xsl&quot; in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 10:43:16 UTC] PHP Warning:  XSLTProcessor::importStylesheet() expects parameter 1 to be object, boolean given in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 10:43:16 UTC] PHP Warning:  XSLTProcessor::transformToXml(): No stylesheet associated to this object in /var/www/ILRI/base/Assembly.php on line 75
+[13-May-2012 10:46:38 UTC] PHP Notice:  Array to string conversion in /var/www/ILRI/base/Assembly.php on line 74
+[13-May-2012 10:48:49 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 58
+[13-May-2012 10:49:05 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 58
+[13-May-2012 10:57:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 55
+[13-May-2012 10:57:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 55
+[13-May-2012 10:58:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 55
+[13-May-2012 10:58:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 55
+[13-May-2012 10:59:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 51
+[13-May-2012 10:59:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 51
+[13-May-2012 16:36:08 UTC] PHP Warning:  XSLTProcessor::importStylesheet(): Invalid expression in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 16:36:08 UTC] PHP Warning:  XSLTProcessor::importStylesheet(): compilation error: file /var/www/ILRI/themes/colourpanel/authentication.xsl line 17 element value-of in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 16:36:08 UTC] PHP Warning:  XSLTProcessor::importStylesheet(): xsl:value-of : could not compile select expression '/response/' in /var/www/ILRI/base/Assembly.php on line 73
+[13-May-2012 16:44:45 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 27
+[13-May-2012 18:12:30 UTC] PHP Notice:  Undefined variable: label in /var/www/ILRI/apps/studio/models/formModel.php on line 70
+[13-May-2012 18:12:30 UTC] PHP Notice:  Undefined variable: label in /var/www/ILRI/apps/studio/models/formModel.php on line 70
+[13-May-2012 18:12:30 UTC] PHP Notice:  Undefined variable: label in /var/www/ILRI/apps/studio/models/formModel.php on line 70
+[13-May-2012 18:12:30 UTC] PHP Notice:  Undefined variable: label in /var/www/ILRI/apps/studio/models/formModel.php on line 70
+[13-May-2012 18:12:30 UTC] PHP Notice:  Undefined variable: label in /var/www/ILRI/apps/studio/models/formModel.php on line 70
+[13-May-2012 19:40:12 UTC] PHP Fatal error:  Call to undefined method apps\studio\formModel::maxLenghth() in /var/www/ILRI/apps/studio/models/formModel.php on line 111
+[13-May-2012 19:40:12 UTC] PHP Fatal error:  Call to undefined method apps\studio\formModel::maxLenghth() in /var/www/ILRI/apps/studio/models/formModel.php on line 111
+[13-May-2012 19:40:25 UTC] PHP Notice:  Undefined variable: element in /var/www/ILRI/apps/studio/models/formModel.php on line 173
+[13-May-2012 19:40:25 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/formModel.php on line 173
+[13-May-2012 19:40:35 UTC] PHP Notice:  Undefined variable: class in /var/www/ILRI/apps/studio/models/formModel.php on line 174
+[13-May-2012 19:40:35 UTC] PHP Notice:  Undefined variable: property in /var/www/ILRI/apps/studio/models/formModel.php on line 174
+[13-May-2012 19:40:35 UTC] PHP Notice:  Undefined variable: class in /var/www/ILRI/apps/studio/models/formModel.php on line 174
+[13-May-2012 19:40:35 UTC] PHP Notice:  Undefined variable: property in /var/www/ILRI/apps/studio/models/formModel.php on line 174
+[14-May-2012 06:00:42 UTC] PHP Notice:  Undefined offset: 0 in /var/www/ILRI/base/Assembly.php on line 68
+[14-May-2012 06:02:32 UTC] PHP Warning:  Parameter 1 to base\Assembly::init() expected to be a reference, value given in /var/www/ILRI/base/Sandbox.php on line 46
+[14-May-2012 06:02:46 UTC] PHP Fatal error:  Call-time pass-by-reference has been removed in /var/www/ILRI/base/Routing.php on line 24
+[14-May-2012 06:09:25 UTC] PHP Warning:  call_user_func_array() expects parameter 2 to be array, string given in /var/www/ILRI/base/Sandbox.php on line 47
+[14-May-2012 06:09:25 UTC] PHP Warning:  call_user_func_array() expects parameter 2 to be array, double given in /var/www/ILRI/base/Sandbox.php on line 47
+[14-May-2012 06:09:44 UTC] PHP Warning:  call_user_func_array() expects parameter 2 to be array, string given in /var/www/ILRI/base/Sandbox.php on line 48
+[14-May-2012 06:09:44 UTC] PHP Warning:  call_user_func_array() expects parameter 2 to be array, double given in /var/www/ILRI/base/Sandbox.php on line 48
+[14-May-2012 06:12:25 UTC] PHP Warning:  Parameter 1 to base\Controller::sendContent() expected to be a reference, value given in /var/www/ILRI/base/Sandbox.php on line 46
+[14-May-2012 06:18:32 UTC] PHP Fatal error:  Call-time pass-by-reference has been removed in /var/www/ILRI/base/Assembly.php on line 54
+[14-May-2012 06:18:35 UTC] PHP Notice:  Undefined variable: models in /var/www/ILRI/base/Assembly.php on line 59
+[14-May-2012 06:18:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 59
+[14-May-2012 06:20:23 UTC] PHP Notice:  Undefined variable: models in /var/www/ILRI/base/Assembly.php on line 51
+[14-May-2012 06:23:15 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 30
+[14-May-2012 06:23:17 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 30
+[14-May-2012 06:36:57 UTC] PHP Parse error:  syntax error, unexpected ')' in /var/www/ILRI/base/Assembly.php on line 43
+[14-May-2012 06:36:58 UTC] PHP Parse error:  syntax error, unexpected ')' in /var/www/ILRI/base/Assembly.php on line 43
+[14-May-2012 06:41:57 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 63
+[14-May-2012 06:41:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:41:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:42:23 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 63
+[14-May-2012 06:42:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:42:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:42:28 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Assembly.php on line 63
+[14-May-2012 06:42:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:42:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:42:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:42:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:43:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:43:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 60
+[14-May-2012 06:43:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 61
+[14-May-2012 06:43:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 61
+[14-May-2012 06:44:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:44:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:45:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 63
+[14-May-2012 06:45:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 63
+[14-May-2012 06:47:58 UTC] PHP Notice:  Undefined variable: key in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:47:58 UTC] PHP Notice:  Undefined variable: key in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:47:58 UTC] PHP Notice:  Undefined variable: value in /var/www/ILRI/base/Assembly.php on line 63
+[14-May-2012 06:47:58 UTC] PHP Notice:  Undefined variable: value in /var/www/ILRI/base/Assembly.php on line 67
+[14-May-2012 06:47:58 UTC] PHP Warning:  SimpleXMLElement::addChild(): Element name is required in /var/www/ILRI/base/Assembly.php on line 67
+[14-May-2012 06:48:36 UTC] PHP Notice:  Undefined variable: key in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:48:36 UTC] PHP Notice:  Undefined variable: key in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:48:36 UTC] PHP Notice:  Undefined variable: value in /var/www/ILRI/base/Assembly.php on line 63
+[14-May-2012 06:48:36 UTC] PHP Notice:  Undefined variable: value in /var/www/ILRI/base/Assembly.php on line 67
+[14-May-2012 06:48:36 UTC] PHP Warning:  SimpleXMLElement::addChild(): Element name is required in /var/www/ILRI/base/Assembly.php on line 67
+[14-May-2012 06:49:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:49:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/ILRI/base/Assembly.php on line 62
+[14-May-2012 06:56:34 UTC] PHP Notice:  Undefined variable: heading in /var/www/ILRI/apps/studio/SignUpController.php on line 14
+[14-May-2012 13:22:15 UTC] PHP Warning:  require_once(models/formModel.php): failed to open stream: No such file or directory in /var/www/ILRI/apps/studio/formController.php on line 9
+[14-May-2012 13:22:15 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/formModel.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/ILRI/apps/studio/formController.php on line 9
+[14-May-2012 14:16:32 UTC] PHP Notice:  Undefined variable: field in /var/www/ILRI/apps/studio/models/FormModel.php on line 183
+[14-May-2012 14:16:32 UTC] PHP Fatal error:  Call to a member function attributes() on a non-object in /var/www/ILRI/apps/studio/models/FormModel.php on line 183
+[16-May-2012 14:06:11 UTC] PHP Fatal error:  Class 'apps\studio\formModel' not found in /var/www/ILRI/apps/studio/GridController.php on line 10
+[16-May-2012 14:06:31 UTC] PHP Fatal error:  Class 'apps\studio\formModel' not found in /var/www/ILRI/apps/studio/GridController.php on line 10
+[16-May-2012 14:06:32 UTC] PHP Fatal error:  Class 'apps\studio\formModel' not found in /var/www/ILRI/apps/studio/GridController.php on line 10
+[16-May-2012 14:06:32 UTC] PHP Fatal error:  Class 'apps\studio\formModel' not found in /var/www/ILRI/apps/studio/GridController.php on line 10
+[16-May-2012 14:06:39 UTC] PHP Fatal error:  Call to a member function getSandbox() on a non-object in /var/www/ILRI/apps/studio/models/GridModel.php on line 92
+[16-May-2012 14:08:07 UTC] PHP Fatal error:  Call to a member function getSandbox() on a non-object in /var/www/ILRI/apps/studio/models/GridModel.php on line 92
+[16-May-2012 14:08:07 UTC] PHP Fatal error:  Call to a member function getSandbox() on a non-object in /var/www/ILRI/apps/studio/models/GridModel.php on line 92
+[16-May-2012 14:08:08 UTC] PHP Fatal error:  Call to a member function getSandbox() on a non-object in /var/www/ILRI/apps/studio/models/GridModel.php on line 92
+[16-May-2012 14:08:08 UTC] PHP Fatal error:  Call to a member function getSandbox() on a non-object in /var/www/ILRI/apps/studio/models/GridModel.php on line 92
+[16-May-2012 14:08:23 UTC] PHP Fatal error:  Call to a member function getSandbox() on a non-object in /var/www/ILRI/apps/studio/models/GridModel.php on line 93
+[16-May-2012 14:08:45 UTC] PHP Fatal error:  Call to undefined method apps\studio\GridModel::createGridContent() in /var/www/ILRI/apps/studio/models/GridModel.php on line 37
+[16-May-2012 14:10:31 UTC] PHP Parse error:  syntax error, unexpected '\' (T_NS_SEPARATOR), expecting '}' in /var/www/ILRI/apps/studio/models/GridModel.php on line 87
+[16-May-2012 14:39:29 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
+[16-May-2012 14:39:41 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
+[16-May-2012 14:40:43 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
+[16-May-2012 15:45:12 UTC] PHP Fatal error:  Call to protected method apps\studio\GridModel::asHTML() from context 'apps\studio\GridTemplateController' in /var/www/ILRI/apps/studio/GridTemplateController.php on line 11
+[16-May-2012 15:46:09 UTC] PHP Warning:  Missing argument 1 for apps\studio\GridModel::buildHTML(), called in /var/www/ILRI/apps/studio/models/GridModel.php on line 36 and defined in /var/www/ILRI/apps/studio/models/GridModel.php on line 42
+[16-May-2012 15:46:09 UTC] PHP Warning:  Missing argument 2 for apps\studio\GridModel::buildHTML(), called in /var/www/ILRI/apps/studio/models/GridModel.php on line 36 and defined in /var/www/ILRI/apps/studio/models/GridModel.php on line 42
+[16-May-2012 15:46:09 UTC] PHP Notice:  Undefined variable: gridHeaderColumns in /var/www/ILRI/apps/studio/models/GridModel.php on line 48
+[16-May-2012 15:46:09 UTC] PHP Warning:  join(): Invalid arguments passed in /var/www/ILRI/apps/studio/models/GridModel.php on line 48
+[16-May-2012 15:46:09 UTC] PHP Notice:  Undefined variable: gridContent in /var/www/ILRI/apps/studio/models/GridModel.php on line 53
+[16-May-2012 15:46:09 UTC] PHP Warning:  join(): Invalid arguments passed in /var/www/ILRI/apps/studio/models/GridModel.php on line 53
