@@ -31,27 +31,28 @@ class GridModel {
 		if(property_exists($this->definition, "columns")){
 			foreach($this->definition->columns as $columns){
 				foreach($columns as $column){
-					$gridHeaderColumns[] = $this->gridHeaderColumns($column);
+					$gridColumns[] = $this->gridColumns($column);
 					$gridContent[] = $this->gridContent($column);
 				}
 			}
-			if(!isset($gridHeaderColumns)) throw new ApplicationException("Could not create grid header columns");
+			if(!isset($gridColumns)) throw new ApplicationException("Could not create grid header columns");
 			if(!isset($gridContent)) throw new ApplicationException("Could not create grid content template");
-			return $this->buildHTML($gridHeaderColumns, $gridContent);				
+			return $this->buildHTML($gridColumns, $gridContent);				
 		} else {
 			throw new ApplicationException("No columns defined for grid ".$this->name);
 		}
 	}
 	
-	protected function buildHTML($gridHeaderColumns, $gridContent){
+	protected function buildHTML($gridColumns, $gridContent){
 		$html[] = "<div class=\"grid\">";
 		$html[] = "\t<div class=\"gridHeader gradientSilver\">";
 		$html[] = $this->gridHeaderTitle();
 		$html[] = $this->gridHeaderSearch();
-		$html[] = "\t\t<div class=\"gridHeaderColumns gradientSilver\">";
-		$html[] = join("\n", $gridHeaderColumns);
-		$html[] = "\t\t</div>"; //gridHeaderColumns
+		$html[] = $this->gridHeaderAdd();
 		$html[] = "\t</div>"; //gridHeader
+		$html[] = "\t<div class=\"gridColumns gradientSilver\">";
+		$html[] = join("\n", $gridColumns);
+		$html[] = "\t</div>"; //gridHeaderColumns
 		$html[] = "\t<div class=\"gridContent\">";
 		$html[] = "\t\t<div class=\"gridContentRecord\">";
 		$html[] = join("\n", $gridContent);
@@ -65,7 +66,7 @@ class GridModel {
 	}
 	
 	protected function gridHeaderTitle(){
-		$html[] = "\t\t<div class=\"gridHeaderTitle column grid5of10\">";
+		$html[] = "\t\t<div class=\"gridHeaderTitle column grid4of10\">";
 		$title = $this->titleTranslation($this->definition);
 		$html[] = "\t\t\t<h2>$title</h2>";
 		$html[] = "\t\t</div>";
@@ -74,22 +75,31 @@ class GridModel {
 	
 	protected function gridHeaderSearch(){
 		$URI = $this->controller->getSandbox()->getMeta('URI');
-		$html[] = "\t\t<div class=\"gridHeaderSearch column grid5of10\">";
+		$html[] = "\t\t<div class=\"gridHeaderSearch column grid5of10 headerForm\">";
 		$html[] = "\t\t\t<form action=\"$URI\" method=\"POST\">";
-		$html[] = "\t\t\t\t<input type=\"text\" class=\"borderGray\" placeholder=\"Search Grid\"/>";
-		$html[] = "\t\t\t\t<input type=\"submit\" value=\"\" class=\"borderGray\" />";
+		$searchText = $this->controller->translate('action.search');
+		$html[] = "\t\t\t\t<input type=\"text\" placeholder=\"$searchText\"/>";
+		$html[] = "\t\t\t\t<input type=\"submit\" value=\"\" class=\"searchButton button\" />";
 		$html[] = "\t\t\t</form>";
 		$html[] = "\t\t</div>";
 		return join("\n", $html);
 	}
 	
-	protected function gridHeaderColumns ($column) {
+	protected function gridHeaderAdd(){
+		$html[] = "\t\t<div class=\"column grid1of10 headerForm\">";
+		$addText = $this->controller->translate('action.add');
+		$html[] = "\t\t\t<input type=\"button\" value=\"$addText\" class=\"addButton\" />";
+		$html[] = "\t\t</div>";
+		return join("\n", $html);
+	}
+	
+	protected function gridColumns ($column) {
 		$class = $this->getAttribute("class", $column);
-		$gridHeaderColumn[] = "\t\t\t<div$class>";
-		$gridHeaderColumn[] = "\t\t\t\t".$this->titleTranslation($column);
-		$gridHeaderColumn[] = "\t\t\t\t<span class=\"sort-icon\"></span>";
-		$gridHeaderColumn[] = "\t\t\t</div>";
-		return join("\n", $gridHeaderColumn);
+		$gridColumns[] = "\t\t<div$class>";
+		$gridColumns[] = "\t\t\t".$this->titleTranslation($column);
+		$gridColumns[] = "\t\t\t<span class=\"sort-icon\"></span>";
+		$gridColumns[] = "\t\t</div>";
+		return join("\n", $gridColumns);
 	}
 	
 	protected function gridContent($column) {

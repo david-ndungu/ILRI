@@ -49,7 +49,7 @@ class Authentication {
 		return count($this->portal->portlet) ? true : false;
 	}
 	
-	protected function attestUser($access){
+	public function attestUser($access){
 		if(isset($access->user)){
 			foreach($access->user as $user){
 				if((string) $user === "everyone") return true;
@@ -61,7 +61,7 @@ class Authentication {
 		}
 	}
 	
-	protected function attestRole($access){
+	public function attestRole($access){
 		if(isset($access->role)){
 			foreach($access->role as $role){
 				if((string) $role === "everyone") return true;

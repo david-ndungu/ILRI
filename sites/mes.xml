@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
 	<portal type="raw">
-		<match>/studio/form/*</match>
+		<navigation uri="/studio/form/assethead"></navigation>
 		<portlet module="studio" controller="FormController">
 			<access>
 				<user>everyone</user>
@@ -12,7 +12,29 @@
 		</access>
 	</portal>
 	<portal type="raw">
-		<match>/studio/grid/*</match>
+		<navigation uri="/studio/form/assetdetail"></navigation>
+		<portlet module="studio" controller="FormController">
+			<access>
+				<user>everyone</user>
+			</access>
+		</portlet>
+		<access>
+			<user>everyone</user>
+		</access>
+	</portal>
+	<portal type="raw">
+		<navigation uri="/studio/grid/assethead"></navigation>
+		<portlet module="studio" controller="GridTemplateController">
+			<access>
+				<user>everyone</user>
+			</access>
+		</portlet>
+		<access>
+			<user>everyone</user>
+		</access>
+	</portal>		
+	<portal type="raw">
+		<navigation uri="/studio/grid/assetdetail"></navigation>
 		<portlet module="studio" controller="GridTemplateController">
 			<access>
 				<user>everyone</user>
@@ -23,8 +45,8 @@
 		</access>
 	</portal>	
 	<portal type="html" template="authentication.xsl">
-	    <match>/signin</match>
-	    <portlet module="studio" controller="SignInController">
+	    <navigation group="authentication" uri="/signin" label="signin"></navigation>
+	    <portlet module="user" controller="SignInController">
 		    <access>
 		        <user>everyone</user>
 		    </access>	        	        
@@ -34,8 +56,8 @@
 	    </access>
 	</portal>
 	<portal type="html" template="authentication.xsl">
-	    <match>/signup</match>
-	    <portlet module="studio" controller="SignUpController">
+	    <navigation group="authentication" uri="/signout" label="signout"></navigation>
+	    <portlet module="user" controller="SignOutController">
 		    <access>
 		        <user>everyone</user>
 		    </access>	        	        
@@ -45,8 +67,8 @@
 	    </access>
 	</portal>
 	<portal type="html" template="authentication.xsl">
-	    <match>/changepassword</match>
-	    <portlet module="studio" controller="ChangePasswordController">
+	    <navigation group="authentication" uri="/signup" label="signup"></navigation>
+	    <portlet module="user" controller="SignUpController">
 		    <access>
 		        <user>everyone</user>
 		    </access>	        	        
@@ -56,8 +78,8 @@
 	    </access>
 	</portal>
 	<portal type="html" template="authentication.xsl">
-	    <match>/resetpassword</match>
-	    <portlet module="studio" controller="ResetPasswordController">
+	    <navigation group="account" uri="/changepassword" label="changepassword"></navigation>
+	    <portlet module="user" controller="ChangePasswordController">
 		    <access>
 		        <user>everyone</user>
 		    </access>	        	        
@@ -66,5 +88,96 @@
 	        <user>everyone</user>
 	    </access>
 	</portal>
-		
+	<portal type="html" template="authentication.xsl">
+	    <navigation group="authentication" uri="/resetpassword" label="resetpassword"></navigation>
+	    <portlet module="user" controller="ResetPasswordController">
+		    <access>
+		        <user>everyone</user>
+		    </access>	        	        
+	    </portlet>
+	    <access>
+	        <user>everyone</user>
+	    </access>
+	</portal>
+	<portal type="html" template="dashboard.xsl">
+	    <navigation group="primary" parent="root" name="dashboard" uri="/" label="dashboard.label"></navigation>
+	    <portlet module="studio" controller="NavigationController">
+	        <access>
+	            <role>administrator</role>
+	            <role>editor</role>
+	            <role>viewer</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+            <role>editor</role>
+            <role>viewer</role>
+        </access>	    	    
+	</portal>
+	<portal type="html" template="dashboard.xsl">
+	    <navigation group="primary" parent="root" name="administration" uri="/administration" label="administration.label"></navigation>
+	    <portlet module="studio" controller="NavigationController">
+	        <access>
+	            <user>administrator</user>
+	        </access>
+	    </portlet>
+        <access>
+            <user>administrator</user>
+        </access>	    	    
+	</portal>
+	<portal type="html" template="dashboard.xsl">
+	    <navigation group="primary" parent="administration" name="users" uri="/users" label="users.label"></navigation>
+	    <portlet module="studio" controller="NavigationController">
+	        <access>
+	            <user>administrator</user>
+	        </access>
+	    </portlet>
+        <access>
+            <user>administrator</user>
+        </access>	    	    
+	</portal>
+	<portal type="html" template="dashboard.xsl">
+	    <navigation group="primary" parent="root" name="maintenance" uri="/maintenance" label="maintenance.label"></navigation>
+	    <portlet module="studio" controller="NavigationController">
+	        <access>
+	            <user>everyone</user>
+	        </access>
+	    </portlet>
+        <access>
+            <user>everyone</user>
+        </access>	    	    
+	</portal>
+	<portal type="html" template="dashboard.xsl">
+	    <navigation group="primary" parent="root" name="content" uri="/content" label="content.label"></navigation>
+	    <portlet module="studio" controller="NavigationController">
+	        <access>
+	            <user>everyone</user>
+	        </access>
+	    </portlet>
+        <access>
+            <user>everyone</user>
+        </access>	    	    
+	</portal>
+	<portal type="html" template="dashboard.xsl">
+	    <navigation group="primary" parent="root" name="statistics" uri="/statistics" label="statistics.label"></navigation>
+	    <portlet module="studio" controller="NavigationController">
+	        <access>
+	            <user>everyone</user>
+	        </access>
+	    </portlet>
+        <access>
+            <user>everyone</user>
+        </access>	    	    
+	</portal>
+	<portal type="html" template="dashboard.xsl">
+	    <navigation group="primary" parent="root" name="settings" uri="/settings" label="settings.label"></navigation>
+	    <portlet module="studio" controller="NavigationController">
+	        <access>
+	            <user>everyone</user>
+	        </access>
+	    </portlet>
+        <access>
+            <user>everyone</user>
+        </access>	    	    
+	</portal>
 </package>

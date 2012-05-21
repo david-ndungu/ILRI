@@ -31,11 +31,14 @@ class Logging {
 	
 	protected function logMeta() {
 		$user = $this->sandbox->getService('user')->getUser();
-		$log['user'] = $user['ID'];
+		if($user['isGuest'] == 'Yes'){
+			$user['guest'] = $user['ID'];
+		} else {
+			$user['user'] = $user['ID'];
+		}
 		$log['resource'] = $this->sandbox->getMeta('URI');
 		$log['IP'] = $_SERVER['REMOTE_ADDR'];
 		$log['creationTime'] = microtime(true);
-		$log['isGuest'] = $user['isGuest'];
 		return $log;
 	}
 	

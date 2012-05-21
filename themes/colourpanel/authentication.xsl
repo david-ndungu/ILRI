@@ -3,7 +3,7 @@
 	<xsl:template match="/">
 		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 			<head>
-				<title><xsl:value-of select="/response/*/content/title"/></title>
+				<title><xsl:value-of select="/response/studio/*/*/title"/></title>
 				<meta charset="utf-8" />
 				<link media="screen" href="/themes/colourpanel/screen.css" rel="stylesheet" />
 				<link media="screen" href="/themes/colourpanel/grid.css" rel="stylesheet" />
@@ -12,11 +12,21 @@
 			</head>
 			<body>
 				<div class="pageContainer">
-					<div class="pageHeader">
-						<h1><xsl:value-of select="/response/*/content/title"/></h1>
+					<div class="pageHeader gradientBlack">
+						<h1><xsl:value-of select="/response/user/*/*/title"/></h1>
 					</div>
-					<div class="pageContent">
-						<xsl:value-of select="/response/*/content/body" disable-output-escaping="yes"/>
+					<div class="pageContent gradientSilver">
+						<xsl:for-each select="/response/user/*/*/error">
+							<p class="errorBox">
+								<xsl:value-of select="node-0"/>
+							</p>
+						</xsl:for-each>
+						<xsl:for-each select="/response/user/*/*/message">
+							<p class="messageBox">
+								<xsl:value-of select="node-0"/>
+							</p>
+						</xsl:for-each>
+						<xsl:value-of select="/response/user/*/*/body" disable-output-escaping="yes"/>
 					</div>
 				</div>
 			</body>

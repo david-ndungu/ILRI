@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <language code="en_GB">
+    <label index="action.add">Add New</label>
+    <label index="action.search">Search</label>
+    <label index="invalid.email">Please provide a valid email address</label>
+    <label index="invalid.login">Please provide a valid login</label>
+    <label index="invalid.password">Please provide a password with at least six characters and no more than 32 characters long</label>
+    <label index="mismatched.passwords">The passwords you provided to not match</label>
+    <label index="incorrect.login">The login you provided does not exist in this system</label>
+    <label index="incorrect.password">The password you provided was not valid for that account</label>
     <label index="signup">Sign Up</label>
     <label index="signin">Sign In</label>
+    <label index="signout">Sign Out</label>
+    <label index="user.sign.out">You have successfully signed out</label>
     <label index="resetpassword">Reset Password</label>
     <label index="changepassword">Change Password</label>
+    <label index="password.changed">You have successfully changed your password, sign in to continue</label>
     <label index="login.label">Username</label>
     <label index="login.placeholder">Please choose a username</label>
     <label index="email.label">E-mail</label>
@@ -12,6 +23,7 @@
     <label index="password.placeholder"></label>
     <label index="password.label">Password</label>
     <label index="password.confirm.label">Confirm Password</label>
+    <label index="password.current.label">Current Password</label>
     <label index="assethead.label">Inventory of assets</label>
     <label index="assethead.form">Inventory of assets form</label>
     <label index="recorder.label">Recorder name</label>
@@ -48,4 +60,11 @@
     <label index="pagination.previous">previous</label>
     <label index="pagination.next">next</label>
     <label index="pagination.last">last</label>
+    <label index="dashboard.label">Dashboard</label>
+    <label index="administration.label">Administration</label>
+    <label index="maintenance.label">Maintenance</label>
+    <label index="content.label">Content</label>
+    <label index="statistics.label">Statistics</label>
+    <label index="settings.label">Settings</label>
+    <label index="users.label">Users</label>
 </language>

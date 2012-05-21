@@ -14,6 +14,8 @@ class FormModel {
 	
 	protected $controller = NULL;
 	
+	protected $action = NULL;
+	
 	public function __construct(&$controller) {
 		$this->controller = &$controller;
 		if(is_null($this->setURIName())) {
@@ -46,10 +48,15 @@ class FormModel {
 			throw new ApplicationException($this->source." is not readable or does not exist");
 		}
 	}
+	
+	public function setAction($action){
+		$this->action = $action;
+	}
 				
 	public function asHTML(){
 		$html[] = "\r";
-		$html[] = '<form name="'.(string) $this->definition->attributes()->name.'" action="'.$this->controller->getSandbox()->getMeta('URI').'" method="POST">';
+		$action = is_null($this->action) ? $this->controller->getSandbox()->getMeta('URI') : $this->action;
+		$html[] = '<form name="'.(string) $this->definition->attributes()->name.'" action="'.$this->action.'" method="POST">';
 		if(property_exists($this->definition, "fieldset")){
 			foreach($this->definition as $fieldset){
 				$html[] = "\t".'<fieldset name="'.(string) $fieldset->attributes()->name.'">';

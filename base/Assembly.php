@@ -15,13 +15,11 @@ class Assembly {
 	
 	public function init($data) {
 		$this->response = $data;
+		$this->response['base']['locale'] = $this->sandbox->getService('translation')->getLocale();
 		try {
 			switch((string) $this->sandbox->getMeta('portal')->attributes()->type){
 				case "raw":
-					$output = "";
-					foreach($this->response as $response){
-						$output .= $response['content'];
-					}
+					$output = $this->toString();
 					break;
 				case "json":
 					$output = $this->toJSON();
@@ -38,9 +36,19 @@ class Assembly {
 		}
 		return $this->sandbox->fire('assembly.passed', $output);
 	}
+	
+	protected function toString(){
+		$string = array();
+		foreach($this->response as $app){
+			foreach($app as $controller => $content){
+				$string[] = $content;
+			}
+		}
+		return join("\n", $content);
+	}
 		
 	protected function toJSON(){
-		return json_encode($this->response);
+		return json_encode($this->response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 	}
 	
 	protected function toXML($response = null, &$xml = null){
@@ -63,7 +71,8 @@ class Assembly {
 				$child = $xml->addChild($node);
 				$this->toXML($value, $child);
 			}else{
-				$xml->addChild($node, $value);
+				$text = htmlentities((string) $value);
+				$xml->addChild($node, $text);
 			}
 		}
 	}
@@ -76,6 +85,7 @@ class Assembly {
 			$theme = $settings['theme'];
 			$xslt = new \XsltProcessor();
 			$xslt->importStylesheet(simplexml_load_file("$base/themes/$theme/$template"));
+// 			print_r($this->toXML());exit;
 			$data = simplexml_load_string($this->toXML());
 			$html = $xslt->transformToXML($data);
 			return $html;

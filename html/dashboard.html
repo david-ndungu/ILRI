@@ -6,6 +6,13 @@
 <link media="screen" href="/themes/colourpanel/grid.css" rel="stylesheet" />
 <link media="screen" href="/themes/colourpanel/form.css" rel="stylesheet" />
 <link media="screen" href="/themes/colourpanel/dashboard.css" rel="stylesheet" />
+<script src="js/base/core.js" type="text/javascript"></script>
+<script src="js/base/core.control.js" type="text/javascript"></script>
+<script src="js/base/core.control.grid.js" type="text/javascript"></script>
+<script type="text/javascript">
+var grid = new core.control.grid({name: "david", sex: "male"});
+console.info(grid);
+</script>
 </head>
 <body>
 	<div class="pageContainer">
@@ -18,10 +25,10 @@
 			</div>
 		</div>
 		<div class="pageContent">
-			<div class="pageContentNavigation ">
+			<div class="pageContentNavigation">
 				<ul>
 					<li>
-						<a href="studio.administration" class="gradientGray">Administration</a>
+						<a href="studio.administration">Administration</a>
 						<ul>
 							<li><a href="#">sub menu item 1</a></li>
 							<li><a href="#">sub menu item 1</a></li>
@@ -33,7 +40,7 @@
 						</ul>						
 					</li>
 					<li>
-						<a href="studio.maintenace" class="gradientGray">Maintenance</a>
+						<a href="studio.maintenace">Maintenance</a>
 						<ul>
 							<li><a href="#">sub menu item 1</a></li>
 							<li><a href="#">sub menu item 1</a></li>
@@ -45,7 +52,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="studio.maintenace" class="gradientGray">Content</a>
+						<a href="studio.maintenace">Content</a>
 						<ul>
 							<li><a href="#">sub menu item 1</a></li>
 							<li><a href="#">sub menu item 1</a></li>
@@ -57,7 +64,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="studio.maintenace" class="gradientGray">Statistics</a>
+						<a href="studio.maintenace">Statistics</a>
 						<ul>
 							<li><a href="#">sub menu item 1</a></li>
 							<li><a href="#">sub menu item 1</a></li>
@@ -68,40 +75,52 @@
 							<li><a href="#">sub menu item 1</a></li>
 						</ul>
 					</li>
-					<li>
-						<a href="studio.maintenace" class="gradientGray">Settings</a>
+					<li class="expanded">
+						<a href="studio.maintenace">Settings</a>
+						<ul>
+							<li><a href="#">sub menu item 1</a></li>
+							<li><a href="#">sub menu item 1</a></li>
+							<li><a href="#">sub menu item 1</a></li>
+							<li><a href="#">sub menu item 1</a></li>
+							<li><a href="#">sub menu item 1</a></li>
+							<li><a href="#">sub menu item 1</a></li>
+							<li><a href="#">sub menu item 1</a></li>
+						</ul>
 					</li>
 				</ul>
 			</div>
 			<div class="pageContentContent">
 				<div class="grid">
-					<div class="gridHeader gradientGray">
-						<div class="gridHeaderTitle column grid5of10">
+					<div class="gridHeader gradientSilver">
+						<div class="gridHeaderTitle column grid4of10">
 							<h2>Some data grid</h2>
 						</div>
-						<div class="gridHeaderSearch column grid5of10">
+						<div class="gridHeaderSearch column grid5of10 headerForm">
 							<form action="/" onsubmit="return false" method="POST">
-								<input type="text" class="borderGray" placeholder="Search Grid"/>
-								<input type="submit" value="" class="borderGray" />
+								<input type="text" placeholder="Search Grid"/>
+								<input type="submit" value="" class="searchButton button"/>
 							</form>						
 						</div>
-						<div class="gridHeaderColumns gradientGray">
-							<div class="column grid1of10">
-								ID
-								<span class="sort-icon"></span>
-							</div>
-							<div class="column grid5of10">
-								Article
-								<span class="sort-icon"></span>
-							</div>
-							<div class="column grid2of10">
-								Author
-								<span class="sort-icon descending"></span>
-							</div>
-							<div class="column grid2of10">
-								Date
-								<span class="sort-icon"></span>
-							</div>
+						<div class="column grid1of10 headerForm">
+							<input type="button" value="add new" class="addButton"/>
+						</div>
+					</div>
+					<div class="gridColumns gradientSilver">
+						<div class="column grid1of10">
+							ID
+							<span class="sort-icon"></span>
+						</div>
+						<div class="column grid5of10">
+							Article
+							<span class="sort-icon"></span>
+						</div>
+						<div class="column grid2of10">
+							Author
+							<span class="sort-icon descending"></span>
+						</div>
+						<div class="column grid2of10">
+							Date
+							<span class="sort-icon"></span>
 						</div>
 					</div>
 					<div class="gridContent">
@@ -123,13 +142,8 @@
 						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
 						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
 						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
-						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
-						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
-						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
-						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
-						<div class="gridContentRecord"><div class="column grid1of10">1</div><div class="column grid5of10">The brown fox jumped over the fence</div><div class="column grid2of10">Jon Fresco</div><div class="column grid2of10">16th May 2012</div></div>
 					</div>
-					<div class="gridFooter gradientGray">
+					<div class="gridFooter gradientSilver">
 						<div class="column grid10of10">
 							<span>Showing 1 to 10 of 58 entries</span>
 							<ul>
@@ -147,13 +161,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="pageFooter gradientBlack">
-			<ul>
-				<li class="column grid3of10"><a href="#">&nbsp;</a></li>
-				<li class="column grid3of10"><a href="#">&nbsp;</a></li>
-				<li class="column grid3of10"><a href="#">&nbsp;</a></li>
-			</ul>
 		</div>
 	</div>
 </body>

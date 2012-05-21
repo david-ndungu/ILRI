@@ -67,13 +67,13 @@ class Aliasing {
 		$URI = $this->sandbox->getMeta('URI');
 		$handler = NULL;
 		foreach($package->portal as $portal){
-			foreach($portal->match as $match){
-				$match = (string) $match;
-				if($URI === $match) {
+			foreach($portal->navigation as $match){
+				$request = (string) $match->attributes()->uri;
+				if($URI === $request) {
 					return $portal;
 				}
-				if($match[strlen($match)-1] === "*") {
-					if(substr_count($URI, rtrim($match, "*")) > 0){
+				if($request[strlen($request)-1] === "*") {
+					if(substr_count($URI, rtrim($request, "*")) > 0){
 						$handler = $portal;
 					}
 				}

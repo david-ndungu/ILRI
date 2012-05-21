@@ -18,6 +18,14 @@ class Application {
 		$this->storage = new \base\Storage($this->sandbox);
 	}
 	
+	public function doGet(){
+		
+	}
+	
+	public function doPost(){
+		
+	}
+	
 	public function getStorage(){
 		return $this->storage;
 	}
@@ -29,6 +37,10 @@ class Application {
 	public function onError($e){
 		$this->sandbox->fire('application.error', $e->getMessage());
 		\base\Response::sendHeader(400);
+	}
+	
+	public function translate($index){
+		return $this->sandbox->getService("translation")->translate($index);
 	}
 	
 }

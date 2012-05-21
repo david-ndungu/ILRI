@@ -10,8 +10,8 @@
         <field name="password" type="varchar" length="32">
             <element name="password" type="password" label="password.label"></element>
         </field>
-        <field name="password.confirm" type="varchar" length="32">
-            <element name="password.confirm" type="password" label="password.confirm.label"></element>
+        <field name="passwordconfirm" type="varchar" length="32">
+            <element name="passwordconfirm" type="password" label="password.confirm.label"></element>
         </field>
 	    <field name="submit">
 	        <element name="action" type="submit" value="action.signup"></element>

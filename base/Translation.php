@@ -38,6 +38,9 @@ class Translation {
 		}
 	}
 	
+	public function getLocale(){
+		return $this->translations;
+	}
 }
 
 ?>

@@ -19,7 +19,7 @@ class Routing {
 				$module = (string) $portlet->attributes()->module;
 				$controller = (string) $portlet->attributes()->controller;
 				$content = $this->route($module, $controller);
-				$response[] = array("module" => $module, "controller" => $controller, "content" => $content);
+				$response[$module][$controller][] = $content;
 			}
 			$this->sandbox->fire('routing.passed', $response);
 		} catch(BaseException $e) {
