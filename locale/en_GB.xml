@@ -60,7 +60,7 @@
     <label index="pagination.previous">previous</label>
     <label index="pagination.next">next</label>
     <label index="pagination.last">last</label>
-    <label index="dashboard.label">Dashboard</label>
+    <label index="dashboard.label">Overview</label>
     <label index="administration.label">Administration</label>
     <label index="maintenance.label">Maintenance</label>
     <label index="content.label">Content</label>

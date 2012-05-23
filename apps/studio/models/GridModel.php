@@ -14,6 +14,10 @@ class GridModel {
 	
 	protected $controller = NULL;
 	
+	protected $offset = 0;
+	
+	protected $limit = 250;
+	
 	public function __construct(&$controller) {
 		$this->controller = &$controller;
 		if(is_null($this->setURIName())) {
@@ -27,13 +31,59 @@ class GridModel {
 		}
 	}
 	
-	public function asHTML(){
+	public function getRecords(){
 		if(property_exists($this->definition, "columns")){
-			foreach($this->definition->columns as $columns){
-				foreach($columns as $column){
-					$gridColumns[] = $this->gridColumns($column);
-					$gridContent[] = $this->gridContent($column);
-				}
+			$storage = $this->controller->getStorage();
+			$sqlFields = $this->sqlFields();
+			$sqlFrom = $this->sqlFrom();
+			$sqlLeftJoins = $this->sqlLeftJoins();
+			$sqlLimit = $this->sqlLimit();
+			$sqlCount = "SELECT COUNT(*) AS `rowCount` $sqlFrom $sqlLeftJoins $sqlLimit";
+			$sqlRecords = "SELECT $sqlFields $sqlFrom $sqlLeftJoins $sqlLimit";
+			$result['body'] = $storage->query($sqlRecords);
+			$legend = $storage->query($sqlCount);
+			$legend['rowOffset'] = $this->offset;
+			$legend['rowLimit'] = $legend['rowCount'] < $this->limit ? $legend['rowCount'] : $this->limit;
+			$result['footer'] = $legend;
+			return json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+		}else{
+			throw new ApplicationException("No columns defined for grid ".$this->name);
+		}
+	}
+	
+	protected function sqlFields(){
+		foreach($this->definition->columns->column as $column){
+			$field = (string) $column->attributes()->name;
+			$columns[] = "`$field`";
+		}
+		return isset($columns) ? join(", ", $columns) : "*";
+	}
+	
+	protected function sqlFrom(){
+		$table = (string) $this->definition->attributes()->name;
+		$table = "`$table`";
+		return sprintf("FROM %s", $table);
+	}
+	
+	protected function sqlLeftJoins(){
+		foreach($this->definition->records->leftjoin as $leftjoin){
+			$leftjoins[] = "LEFT JOIN $leftjoin";
+		}
+		return isset($leftjoins) ? join(" ", $leftjoins) : "";
+	}
+	
+	protected function sqlLimit(){
+		$parts = explode("/", $this->controller->getSandbox()->getMeta('URI'));
+		$this->offset = array_key_exists('offset', $_POST) ? intval(trim($_POST['offset'])) : $this->offset;
+		$this->limit = array_key_exists('limit', $_POST) ? intval(trim($_POST['limit'])) : $this->limit;
+		return sprintf("LIMIT %d, %d", $this->offset, $this->limit);
+	}
+	
+	public function getTemplate(){
+		if(property_exists($this->definition, "columns")){
+			foreach($this->definition->columns->column as $column){
+				$gridColumns[] = $this->gridColumns($column);
+				$gridContent[] = $this->gridContent($column);
 			}
 			if(!isset($gridColumns)) throw new ApplicationException("Could not create grid header columns");
 			if(!isset($gridContent)) throw new ApplicationException("Could not create grid content template");
@@ -78,17 +128,17 @@ class GridModel {
 		$html[] = "\t\t<div class=\"gridHeaderSearch column grid5of10 headerForm\">";
 		$html[] = "\t\t\t<form action=\"$URI\" method=\"POST\">";
 		$searchText = $this->controller->translate('action.search');
-		$html[] = "\t\t\t\t<input type=\"text\" placeholder=\"$searchText\"/>";
-		$html[] = "\t\t\t\t<input type=\"submit\" value=\"\" class=\"searchButton button\" />";
+		$html[] = "\t\t\t\t<input type=\"text\" name=\"keywords\" placeholder=\"$searchText\"/>";
+		$html[] = "\t\t\t\t<input type=\"submit\" value=\"&nbsp;\" class=\"searchButton button\" />";
 		$html[] = "\t\t\t</form>";
 		$html[] = "\t\t</div>";
 		return join("\n", $html);
 	}
 	
 	protected function gridHeaderAdd(){
-		$html[] = "\t\t<div class=\"column grid1of10 headerForm\">";
+		$html[] = "\t\t<div class=\"gridHeaderAdd column grid1of10 headerForm\">";
 		$addText = $this->controller->translate('action.add');
-		$html[] = "\t\t\t<input type=\"button\" value=\"$addText\" class=\"addButton\" />";
+		$html[] = "\t\t\t<input type=\"button\" name=\"addButton\" value=\"$addText\" class=\"addButton\" />";
 		$html[] = "\t\t</div>";
 		return join("\n", $html);
 	}
@@ -129,7 +179,7 @@ class GridModel {
 		if(count($parts) < 3){
 			return NULL;
 		} else {
-			$this->name = $parts[(count($parts)-1)];
+			$this->name = $parts[3];
 			return $this->name;
 		}
 	}

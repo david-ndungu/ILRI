@@ -1,4 +1,4 @@
-var sandbox = window.sandbox || function(module){
+var sandbox = window.sandbox || function(){
 	return {
 		listen : function(types, listener) {
 			types = typeof types == "string" ? [ types ] : types;
@@ -19,10 +19,31 @@ var sandbox = window.sandbox || function(module){
 						try {
 							listeners[i](event);
 						} catch (e) {
-							core.log(e, 2);
+							this.log(e.message, 3);
 						}
 					}
 				} while (i--);
+			}
+		},
+		createControl: function(){
+			var name = arguments[0];
+			var source = arguments[1] ? arguments[1] : false;
+			var control = new core.control[name](source);
+			return control;
+		},
+		log : function(message, level) {
+			if (!console) return;
+			severity = level ? level : 1;
+			switch (severity) {
+				case 1:
+					console.info(message);
+					break;
+				case 2:
+					console.warn(message);
+					break;
+				case 3:
+					console.error(message);
+					break;
 			}
 		}		
 	};

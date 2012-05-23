@@ -186,6 +186,7 @@
 	display: block;
 	border-top: 1px solid #bfbfbf;
 	border-bottom: 1px solid #bfbfbf;
+	font-size:.75em;
 }
 
 .gridColumns>div.grid1of10,.gridContentRecord>div.grid1of10 {

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grid name="assethead" title="assethead.label">
-    <browseQuery>Select * from assethead</browseQuery>
-    <searchQuery>Select * from assethead</searchQuery>
+<grid name="assetshead" title="assethead.label">
+    <records>
+        <leftjoin>lkpdistrict on (assetshead.district_id = lkpdistrict.district_id)</leftjoin>
+        <leftjoin>lkpvillage on (assetshead.village_id = lkpvillage.village_id)</leftjoin>
+        <orderby>upload_date desc</orderby>
+    </records>
     <columns key="assetshead_id">
         <column name="recorder_name" title="recorder.label" class="grid2of10 column"></column>
-        <column name="ward_name" title="ward.label" class="grid2of10 column"></column>
+        <column name="village_des" title="village.label" class="grid2of10 column"></column>
         <column name="subvillage_name" title="subvillage.label" class="grid2of10 column"></column>
         <column name="district_des" title="district.label" class="grid2of10 column"></column>
         <column name="upload_date" title="upload_date.label" class="grid2of10 column"></column>

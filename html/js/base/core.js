@@ -1,3 +1,4 @@
+"use strict";
 var core = window.core || {
 	events: [],
 	modules: {},
@@ -9,12 +10,12 @@ var core = window.core || {
 	},
 	start : function(moduleId) {
 		var module = this.modules[moduleId];
-		module.instance = module.creator(new sandbox(module.creator));
+		module.instance = module.creator(new sandbox());
 		try {
 			module.instance.init();
 		} catch (e) {
 			if (typeof console === 'object') {
-				console.error(e);
+				console.error(e.message);
 			}
 		}
 	},
@@ -26,7 +27,7 @@ var core = window.core || {
 		}
 	},
 	boot : function() {
-		for (moduleId in this.modules) {
+		for (var moduleId in this.modules) {
 			if (this.modules.hasOwnProperty(moduleId)) {
 				this.start(moduleId);
 			}
@@ -37,22 +38,6 @@ var core = window.core || {
 			if (this.modules.hasOwnProperty(moduleId)) {
 				this.stop(moduleId);
 			}
-		}
-	},
-	log : function(message, level) {
-		if (!!console)
-			return;
-		severity = level ? level : 1;
-		switch (severity) {
-			case 1:
-				console.info(message);
-				break;
-			case 2:
-				console.warn(message);
-				break;
-			case 3:
-				console.error(message);
-				break;
 		}
 	},
 	include : function(url, callback) {

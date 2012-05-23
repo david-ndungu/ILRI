@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
 	<portal type="raw">
-		<navigation uri="/studio/form/assethead"></navigation>
+		<navigation uri="/studio/form/*"></navigation>
 		<portlet module="studio" controller="FormController">
 			<access>
 				<user>everyone</user>
@@ -11,39 +11,6 @@
 			<user>everyone</user>
 		</access>
 	</portal>
-	<portal type="raw">
-		<navigation uri="/studio/form/assetdetail"></navigation>
-		<portlet module="studio" controller="FormController">
-			<access>
-				<user>everyone</user>
-			</access>
-		</portlet>
-		<access>
-			<user>everyone</user>
-		</access>
-	</portal>
-	<portal type="raw">
-		<navigation uri="/studio/grid/assethead"></navigation>
-		<portlet module="studio" controller="GridTemplateController">
-			<access>
-				<user>everyone</user>
-			</access>
-		</portlet>
-		<access>
-			<user>everyone</user>
-		</access>
-	</portal>		
-	<portal type="raw">
-		<navigation uri="/studio/grid/assetdetail"></navigation>
-		<portlet module="studio" controller="GridTemplateController">
-			<access>
-				<user>everyone</user>
-			</access>
-		</portlet>
-		<access>
-			<user>everyone</user>
-		</access>
-	</portal>	
 	<portal type="html" template="authentication.xsl">
 	    <navigation group="authentication" uri="/signin" label="signin"></navigation>
 	    <portlet module="user" controller="SignInController">
@@ -118,66 +85,85 @@
 	    <navigation group="primary" parent="root" name="administration" uri="/administration" label="administration.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
-	            <user>administrator</user>
+	            <role>administrator</role>
 	        </access>
 	    </portlet>
         <access>
-            <user>administrator</user>
+            <role>administrator</role>
         </access>	    	    
 	</portal>
 	<portal type="html" template="dashboard.xsl">
 	    <navigation group="primary" parent="administration" name="users" uri="/users" label="users.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
-	            <user>administrator</user>
+	            <role>administrator</role>
 	        </access>
 	    </portlet>
         <access>
-            <user>administrator</user>
+            <role>administrator</role>
         </access>	    	    
 	</portal>
 	<portal type="html" template="dashboard.xsl">
 	    <navigation group="primary" parent="root" name="maintenance" uri="/maintenance" label="maintenance.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
-	            <user>everyone</user>
+	            <role>administrator</role>
 	        </access>
 	    </portlet>
         <access>
-            <user>everyone</user>
+            <role>administrator</role>
         </access>	    	    
 	</portal>
 	<portal type="html" template="dashboard.xsl">
 	    <navigation group="primary" parent="root" name="content" uri="/content" label="content.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
-	            <user>everyone</user>
+	            <role>administrator</role>
+	            <role>editor</role>
 	        </access>
 	    </portlet>
         <access>
-            <user>everyone</user>
+            <role>administrator</role>
+            <role>editor</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="content" name="assethead" uri="/studio/grid/assethead" label="assethead.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	            <role>editor</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+            <role>editor</role>
         </access>	    	    
 	</portal>
 	<portal type="html" template="dashboard.xsl">
 	    <navigation group="primary" parent="root" name="statistics" uri="/statistics" label="statistics.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
-	            <user>everyone</user>
+	            <role>administrator</role>
+	            <role>editor</role>
+	            <role>viewer</role>
 	        </access>
 	    </portlet>
         <access>
-            <user>everyone</user>
+            <role>administrator</role>
+            <role>editor</role>
+            <role>viewer</role>
         </access>	    	    
 	</portal>
 	<portal type="html" template="dashboard.xsl">
 	    <navigation group="primary" parent="root" name="settings" uri="/settings" label="settings.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
-	            <user>everyone</user>
+	            <role>administrator</role>
 	        </access>
 	    </portlet>
         <access>
-            <user>everyone</user>
+            <role>administrator</role>
         </access>	    	    
 	</portal>
 </package>

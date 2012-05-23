@@ -12,12 +12,11 @@
 				<script src="/js/libraries/jquery-1.7.2.min.js" type="text/javascript"></script>
 				<script src="/js/base/core.js" type="text/javascript"></script>
 				<script src="/js/base/sandbox.js" type="text/javascript"></script>
+				<script src="/js/base/core.navigation.js" type="text/javascript"></script>
 				<script src="/js/base/core.control.js" type="text/javascript"></script>
 				<script src="/js/base/core.control.grid.js" type="text/javascript"></script>
-				<script src="/js/base/core.navigation.js" type="text/javascript"></script>				
-				<script type="text/javascript">
-					var grid = new core.control.grid({name: "david", sex: "male"});
-				</script>
+				<script src="/js/base/core.control.form.js" type="text/javascript"></script>
+				<script src="/js/apps/studio.js" type="text/javascript"></script>
 			</head>
 			<body>
 				<div class="pageContainer">
@@ -35,64 +34,18 @@
 					<div class="pageContent">
 						<div class="pageContentNavigation">
 							<ul>
-								<xsl:for-each select="/response/studio/NavigationController/*/primary/*/root/dashboard">
+								<xsl:for-each select="/response/studio/NavigationController/*/primary/*/root/*">
 								<li>
+									<xsl:variable name="parent" select="name(.)"/>
 									<a href="{uri}"><xsl:value-of select="text"/></a>
-									<xsl:for-each select="/response/studio/NavigationController/*/primary/*/dashboard/*">
 									<ul>
-									 	<li><a href="{uri}"><xsl:value-of select="text"/></a></li>
-									</ul>
+									<xsl:for-each select="/response/studio/NavigationController/*/primary/*/*/*">
+										<xsl:variable name="child" select="name(..)"/>
+										<xsl:if test="$parent=$child">
+									 		<li><a href="{uri}"><xsl:value-of select="text"/></a></li>
+										</xsl:if>
 									</xsl:for-each>
-								</li>
-								</xsl:for-each>
-								<xsl:for-each select="/response/studio/NavigationController/*/primary/*/root/administration">
-								<li>
-									<a href="{uri}"><xsl:value-of select="text"/></a>
-									<xsl:for-each select="/response/studio/NavigationController/*/primary/*/administration/*">
-									<ul>
-									 	<li><a href="{uri}"><xsl:value-of select="text"/></a></li>
 									</ul>
-									</xsl:for-each>
-								</li>
-								</xsl:for-each>
-								<xsl:for-each select="/response/studio/NavigationController/*/primary/*/root/content">
-								<li>
-									<a href="{uri}"><xsl:value-of select="text"/></a>
-									<xsl:for-each select="/response/studio/NavigationController/*/primary/*/content/*">
-									<ul>
-									 	<li><a href="{uri}"><xsl:value-of select="text"/></a></li>
-									</ul>
-									</xsl:for-each>
-								</li>
-								</xsl:for-each>
-								<xsl:for-each select="/response/studio/NavigationController/*/primary/*/root/maintenance">
-								<li>
-									<a href="{uri}"><xsl:value-of select="text"/></a>
-									<xsl:for-each select="/response/studio/NavigationController/*/primary/*/maintenance/*">
-									<ul>
-									 	<li><a href="{uri}"><xsl:value-of select="text"/></a></li>
-									</ul>
-									</xsl:for-each>
-								</li>
-								</xsl:for-each>
-								<xsl:for-each select="/response/studio/NavigationController/*/primary/*/root/statistics">
-								<li>
-									<a href="{uri}"><xsl:value-of select="text"/></a>
-									<xsl:for-each select="/response/studio/NavigationController/*/primary/*/statistics/*">
-									<ul>
-									 	<li><a href="{uri}"><xsl:value-of select="text"/></a></li>
-									</ul>
-									</xsl:for-each>
-								</li>
-								</xsl:for-each>
-								<xsl:for-each select="/response/studio/NavigationController/*/primary/*/root/settings">
-								<li>
-									<a href="{uri}"><xsl:value-of select="text"/></a>
-									<xsl:for-each select="/response/studio/NavigationController/*/primary/*/settings/*">
-									<ul>
-									 	<li><a href="{uri}"><xsl:value-of select="text"/></a></li>
-									</ul>
-									</xsl:for-each>
 								</li>
 								</xsl:for-each>
 							</ul>
@@ -100,6 +53,7 @@
 						<div class="pageContentContent"></div>
 					</div>
 				</div>
+				<script type="text/javascript">core.boot();</script>
 			</body>
 		</html>
 	</xsl:template>

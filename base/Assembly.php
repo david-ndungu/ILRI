@@ -15,7 +15,6 @@ class Assembly {
 	
 	public function init($data) {
 		$this->response = $data;
-		$this->response['base']['locale'] = $this->sandbox->getService('translation')->getLocale();
 		try {
 			switch((string) $this->sandbox->getMeta('portal')->attributes()->type){
 				case "raw":
@@ -28,6 +27,7 @@ class Assembly {
 					$output = $this->toXML();
 					break;
 				case "html":
+					$this->response['base']['locale'] = $this->sandbox->getService('translation')->getLocale();
 					$output = $this->toHTML();
 					break;
 			}
