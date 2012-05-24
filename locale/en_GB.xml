@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <language code="en_GB">
-    <label index="action.add">Add New</label>
+    <label index="action.add">Add</label>
     <label index="action.search">Search</label>
     <label index="invalid.email">Please provide a valid email address</label>
     <label index="invalid.login">Please provide a valid login</label>
@@ -25,7 +25,7 @@
     <label index="password.confirm.label">Confirm Password</label>
     <label index="password.current.label">Current Password</label>
     <label index="assethead.label">Inventory of assets</label>
-    <label index="assethead.form">Inventory of assets form</label>
+    <label index="assethead.form">Asset head</label>
     <label index="recorder.label">Recorder name</label>
     <label index="recorder.placeholder">e.g John Smith</label>
     <label index="upload_date.label">Upload date</label>
@@ -34,6 +34,7 @@
     <label index="district.label">District</label>
     <label index="district.placeholder">Select district</label>
     <label index="village.label">Village name</label>
+    <label index="village.placeholder">Select village</label>
     <label index="ward.label">Ward name</label>
     <label index="ward.placeholder">e.g Some ward</label>
     <label index="supp_name.label">Name of supplier</label>
@@ -56,10 +57,10 @@
     <label index="action.resetpassword">Reset Password</label>
     <label index="action.changepassword">Change Password</label>
     <label index="pagination.legend">Showing {{rowOffset}} to {{rowLimit}} of {{rowCount}} entries</label>
-    <label index="pagination.first">first</label>
-    <label index="pagination.previous">previous</label>
-    <label index="pagination.next">next</label>
-    <label index="pagination.last">last</label>
+    <label index="pagination.first"> |&lt; </label>
+    <label index="pagination.previous"> &lt;&lt; </label>
+    <label index="pagination.next"> &gt;&gt; </label>
+    <label index="pagination.last"> &gt;| </label>
     <label index="dashboard.label">Overview</label>
     <label index="administration.label">Administration</label>
     <label index="maintenance.label">Maintenance</label>

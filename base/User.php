@@ -52,7 +52,7 @@ class User {
 		$this->setEmail($user['email']);
 		$this->setPassword(array_key_exists("password", $user) ? $user['password'] : NULL);
 		$this->setLogin($user['login']);
-		$this->setRoles(array_key_exists('roles', $user) ? $user['roles'] : array());
+		$this->setRoles($user['roles']);
 		$this->setCreationTime($user['creationTime']);
 	}
 	

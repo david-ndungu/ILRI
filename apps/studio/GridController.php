@@ -24,7 +24,11 @@ class GridController extends \apps\Application {
 		switch(trim($_POST['command'])){
 			case 'browse':
 				header('Content-type: application/json');
-				return $form->getRecords();
+				return $form->browseRecords();
+				break;
+			case 'search':
+				header('Content-type: application/json');
+				return $form->searchRecords();
 				break;
 		}
 	}

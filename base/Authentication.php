@@ -65,7 +65,9 @@ class Authentication {
 		if(isset($access->role)){
 			foreach($access->role as $role){
 				if((string) $role === "everyone") return true;
-				if(in_array((string) $role, $this->user->getRoles())) return true;
+				$roles = $this->user->getRoles();
+				if(is_null($roles)) return false;
+				if(in_array((string) $role, $roles)) return true;
 			}
 			return false;
 		} else {

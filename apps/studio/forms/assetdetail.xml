@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
-    <fieldset name="assetdetail" legend="assetdetail.label">
-        <field name="assethead_id" type="int">
-            <element name="assetshead_id" type="select" label="asset.head" lookup="assetshead"></element>
-        </field>
-        <field name="supp_name" type="varchar" length="120">
-            <element name="supp_name" type="text" label="supp.label" placeholder="supp.placeholder"></element>
-        </field>
-        <field name="equip_name" type="varchar" length="120">
-            <element name="equip_name" type="text" label="equip.label" placeholder="equip.placeholder"></element>
-        </field>
-        <field name="prch_date" type="date">
-            <element name="prch_date" type="text" label="prch_date.label"></element>
-        </field>
-        <field name="qty_prch" type="int">
-            <element name="qty_prch" type="text" label="qty_prch.label" placeholder="qty_prch.placeholder"></element>
-        </field>
-        <field name="prch_price" type="decimal" length="11" precision="3">
-            <element name="prch_price" type="text" label="prch_price.label" placeholder="prch_price.placeholder"></element>
-        </field>
-        <field name="asset_value" type="decimal" length="11" precision="3">
-            <element name="asset_value" type="text" label="asset_value.label" placeholder="asset_value.placeholder"></element>
-        </field>
-        <field name="allocated_to" type="varchar" length="120">
-            <element name="allocated_to" type="text" label="allocated_to.label" placeholder="allocated_to.placeholder"></element>
-        </field>
-        <field name="assetcond_id" type="int">
-            <element name="assetcond_id" type="select" label="assetcond.label" lookup="lkpassetcond"></element>
-        </field>
-        <field name="asset_location" type="varchar" length="45">
-            <element name="asset_location" type="text" label="asset_location.label" placeholder="asset_location.placeholder"></element>
-        </field>
-        <field name="received_by" type="varchar" length="120">
-            <element name="received_by" type="text" label="received_by.label" placeholder="received_by.placeholder"></element>
-        </field>
-        <field name="date_received" type="date">
-            <element name="date_received" type="text" label="date_received.label">
-                <class>datepicker</class>
-            </element>
-        </field>
-        <field name="disposed" type="boolean">
-            <element name="disposed" type="radio" label="disposed.yes.label" value="true"></element>
-            <element name="disposed" type="radio" label="disposed.no.label" value="false"></element>
-        </field>
-        <field name="assetdetail_id" type="int">
-            <element name="assetdetail_id" type="hidden"></element>
-        </field>
-    </fieldset>
+	<field name="assethead_id" type="int">
+	    <element name="assetshead_id" type="select" label="asset.head" lookup="assetshead"></element>
+	</field>
+	<field name="supp_name" type="varchar" length="120">
+	    <element name="supp_name" type="text" label="supp.label" placeholder="supp.placeholder"></element>
+	</field>
+	<field name="equip_name" type="varchar" length="120">
+	    <element name="equip_name" type="text" label="equip.label" placeholder="equip.placeholder"></element>
+	</field>
+	<field name="prch_date" type="date">
+	    <element name="prch_date" type="text" label="prch_date.label"></element>
+	</field>
+	<field name="qty_prch" type="int">
+	    <element name="qty_prch" type="text" label="qty_prch.label" placeholder="qty_prch.placeholder"></element>
+	</field>
+	<field name="prch_price" type="decimal" length="11" precision="3">
+	    <element name="prch_price" type="text" label="prch_price.label" placeholder="prch_price.placeholder"></element>
+	</field>
+	<field name="asset_value" type="decimal" length="11" precision="3">
+	    <element name="asset_value" type="text" label="asset_value.label" placeholder="asset_value.placeholder"></element>
+	</field>
+	<field name="allocated_to" type="varchar" length="120">
+	    <element name="allocated_to" type="text" label="allocated_to.label" placeholder="allocated_to.placeholder"></element>
+	</field>
+	<field name="assetcond_id" type="int">
+	    <element name="assetcond_id" type="select" label="assetcond.label" lookup="lkpassetcond"></element>
+	</field>
+	<field name="asset_location" type="varchar" length="45">
+	    <element name="asset_location" type="text" label="asset_location.label" placeholder="asset_location.placeholder"></element>
+	</field>
+	<field name="received_by" type="varchar" length="120">
+	    <element name="received_by" type="text" label="received_by.label" placeholder="received_by.placeholder"></element>
+	</field>
+	<field name="date_received" type="date">
+	    <element name="date_received" type="text" label="date_received.label">
+	        <class>datepicker</class>
+	    </element>
+	</field>
+	<field name="disposed" type="boolean">
+	    <element name="disposed" type="radio" label="disposed.yes.label" value="true"></element>
+	    <element name="disposed" type="radio" label="disposed.no.label" value="false"></element>
+	</field>
+	<field name="assetdetail_id" type="int">
+	    <element name="assetdetail_id" type="hidden"></element>
+	</field>
 </form>

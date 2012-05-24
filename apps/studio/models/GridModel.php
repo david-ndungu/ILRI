@@ -18,6 +18,10 @@ class GridModel {
 	
 	protected $limit = 250;
 	
+	protected $ordercolumn = NULL;
+	
+	protected $orderdirection = NULL;
+	
 	public function __construct(&$controller) {
 		$this->controller = &$controller;
 		if(is_null($this->setURIName())) {
@@ -31,26 +35,89 @@ class GridModel {
 		}
 	}
 	
-	public function getRecords(){
+	public function browseRecords(){
 		if(property_exists($this->definition, "columns")){
+			
+			$sqlParts = $this->buildSQL();
 			$storage = $this->controller->getStorage();
-			$sqlFields = $this->sqlFields();
-			$sqlFrom = $this->sqlFrom();
-			$sqlLeftJoins = $this->sqlLeftJoins();
-			$sqlLimit = $this->sqlLimit();
-			$sqlCount = "SELECT COUNT(*) AS `rowCount` $sqlFrom $sqlLeftJoins $sqlLimit";
-			$sqlRecords = "SELECT $sqlFields $sqlFrom $sqlLeftJoins $sqlLimit";
-			$result['body'] = $storage->query($sqlRecords);
-			$legend = $storage->query($sqlCount);
+
+			$countSQL = sprintf("SELECT COUNT(*) AS `rowCount` %s %s", $sqlParts['From'], $sqlParts['LeftJoins']);
+			$countRows = $storage->query($countSQL);
+			
+			$legend = $countRows[0];
 			$legend['rowOffset'] = $this->offset;
 			$legend['rowLimit'] = $legend['rowCount'] < $this->limit ? $legend['rowCount'] : $this->limit;
 			$result['footer'] = $legend;
+			
+			$recordSQL = sprintf("SELECT %s %s %s %s %s", $sqlParts['Fields'], $sqlParts['From'], $sqlParts['LeftJoins'], $sqlParts['OrderBy'], $sqlParts['Limit']);
+			$recordRows = $storage->query($recordSQL);
+				
+			$result['ordercolumn'] = $this->ordercolumn;
+			$result['orderdirection'] = $this->orderdirection;
+			$result['body'] = $recordRows;
+			
 			return json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 		}else{
 			throw new ApplicationException("No columns defined for grid ".$this->name);
 		}
 	}
 	
+	public function searchRecords(){
+		if(!array_key_exists('keywords', $_POST)) {
+			throw new \apps\ApplicationException("No search keywords specified");
+		}
+		$parameters = intval($this->definition->records->search->attributes()->parameters);
+		$sqlWhere = $this->sqlWhere();
+		$sqlParts = $this->buildSQL();
+		$storage = $this->controller->getStorage(); 
+		try {
+			$keywords = $storage->sanitize($_POST['keywords']);
+			$searchArgs[] = sprintf("SELECT %s %s %s WHERE %s", $sqlParts['Fields'], $sqlParts['From'], $sqlParts['LeftJoins'], $sqlWhere);
+			$countArgs[] = sprintf("SELECT COUNT(*) AS `rowCount` %s %s WHERE %s", $sqlParts['From'], $sqlParts['LeftJoins'], $sqlWhere);
+			while($parameters--){
+				$searchArgs[] = "%$keywords%";
+				$countArgs[] = "%$keywords%";
+			}
+			$countSQL = call_user_func_array('sprintf', $countArgs);
+			$countRows = $storage->query($countSQL);
+			$legend = $countRows[0];
+			$legend['rowOffset'] = $this->offset;
+			$legend['rowLimit'] = $legend['rowCount'] < $this->limit ? $legend['rowCount'] : $this->limit;
+			$result['footer'] = $legend;
+				
+			$searchSQL = call_user_func_array('sprintf', $searchArgs);
+			$searchArgs[0] .= sprintf(" %s %s", $sqlParts['OrderBy'], $sqlParts['Limit']);
+
+			$searchRows = $storage->query($searchSQL);
+			
+			$result['ordercolumn'] = $this->ordercolumn;
+			$result['orderdirection'] = $this->orderdirection;
+			$result['body'] = $searchRows;
+				
+			return json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+		
+		} catch (\base\BaseException $e) {
+			throw new \apps\ApplicationException($e->getMessage());
+		}
+	}
+	
+	protected function sqlWhere(){
+		if(property_exists($this->definition->records, 'search')){
+			return (string) $this->definition->records->search;
+		}else{
+			return NULL;
+		}
+	}
+	
+	protected function buildSQL(){
+		$sql['Fields'] = $this->sqlFields();
+		$sql['From'] = $this->sqlFrom();
+		$sql['LeftJoins'] = $this->sqlLeftJoins();
+		$sql['OrderBy'] = $this->sqlOrderBy();
+		$sql['Limit'] = $this->sqlLimit();
+		return $sql;
+	}
+		
 	protected function sqlFields(){
 		foreach($this->definition->columns->column as $column){
 			$field = (string) $column->attributes()->name;
@@ -70,6 +137,23 @@ class GridModel {
 			$leftjoins[] = "LEFT JOIN $leftjoin";
 		}
 		return isset($leftjoins) ? join(" ", $leftjoins) : "";
+	}
+	
+	protected function sqlOrderBy(){
+		$this->ordercolumn = (string) $this->definition->records->ordercolumn;
+		$this->orderdirection = (string) $this->definition->records->orderdirection;
+		$direction = array_key_exists('orderdirection', $_POST) ? trim(strtoupper($_POST['orderdirection'])) : NULL;
+		$this->orderdirection = in_array($direction, array('DESC', 'ASC')) ? $direction : $this->orderdirection;
+		$columns = $this->getTableColumns();
+		$column = array_key_exists('ordercolumn', $_POST) ? trim($_POST['ordercolumn']) : NULL;
+		$this->ordercolumn = array_key_exists($column, $columns) ? $column : $this->ordercolumn;
+		return sprintf("ORDER BY `%s`.`%s` %s", (string) $this->definition->attributes()->name, $this->ordercolumn, $this->orderdirection);
+	}
+	
+	protected function getTableColumns(){
+		$storage = $this->controller->getStorage();
+		$table = (string) $this->definition->attributes()->name;
+		return $storage->getColumns($table);
 	}
 	
 	protected function sqlLimit(){
@@ -98,7 +182,6 @@ class GridModel {
 		$html[] = "\t<div class=\"gridHeader gradientSilver\">";
 		$html[] = $this->gridHeaderTitle();
 		$html[] = $this->gridHeaderSearch();
-		$html[] = $this->gridHeaderAdd();
 		$html[] = "\t</div>"; //gridHeader
 		$html[] = "\t<div class=\"gridColumns gradientSilver\">";
 		$html[] = join("\n", $gridColumns);
@@ -125,29 +208,24 @@ class GridModel {
 	
 	protected function gridHeaderSearch(){
 		$URI = $this->controller->getSandbox()->getMeta('URI');
-		$html[] = "\t\t<div class=\"gridHeaderSearch column grid5of10 headerForm\">";
+		$html[] = "\t\t<div class=\"gridHeaderSearch column grid6of10 headerForm\">";
 		$html[] = "\t\t\t<form action=\"$URI\" method=\"POST\">";
 		$searchText = $this->controller->translate('action.search');
 		$html[] = "\t\t\t\t<input type=\"text\" name=\"keywords\" placeholder=\"$searchText\"/>";
-		$html[] = "\t\t\t\t<input type=\"submit\" value=\"&nbsp;\" class=\"searchButton button\" />";
+		$html[] = "\t\t\t\t<input type=\"submit\" value=\"&nbsp;\" class=\"searchButton button\"/>&nbsp;";
+		$addText = $this->controller->translate('action.add');
+		$html[] = "\t\t\t<input type=\"button\" name=\"addButton\" value=\"$addText\" class=\"addButton\"/>";
 		$html[] = "\t\t\t</form>";
 		$html[] = "\t\t</div>";
 		return join("\n", $html);
 	}
-	
-	protected function gridHeaderAdd(){
-		$html[] = "\t\t<div class=\"gridHeaderAdd column grid1of10 headerForm\">";
-		$addText = $this->controller->translate('action.add');
-		$html[] = "\t\t\t<input type=\"button\" name=\"addButton\" value=\"$addText\" class=\"addButton\" />";
-		$html[] = "\t\t</div>";
-		return join("\n", $html);
-	}
-	
+		
 	protected function gridColumns ($column) {
 		$class = $this->getAttribute("class", $column);
 		$gridColumns[] = "\t\t<div$class>";
 		$gridColumns[] = "\t\t\t".$this->titleTranslation($column);
-		$gridColumns[] = "\t\t\t<span class=\"sort-icon\"></span>";
+		$field = (string) $column->attributes()->field;
+		$gridColumns[] = "\t\t\t<span class=\"sort-icon\" name=\"$field\"></span>";
 		$gridColumns[] = "\t\t</div>";
 		return join("\n", $gridColumns);
 	}
@@ -165,10 +243,10 @@ class GridModel {
 		$html[] = "\t\t<div class=\"column grid10of10\">";
 		$html[] = "\t\t\t<span>".$translator->translate("pagination.legend")."</span>";
 		$html[] = "\t\t\t<ul>";
-		$html[] = "\t\t\t\t<li><a class=\"button first\">".$translator->translate("pagination.first")."</a></li>";
-		$html[] = "\t\t\t\t<li><a class=\"button previous\">".$translator->translate("pagination.previous")."</a></li>";
-		$html[] = "\t\t\t\t<li><a class=\"button next\">".$translator->translate("pagination.next")."</a></li>";
-		$html[] = "\t\t\t\t<li><a class=\"button last\">".$translator->translate("pagination.last")."</a></li>";
+		$html[] = "\t\t\t\t<li><a name=\"first\" class=\"button first\">".$translator->translate("pagination.first")."</a></li>";
+		$html[] = "\t\t\t\t<li><a name=\"previous\" class=\"button previous\">".$translator->translate("pagination.previous")."</a></li>";
+		$html[] = "\t\t\t\t<li><a name=\"next\" class=\"button next\">".$translator->translate("pagination.next")."</a></li>";
+		$html[] = "\t\t\t\t<li><a name=\"last\" class=\"button last\">".$translator->translate("pagination.last")."</a></li>";
 		$html[] = "\t\t\t</ul>";
 		$html[] = "\t\t</div>";
 		return join("\n", $html);

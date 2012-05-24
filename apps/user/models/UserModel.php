@@ -75,9 +75,11 @@ class UserModel extends \base\User {
 		$storage = $this->controller->getSandbox()->getService('storage');
 		$login = $storage->sanitize($this->input['login']);
 		$sql = sprintf("SELECT * FROM `user` WHERE `login` = '%s'", $login);
-		$result = $storage->query($sql);
-		if(count($result)){
+		$rows = $storage->query($sql);
+		if(!is_null($rows)){
+			$result = $rows[0];
 			if($this->input['password'] === $result['password']){
+				$result['roles'] = $this->fetchRoles($result['ID']);
 				return $result;
 			}else{
 				throw new \apps\ApplicationException($this->controller->translate("incorrect.password"));
@@ -89,34 +91,30 @@ class UserModel extends \base\User {
 	
 	public function signIn($result){
 		$storage = $this->controller->getSandbox()->getService('storage');
-		$result['roles'] = $this->fetchRoles();
 		$this->setUser($result);
-		$this->isGuest(false);
-		$this->controller->getSandbox()->getService('session')->write('user', $this->getUser());
+		$session = $this->controller->getSandbox()->getService('session');
+		$session->write('user', $this->getUser());
 	}
 	
 	public function ownGuest($result){
+		if(!$this->isGuest()) return;
 		$update['table'] = 'guest';
 		$update['content'] = array('user' => $result['ID']);
 		$update['constraints'] = array('ID' => $this->getID());
 		$this->controller->getSandbox()->getService('storage')->update($update);
 	}
 	
-	protected function fetchRoles(){
-		$sql = sprintf("SELECT `title` FROM `user_role` LEFT JOIN `role` ON (`user_role`.`role` = `role`.`ID`) WHERE `user` = %d", $this->getID());
+	protected function fetchRoles($ID){
+		$sql = sprintf("SELECT `title` FROM `user_role` LEFT JOIN `role` ON (`user_role`.`role` = `role`.`ID`) WHERE `user` = %d", $ID);
 		try {
 			$result = $this->controller->getSandbox()->getService('storage')->query($sql);
-			if(is_array($result)){
-				if(count($result) > 1){
-					foreach($result as $row){
-						$roles[] = $row['title'];
-					}
-				}else{
-					$roles = array($result['title']);
+			if(!is_null($result)){
+				foreach($result as $row){
+					$roles[] = $row['title'];
 				}
 				return $roles;
 			} else {
-				return array();
+				return NULL;
 			}
 		}catch(\base\BaseException $e){
 			throw new \apps\ApplicationException($e->getMessage());

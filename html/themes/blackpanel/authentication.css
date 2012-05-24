@@ -1,0 +1,59 @@
+body {
+	text-align:center;
+}
+
+.pageContainer {
+	width:480px;
+	margin:90px auto 0 auto;
+	text-align: left;
+	border:1px solid #ccc;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;		
+}
+
+.pageHeader, .pageContent {
+	display:block;
+	padding:0 20px;
+}
+
+.pageContent {
+	padding-top:20px;
+	padding-bottom:20px;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;	
+}
+
+.pageHeader {
+	padding-top:20px;
+	padding-bottom:20px;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;	
+}
+
+.pageHeader>h1{
+	text-transform:capitalize;
+	color:#666;
+	margin:0 0 0 30%;
+}
+
+.primaryHead {
+	display:none;
+}
+
+label>span {
+	font-size:.75em;
+}
+
+label > input[type="text"], label > input[type="password"], label > textarea {
+	width:65%;
+}
+label > span {
+	width:30%;
+}
+
+label[name="submit"] {
+	margin:0 0 0 30%;
+}

@@ -1,19 +1,19 @@
 core.control  = {
 	render : function(template, records){
-		this.html = new String(template);
 		var output = new Array();
 		for(i in records){
-			output.push("\t"+this.compile(records[i]));
+			var row = "\t"+this.compile(template, records[i]);
+			output.push(row);
 		}
 		return output.join("\r");
 	},
-	compile : function(record){
+	compile : function(html, record){
 		var pattern = /{{([^}]*)}}/g;
-		this.html = this.html.replace(pattern, function(tag){
+		html= html.replace(pattern, function(tag){
 			var key = tag.replace('{{', '').replace('}}', '');
 			return record[key];
 		});
-		return this.html;			
+		return html;			
 	},
 	getHTML: function(){
 		return $('<em>It works</em>');

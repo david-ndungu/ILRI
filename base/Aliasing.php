@@ -13,7 +13,8 @@ class Aliasing {
 	
 	public function init($data) {
 		try {
-			$site = $this->getSite();
+			$result = $this->getSite();
+			$site = $result[0];
 			$settings = $this->getSettings($site);
 			$this->sandbox->setMeta('settings', $settings);
 			$portal = $this->matchPortal($site);
@@ -39,7 +40,8 @@ class Aliasing {
 		try {
 			$sql = sprintf("SELECT * FROM `setting` WHERE `site` = %d", $site['site']);
 			$settings = $this->sandbox->getService('storage')->query($sql);
-			$result = NULL;
+			if(is_null($settings)) return NULL;
+			$result = array();
 			foreach($settings as $setting){
 				$result[$setting['key']] = $setting['value'];
 			}

@@ -7,13 +7,12 @@ core.register('studio', function(sandbox){
 		kill: function(){
 			
 		},
-		controls: {			
-		},
 		route: function(event){
 			var href = event.data;
-			if(sandbox.module.initControl(href)){
-				sandbox.fire({type: 'navigation.staging', data: {stage: 'primary', control: sandbox.module.controls[href]}});
-			}			
+			var controlType = sandbox.module.controlType(href);
+			var control = sandbox.module.initControl(href);
+			if(!control) return;
+			sandbox.fire({type: 'navigation.staging', data: {"stage": "primary", "control": control}});
 		},
 		controlType: function(href){
 			var controlType = false;
@@ -28,14 +27,15 @@ core.register('studio', function(sandbox){
 		initControl: function(href){
 			var controlType = sandbox.module.controlType(href);
 			if(controlType) {
-				if(typeof sandbox.module.controls[href] == 'undefined'){
-					var control = sandbox.createControl(controlType, href);
-					if(controlType == 'grid'){
-						control.setAddForm(href.replace('/grid/', '/form/'));
-					}
-					sandbox.module.controls[href] = control;
+				var control = sandbox.createControl(controlType, href);
+				if(controlType == 'grid'){
+					control.setForm(href.replace('/grid/', '/form/'));
 				}
-				return true;					
+				if(controlType == 'form'){
+					control.setGrid(href.replace('/form/', '/grid/'));
+					control.setCommand('create');
+				}				
+				return control;					
 			} else {
 				return false;
 			}

@@ -18,9 +18,11 @@ class SignInController extends \apps\Application {
 		try{
 			$user = $this->initUserModel();
 			$result = $user->validateSignIn();
-			$user->signIn($result);
 			$user->ownGuest($result);
+			$user->isGuest(false);
+			$user->signIn($result);
 			header("Location: /");
+			exit;
 		}catch(\apps\ApplicationException $e){
 			$result = $user->getForm("signin");
 			$result['error'][] = $e->getMessage();

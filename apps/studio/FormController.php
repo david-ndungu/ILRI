@@ -15,7 +15,13 @@ class FormController extends \apps\Application {
 	}
 
 	public function doPost(){
-	
+		try {
+			require_once("models/FormModel.php");
+			$form = new FormModel($this);
+			return $form->createRecord();
+		}catch(\apps\ApplicationException $e){
+			$this->onError($e);
+		}
 	}
 		
 }

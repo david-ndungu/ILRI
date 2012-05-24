@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form name="assetheads">
-    <fieldset name="assetheads" legend="assethead.form">
-	    <field name="recorder_name" type="varchar" length="120">
-	        <element name="recorder_name" type="text" label="recorder.label" placeholder="recorder.placeholder"></element>
-	    </field>
-	    <field name="subvillage_name" type="varchar" length="120">
-	        <element name="subvillage_name" type="text" label="subvillage.label" placeholder="subvillage.placeholder"></element>
-	    </field>
-	    <field name="upload_date" type="date">
-	        <element name="upload_date" type="text" label="recorder.label" placeholder="recorder.placeholder">
-	            <class>datepicker</class>
-	        </element>
-	    </field>
-	    <field name="district_id" type="int">
-	        <element name="district_id" type="select" label="district.label" placeholder="district.placeholder" lookup="lkpdistrict" value="district_id" display="district_des"></element>
-	    </field>
-	    <field name="village_id" type="int">
-	        <element name="village_id" type="select" label="village.label" lookup="lkpvillage"></element>
-	    </field>
-	    <field name="ward_name" type="varchar" length="120">
-	        <element name="ward_name" type="text" label="ward.label" placeholder="ward.placeholder"></element>
-	    </field>	
-	    <field name="assethead_id" type="int">
-	        <element name="assethead_id" type="hidden"></element>
-	    </field>
-	    <field name="action" type="varchar">
-	        <element name="action" type="hidden" value=""></element>
-	    </field>    	    
-	    <field name="submit">
-	        <element name="action" type="submit" value="action.submit"></element>
-	    </field>
-	    <field name="reset">
-	        <element name="reset" type="reset" value="action.reset"></element>
-	    </field>	    
-	</fieldset>
+<form name="assetshead" title="assethead.label">
+    <field name="recorder_name" type="varchar" length="120">
+        <element name="recorder_name" type="text" label="recorder.label" placeholder="recorder.placeholder"></element>
+    </field>
+    <field name="subvillage_name" type="varchar" length="120">
+        <element name="subvillage_name" type="text" label="subvillage.label" placeholder="subvillage.placeholder"></element>
+    </field>
+    <field name="upload_date" type="date">
+        <element name="upload_date" type="text" label="upload_date.label" placeholder="upload_date.placeholder">
+            <class>datepicker</class>
+        </element>
+    </field>
+    <field name="district_id" type="int">
+        <element name="district_id" type="select" label="district.label" placeholder="district.placeholder" lookup="lkpdistrict" value="district_id" display="district_des"></element>
+    </field>
+    <field name="village_id" type="int">
+        <element name="village_id" type="select" label="village.label" placeholder="village.placeholder" lookup="lkpvillage" value="village_id" display="village_des"></element>
+    </field>
+    <field name="ward_name" type="varchar" length="120">
+        <element name="ward_name" type="text" label="ward.label" placeholder="ward.placeholder"></element>
+    </field>	
+    <field name="assetshead_id" type="int">
+        <element name="assethead_id" type="hidden"></element>
+    </field>
+    <field name="submit">
+        <element name="action" type="submit" value="action.submit"></element>
+    </field>
+    <field name="reset">
+        <element name="reset" type="reset" value="action.reset"></element>
+    </field>	    
 </form>

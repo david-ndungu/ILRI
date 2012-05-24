@@ -43,7 +43,7 @@ class Storage {
 		if($this->result instanceof \mysqli_result) {
 			return $this->fetch();
 		}
-		return $this->result;
+		return $this->result ? $this->result : NULL;
 	}
 		
 	public function insert($arguments){
@@ -194,11 +194,11 @@ class Storage {
 
 	
 	protected function fetch(){
-		if($this->result->num_rows === 0) return array();
+		if($this->result->num_rows === 0) return NULL;
 		while($row = $this->result->fetch_assoc()){
 			$rows[] = $row;
 		}
-		return (count($rows) === 1) ? $rows[0] : $rows;
+		return $rows;
 	}
 	
 	protected function prepare($query){
@@ -267,6 +267,11 @@ class Storage {
 			$type = $column['Type'];
 			$this->columns[$field] = array('typeCharacter' => $this->typeCharacter($type));
 		}
+	}
+	
+	public function getColumns($table){
+		$this->setTableColumns($table);
+		return $this->columns;
 	}
 	
 	protected function typeCharacter($type){

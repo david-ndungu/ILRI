@@ -3,13 +3,15 @@
     <records>
         <leftjoin>lkpdistrict on (assetshead.district_id = lkpdistrict.district_id)</leftjoin>
         <leftjoin>lkpvillage on (assetshead.village_id = lkpvillage.village_id)</leftjoin>
-        <orderby>upload_date desc</orderby>
+        <ordercolumn>assetshead_id</ordercolumn>
+        <orderdirection>desc</orderdirection>
+        <search parameters="5">`subvillage_name` LIKE '%s' OR `ward_name` LIKE '%s' OR `recorder_name` LIKE '%s' OR `district_des` LIKE '%s' OR `village_des` LIKE '%s'</search>
     </records>
     <columns key="assetshead_id">
-        <column name="recorder_name" title="recorder.label" class="grid2of10 column"></column>
-        <column name="village_des" title="village.label" class="grid2of10 column"></column>
-        <column name="subvillage_name" title="subvillage.label" class="grid2of10 column"></column>
-        <column name="district_des" title="district.label" class="grid2of10 column"></column>
-        <column name="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+        <column name="recorder_name" field="recorder_name" title="recorder.label" class="grid2of10 column"></column>
+        <column name="village_des" field="village_id" title="village.label" class="grid2of10 column"></column>
+        <column name="subvillage_name" field="subvillage_name" title="subvillage.label" class="grid2of10 column"></column>
+        <column name="district_des" field="district_id" title="district.label" class="grid2of10 column"></column>
+        <column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
     </columns>
 </grid>
