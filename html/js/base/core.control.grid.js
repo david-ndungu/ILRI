@@ -31,13 +31,13 @@ core.control.extend('grid', function(){
 				this.renderPaginator();
 			},			
 			renderContent: function(){
-				var content = $('.gridContent', this.html);
 				var template = new String($('.gridContent' ,$(this.template)).html());
 				var rows = "";
 				if(this.records.body) {
 					rows = control.render(template, this.records.body);
 				}
-				content.html(rows);
+				$('.gridContent', this.html).html(rows);
+				this.initEditForm();
 			},
 			renderLegend: function(){
 				var template = new String($('.gridFooter>div>span' ,$(this.template)).html());
@@ -134,8 +134,37 @@ core.control.extend('grid', function(){
 				var button = $('.gridHeaderSearch input[name="addButton"]', this.html);
 				var that = this;
 				button.unbind('mousedown').mousedown(function(event){
-					that.sandbox.fire({type: 'navigation.primary', data: that.form});
+					that.sandbox.fire({type: 'navigation.primary', data: that.form.getSource()});
 				});
+			},
+			initEditForm: function(){
+				var that = this;
+				var rows = $('.gridContent .gridContentRecord', this.html);
+				rows.unbind('mousedown').mousedown(function(event){
+					if($('form', this).length) return;
+					var primarykey = parseInt($(this).attr('title'));
+					var record = that.findRecord(primarykey);
+					if(record){
+						that.form.setRecord(record);
+						that.form.populateRecord();
+						var form = that.form.getHTML();
+						$('.column:last-child', this).after(form);
+						form.slideDown();
+					}
+					$('.gridContent .gridContentRecord').not(this).find('form').slideUp(function(){
+						$(this).remove();
+					});
+				});
+			},
+			findRecord: function(primarykey){
+				if(!this.records.body) return false;
+				for(i in this.records.body){
+					var record = this.records.body[i];
+					if(record.primarykey == primarykey){
+						return record;
+					}
+				}
+				return false;
 			},
 			ajaxPost: function(){
 				$.ajax({
@@ -173,21 +202,21 @@ core.control.extend('grid', function(){
 			setLimit: function(limit){
 				_private.limit = limit;
 			},
-			setForm: function(source){
-				_private.form = source;
-			},
 			getTemplate: function(){
 				$.ajax({
 					type: 'GET',
 					url: _private.source,
 					complete: function(){
-						var response = arguments[0].responseText;
-						_private.template = response;
+						_private.template = arguments[0].responseText;
 						_private.html = $(_private.template);
 					},
 					async: false
 				});
 			},
+			setForm: function(source){
+				_private.form = _private.sandbox.createControl('form', source);
+				_private.form.setCommand('update');
+			},			
 			getRecords: function(){
 				_private.ajaxPost('browse', function(){
 					_private.records = jQuery.parseJSON(arguments[0].responseText);

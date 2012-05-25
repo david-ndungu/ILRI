@@ -54,6 +54,7 @@ class GridModel {
 				
 			$result['ordercolumn'] = $this->ordercolumn;
 			$result['orderdirection'] = $this->orderdirection;
+			$result['primarykey'] = (string) $this->definition->columns->attributes()->primarykey;
 			$result['body'] = $recordRows;
 			
 			return json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
@@ -92,6 +93,7 @@ class GridModel {
 			
 			$result['ordercolumn'] = $this->ordercolumn;
 			$result['orderdirection'] = $this->orderdirection;
+			$result['primarykey'] = (string) $this->definition->columns->attributes()->primarykey;
 			$result['body'] = $searchRows;
 				
 			return json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
@@ -119,6 +121,8 @@ class GridModel {
 	}
 		
 	protected function sqlFields(){
+		$primarykey = (string) $this->definition->columns->attributes()->primarykey;
+		$columns[] = "`$primarykey` AS `primarykey`";
 		foreach($this->definition->columns->column as $column){
 			$field = (string) $column->attributes()->name;
 			$columns[] = "`$field`";
@@ -187,7 +191,7 @@ class GridModel {
 		$html[] = join("\n", $gridColumns);
 		$html[] = "\t</div>"; //gridHeaderColumns
 		$html[] = "\t<div class=\"gridContent\">";
-		$html[] = "\t\t<div class=\"gridContentRecord\">";
+		$html[] = "\t\t<div class=\"gridContentRecord\" title=\"{{primarykey}}\">";
 		$html[] = join("\n", $gridContent);
 		$html[] = "\t\t</div>";
 		$html[] = "\t</div>"; //gridContent
@@ -233,8 +237,7 @@ class GridModel {
 	protected function gridContent($column) {
 		$name = (string) $column->attributes()->name;
 		$class = $this->getAttribute("class", $column);
-		$title = $this->getAttribute("title", $column);
-		$gridContent[] = "\t\t\t<div$class$title>{{".$name."}}</div>";		
+		$gridContent[] = "\t\t\t<div$class>{{".$name."}}</div>";		
 		return join("\n", $gridContent);
 	}
 	

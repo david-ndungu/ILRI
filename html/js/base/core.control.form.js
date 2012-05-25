@@ -1,4 +1,5 @@
 core.control.extend('form', function(){
+	var control = this;
 	var _private = {
 		html: new Object(),
 		source: new String(),
@@ -13,7 +14,7 @@ core.control.extend('form', function(){
 				type: 'GET',
 				url: that.source,
 				complete: function(){
-					that.template = '<div>'+arguments[0].responseText+'</div>';
+					that.template = '<div class="column grid10of10">'+arguments[0].responseText+'</div>';
 					that.html = $(that.template);
 				},
 				async: false
@@ -53,6 +54,14 @@ core.control.extend('form', function(){
 				_private.initSubmit();
 				return _private.html;
 			},
+			setRecord: function(record){
+				_private.record = record;
+			},
+			populateRecord: function(){
+				var template = new String(_private.template);
+				var html = control.render(template, [_private.record]);
+				_private.html = $('form', html).removeClass('primaryContent').addClass('column').addClass('grid10of10').css({display: 'none'});
+			},
 			clearForm: function(){
 				_private.html.find('input[type="text"], input[type="password"], textarea').val('lorem ipsum');
 			},
@@ -61,7 +70,10 @@ core.control.extend('form', function(){
 			},
 			setCommand: function(command){
 				_private.command = command;
-			}						
+			},
+			getSource: function(){
+				return _private.source;
+			}
 	};
 	for(i in _public){
 		this[i] = _public[i];

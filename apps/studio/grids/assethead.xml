@@ -7,7 +7,7 @@
         <orderdirection>desc</orderdirection>
         <search parameters="5">`subvillage_name` LIKE '%s' OR `ward_name` LIKE '%s' OR `recorder_name` LIKE '%s' OR `district_des` LIKE '%s' OR `village_des` LIKE '%s'</search>
     </records>
-    <columns key="assetshead_id">
+    <columns primarykey="assetshead_id">
         <column name="recorder_name" field="recorder_name" title="recorder.label" class="grid2of10 column"></column>
         <column name="village_des" field="village_id" title="village.label" class="grid2of10 column"></column>
         <column name="subvillage_name" field="subvillage_name" title="subvillage.label" class="grid2of10 column"></column>

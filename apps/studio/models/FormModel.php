@@ -151,7 +151,7 @@ class FormModel {
 	}
 	
 	protected function createInputHidden($field, $element){
-		return '<input type="hidden" name="'.(string) $field->attributes()->name.'" value="{{'.$this->elementValue($element).'}}"/>';
+		return '<input type="hidden" name="'.(string) $field->attributes()->name.'" value="'.$this->elementValue($element).'"/>';
 	}
 
 	protected function createInputSubmit($field, $element){
