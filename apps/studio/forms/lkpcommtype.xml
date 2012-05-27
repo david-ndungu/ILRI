@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpcommtype" title="lkpcommtype.label" primarykey="commtype_id">
+	<field name="commtype_des" type="varchar" length="45">
+		<element name="commtype_des" type="text" label="commtype_des.label" placeholder="commtype_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

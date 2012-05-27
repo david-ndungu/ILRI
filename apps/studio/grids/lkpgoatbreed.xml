@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpgoatbreed" title="lkpgoatbreed.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>goatbreed_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`goatbreed_id` = %d</search>
+	</records>
+	<columns primarykey="goatbreed_id">
+		<column name="goatbreed_id" field="goatbreed_id" title="goatbreed_id.label" class="grid2of10 column"></column>
+		<column name="goatbreed_de" field="goatbreed_de" title="goatbreed_de.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="fielddemodet" title="fielddemodet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>fielddemodet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`fielddemodet_id` = %d</search>
+	</records>
+	<columns primarykey="fielddemodet_id">
+		<column name="fielddemodet_id" field="fielddemodet_id" title="fielddemodet_id.label" class="grid2of10 column"></column>
+		<column name="fielddemohead_id" field="fielddemohead_id" title="fielddemohead_id.label" class="grid2of10 column"></column>
+		<column name="fielddemo_date" field="fielddemo_date" title="fielddemo_date.label" class="grid2of10 column"></column>
+		<column name="participant_name" field="participant_name" title="participant_name.label" class="grid2of10 column"></column>
+		<column name="participant_village" field="participant_village" title="participant_village.label" class="grid2of10 column"></column>
+		<column name="participant_gender" field="participant_gender" title="participant_gender.label" class="grid2of10 column"></column>
+		<column name="extension_materials" field="extension_materials" title="extension_materials.label" class="grid2of10 column"></column>
+		<column name="number_given" field="number_given" title="number_given.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

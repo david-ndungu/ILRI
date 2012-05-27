@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="goatprodgrpdet" title="goatprodgrpdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>goatprodgrpdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`goatprodgrpdet_id` = %d</search>
+	</records>
+	<columns primarykey="goatprodgrpdet_id">
+		<column name="goatprodgrpdet_id" field="goatprodgrpdet_id" title="goatprodgrpdet_id.label" class="grid2of10 column"></column>
+		<column name="goatprodhead_id" field="goatprodhead_id" title="goatprodhead_id.label" class="grid2of10 column"></column>
+		<column name="member_name" field="member_name" title="member_name.label" class="grid2of10 column"></column>
+		<column name="gender_id" field="gender_id" title="gender_id.label" class="grid2of10 column"></column>
+		<column name="leadership_id" field="leadership_id" title="leadership_id.label" class="grid2of10 column"></column>
+		<column name="meetintervals" field="meetintervals" title="meetintervals.label" class="grid2of10 column"></column>
+		<column name="feepaid" field="feepaid" title="feepaid.label" class="grid2of10 column"></column>
+		<column name="howmuch" field="howmuch" title="howmuch.label" class="grid2of10 column"></column>
+		<column name="receivedgoat" field="receivedgoat" title="receivedgoat.label" class="grid2of10 column"></column>
+		<column name="tubergrow" field="tubergrow" title="tubergrow.label" class="grid2of10 column"></column>
+		<column name="feeding" field="feeding" title="feeding.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpsaleoutlet" title="lkpsaleoutlet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>saleoutlet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`saleoutlet_id` = %d</search>
+	</records>
+	<columns primarykey="saleoutlet_id">
+		<column name="saleoutlet_id" field="saleoutlet_id" title="saleoutlet_id.label" class="grid2of10 column"></column>
+		<column name="saleoutlet_des" field="saleoutlet_des" title="saleoutlet_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

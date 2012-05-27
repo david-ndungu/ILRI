@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="assetsdet" title="assetsdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>assetsdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`assetsdet_id` = %d</search>
+	</records>
+	<columns primarykey="assetsdet_id">
+		<column name="assetsdet_id" field="assetsdet_id" title="assetsdet_id.label" class="grid2of10 column"></column>
+		<column name="assetshead_id" field="assetshead_id" title="assetshead_id.label" class="grid2of10 column"></column>
+		<column name="supp_name" field="supp_name" title="supp_name.label" class="grid2of10 column"></column>
+		<column name="equip_name" field="equip_name" title="equip_name.label" class="grid2of10 column"></column>
+		<column name="prch_name" field="prch_name" title="prch_name.label" class="grid2of10 column"></column>
+		<column name="qty_prch" field="qty_prch" title="qty_prch.label" class="grid2of10 column"></column>
+		<column name="prch_price" field="prch_price" title="prch_price.label" class="grid2of10 column"></column>
+		<column name="asset_value" field="asset_value" title="asset_value.label" class="grid2of10 column"></column>
+		<column name="allocated_to" field="allocated_to" title="allocated_to.label" class="grid2of10 column"></column>
+		<column name="assetcond_id" field="assetcond_id" title="assetcond_id.label" class="grid2of10 column"></column>
+		<column name="asset_location" field="asset_location" title="asset_location.label" class="grid2of10 column"></column>
+		<column name="received_by" field="received_by" title="received_by.label" class="grid2of10 column"></column>
+		<column name="date_received" field="date_received" title="date_received.label" class="grid2of10 column"></column>
+		<column name="disposed" field="disposed" title="disposed.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

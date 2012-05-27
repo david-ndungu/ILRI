@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpassetcond" title="lkpassetcond.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>assetcond_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`assetcond_id` = %d</search>
+	</records>
+	<columns primarykey="assetcond_id">
+		<column name="assetcond_id" field="assetcond_id" title="assetcond_id.label" class="grid2of10 column"></column>
+		<column name="assetcond_des" field="assetcond_des" title="assetcond_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpgender" title="lkpgender.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>gender_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`gender_id` = %d</search>
+	</records>
+	<columns primarykey="gender_id">
+		<column name="gender_id" field="gender_id" title="gender_id.label" class="grid2of10 column"></column>
+		<column name="gender_des" field="gender_des" title="gender_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

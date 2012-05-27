@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="houseconsdet" title="houseconsdet.label" primarykey="houseconsdet_id">
+	<field name="houseconshead_id" type="int" length="11">
+		<element name="houseconshead_id" type="select" label="houseconshead_id.label" placeholder="houseconshead_id.placeholder" lookup="lkphouseconshead" display="houseconshead_des" value="houseconshead_id"></element>
+	</field>
+	<field name="farmer_name" type="varchar" length="120">
+		<element name="farmer_name" type="text" label="farmer_name.label" placeholder="farmer_name.placeholder"></element>
+	</field>
+	<field name="farmer_gender" type="int" length="11">
+		<element name="farmer_gender" type="text" label="farmer_gender.label" placeholder="farmer_gender.placeholder"></element>
+	</field>
+	<field name="constype_id" type="int" length="11">
+		<element name="constype_id" type="select" label="constype_id.label" placeholder="constype_id.placeholder" lookup="lkpconstype" display="constype_des" value="constype_id"></element>
+	</field>
+	<field name="floortype_id" type="int" length="11">
+		<element name="floortype_id" type="select" label="floortype_id.label" placeholder="floortype_id.placeholder" lookup="lkpfloortype" display="floortype_des" value="floortype_id"></element>
+	</field>
+	<field name="floor_cost" type="decimal" length="11" precision="3">
+		<element name="floor_cost" type="text" label="floor_cost.label" placeholder="floor_cost.placeholder"></element>
+	</field>
+	<field name="roottype_id" type="int" length="11">
+		<element name="roottype_id" type="select" label="roottype_id.label" placeholder="roottype_id.placeholder" lookup="lkproottype" display="roottype_des" value="roottype_id"></element>
+	</field>
+	<field name="roof_cost" type="decimal" length="11" precision="3">
+		<element name="roof_cost" type="text" label="roof_cost.label" placeholder="roof_cost.placeholder"></element>
+	</field>
+	<field name="walltype_id" type="int" length="11">
+		<element name="walltype_id" type="select" label="walltype_id.label" placeholder="walltype_id.placeholder" lookup="lkpwalltype" display="walltype_des" value="walltype_id"></element>
+	</field>
+	<field name="wall_cost" type="decimal" length="11" precision="3">
+		<element name="wall_cost" type="text" label="wall_cost.label" placeholder="wall_cost.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="varietyevaldet" title="varietyevaldet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>varietyevaldet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`varietyevaldet_id` = %d</search>
+	</records>
+	<columns primarykey="varietyevaldet_id">
+		<column name="varietyevaldet_id" field="varietyevaldet_id" title="varietyevaldet_id.label" class="grid2of10 column"></column>
+		<column name="varietyevalhead_id" field="varietyevalhead_id" title="varietyevalhead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="farmer_gender" field="farmer_gender" title="farmer_gender.label" class="grid2of10 column"></column>
+		<column name="plot_size" field="plot_size" title="plot_size.label" class="grid2of10 column"></column>
+		<column name="plotsize_unit" field="plotsize_unit" title="plotsize_unit.label" class="grid2of10 column"></column>
+		<column name="variety_type" field="variety_type" title="variety_type.label" class="grid2of10 column"></column>
+		<column name="planting_date" field="planting_date" title="planting_date.label" class="grid2of10 column"></column>
+		<column name="num_planted" field="num_planted" title="num_planted.label" class="grid2of10 column"></column>
+		<column name="num_germinated" field="num_germinated" title="num_germinated.label" class="grid2of10 column"></column>
+		<column name="num_weedings" field="num_weedings" title="num_weedings.label" class="grid2of10 column"></column>
+		<column name="vine_length" field="vine_length" title="vine_length.label" class="grid2of10 column"></column>
+		<column name="pest_id" field="pest_id" title="pest_id.label" class="grid2of10 column"></column>
+		<column name="harvest_date" field="harvest_date" title="harvest_date.label" class="grid2of10 column"></column>
+		<column name="yield_type" field="yield_type" title="yield_type.label" class="grid2of10 column"></column>
+		<column name="yield_qty" field="yield_qty" title="yield_qty.label" class="grid2of10 column"></column>
+		<column name="accepttest_id" field="accepttest_id" title="accepttest_id.label" class="grid2of10 column"></column>
+		<column name="acceptable" field="acceptable" title="acceptable.label" class="grid2of10 column"></column>
+		<column name="genaccept_id" field="genaccept_id" title="genaccept_id.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

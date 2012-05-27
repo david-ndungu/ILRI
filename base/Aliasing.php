@@ -15,6 +15,7 @@ class Aliasing {
 		try {
 			$result = $this->getSite();
 			$site = $result[0];
+			$this->sandbox->setMeta('site', $site);
 			$settings = $this->getSettings($site);
 			$this->sandbox->setMeta('settings', $settings);
 			$portal = $this->matchPortal($site);

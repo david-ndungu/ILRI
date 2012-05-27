@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkprooftype" title="lkprooftype.label" primarykey="rooftype_id">
+	<field name="rooftype_des" type="varchar" length="45">
+		<element name="rooftype_des" type="text" label="rooftype_des.label" placeholder="rooftype_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

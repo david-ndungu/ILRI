@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="cassavademohead" title="cassavademohead.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>cassavademohead_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`cassavademohead_id` = %d</search>
+	</records>
+	<columns primarykey="cassavademohead_id">
+		<column name="cassavademohead_id" field="cassavademohead_id" title="cassavademohead_id.label" class="grid2of10 column"></column>
+		<column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="subvillage_name" field="subvillage_name" title="subvillage_name.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

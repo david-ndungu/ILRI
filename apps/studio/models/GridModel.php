@@ -138,7 +138,10 @@ class GridModel {
 	
 	protected function sqlLeftJoins(){
 		foreach($this->definition->records->leftjoin as $leftjoin){
-			$leftjoins[] = "LEFT JOIN $leftjoin";
+			$join = (string) $leftjoin;
+			if(strlen($join)){
+				$leftjoins[] = "LEFT JOIN $join";
+			}
 		}
 		return isset($leftjoins) ? join(" ", $leftjoins) : "";
 	}
@@ -237,7 +240,7 @@ class GridModel {
 	protected function gridContent($column) {
 		$name = (string) $column->attributes()->name;
 		$class = $this->getAttribute("class", $column);
-		$gridContent[] = "\t\t\t<div$class>{{".$name."}}</div>";		
+		$gridContent[] = "\t\t\t<div$class name=\"$name\">{{".$name."}}</div>";		
 		return join("\n", $gridContent);
 	}
 	

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="milkyielddet" title="milkyielddet.label" primarykey="milkyielddet_id">
+	<field name="milkyieldhead_id" type="int" length="11">
+		<element name="milkyieldhead_id" type="select" label="milkyieldhead_id.label" placeholder="milkyieldhead_id.placeholder" lookup="lkpmilkyieldhead" display="milkyieldhead_des" value="milkyieldhead_id"></element>
+	</field>
+	<field name="record_date" type="date">
+		<element name="record_date" type="text" label="record_date.label" placeholder="record_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="yield_qty" type="decimal" length="11" precision="3">
+		<element name="yield_qty" type="text" label="yield_qty.label" placeholder="yield_qty.placeholder"></element>
+	</field>
+	<field name="total_consumed" type="decimal" length="11" precision="3">
+		<element name="total_consumed" type="text" label="total_consumed.label" placeholder="total_consumed.placeholder"></element>
+	</field>
+	<field name="total_sold" type="decimal" length="11" precision="3">
+		<element name="total_sold" type="text" label="total_sold.label" placeholder="total_sold.placeholder"></element>
+	</field>
+	<field name="where_sold" type="int" length="11">
+		<element name="where_sold" type="text" label="where_sold.label" placeholder="where_sold.placeholder"></element>
+	</field>
+	<field name="sale_price" type="decimal" length="11" precision="3">
+		<element name="sale_price" type="text" label="sale_price.label" placeholder="sale_price.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

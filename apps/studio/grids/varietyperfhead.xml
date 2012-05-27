@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="varietyperfhead" title="varietyperfhead.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>varietyperfhead_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`varietyperfhead_id` = %d</search>
+	</records>
+	<columns primarykey="varietyperfhead_id">
+		<column name="varietyperfhead_id" field="varietyperfhead_id" title="varietyperfhead_id.label" class="grid2of10 column"></column>
+		<column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="subvillage_name" field="subvillage_name" title="subvillage_name.label" class="grid2of10 column"></column>
+		<column name="monitoring_date" field="monitoring_date" title="monitoring_date.label" class="grid2of10 column"></column>
+		<column name="season" field="season" title="season.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

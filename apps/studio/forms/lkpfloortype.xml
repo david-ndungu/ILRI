@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpfloortype" title="lkpfloortype.label" primarykey="floortype_id">
+	<field name="floortype_des" type="varchar" length="45">
+		<element name="floortype_des" type="text" label="floortype_des.label" placeholder="floortype_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

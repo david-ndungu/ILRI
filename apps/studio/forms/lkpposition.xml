@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpposition" title="lkpposition.label" primarykey="position_id">
+	<field name="position_des" type="varchar" length="45">
+		<element name="position_des" type="text" label="position_des.label" placeholder="position_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

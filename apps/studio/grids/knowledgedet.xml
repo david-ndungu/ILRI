@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="knowledgedet" title="knowledgedet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>knowledgedet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`knowledgedet_id` = %d</search>
+	</records>
+	<columns primarykey="knowledgedet_id">
+		<column name="knowledgedet_id" field="knowledgedet_id" title="knowledgedet_id.label" class="grid2of10 column"></column>
+		<column name="knowledgehead_id" field="knowledgehead_id" title="knowledgehead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="farmer_gender" field="farmer_gender" title="farmer_gender.label" class="grid2of10 column"></column>
+		<column name="disease_types" field="disease_types" title="disease_types.label" class="grid2of10 column"></column>
+		<column name="treatment_used" field="treatment_used" title="treatment_used.label" class="grid2of10 column"></column>
+		<column name="medicine_used" field="medicine_used" title="medicine_used.label" class="grid2of10 column"></column>
+		<column name="medicine_source" field="medicine_source" title="medicine_source.label" class="grid2of10 column"></column>
+		<column name="processing_type" field="processing_type" title="processing_type.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

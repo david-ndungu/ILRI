@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="communicationdet" title="communicationdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>communicationdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`communicationdet_id` = %d</search>
+	</records>
+	<columns primarykey="communicationdet_id">
+		<column name="communicationdet_id" field="communicationdet_id" title="communicationdet_id.label" class="grid2of10 column"></column>
+		<column name="communicationhead_id" field="communicationhead_id" title="communicationhead_id.label" class="grid2of10 column"></column>
+		<column name="communication_item" field="communication_item" title="communication_item.label" class="grid2of10 column"></column>
+		<column name="communication_qty" field="communication_qty" title="communication_qty.label" class="grid2of10 column"></column>
+		<column name="commtype_id" field="commtype_id" title="commtype_id.label" class="grid2of10 column"></column>
+		<column name="communication_date" field="communication_date" title="communication_date.label" class="grid2of10 column"></column>
+		<column name="receiver_id" field="receiver_id" title="receiver_id.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

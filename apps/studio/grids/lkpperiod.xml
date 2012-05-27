@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpperiod" title="lkpperiod.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>period_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`period_id` = %d</search>
+	</records>
+	<columns primarykey="period_id">
+		<column name="period_id" field="period_id" title="period_id.label" class="grid2of10 column"></column>
+		<column name="period_des" field="period_des" title="period_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

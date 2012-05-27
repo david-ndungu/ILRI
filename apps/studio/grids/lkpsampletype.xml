@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpsampletype" title="lkpsampletype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>sampletype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`sampletype_id` = %d</search>
+	</records>
+	<columns primarykey="sampletype_id">
+		<column name="sampletype_id" field="sampletype_id" title="sampletype_id.label" class="grid2of10 column"></column>
+		<column name="sampletype_des" field="sampletype_des" title="sampletype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

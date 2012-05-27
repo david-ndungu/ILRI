@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpfeedtype" title="lkpfeedtype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>feedtype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`feedtype_id` = %d</search>
+	</records>
+	<columns primarykey="feedtype_id">
+		<column name="feedtype_id" field="feedtype_id" title="feedtype_id.label" class="grid2of10 column"></column>
+		<column name="feedtype_des" field="feedtype_des" title="feedtype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

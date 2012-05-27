@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="feedtrialsdet" title="feedtrialsdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>feedtrialsdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`feedtrialsdet_id` = %d</search>
+	</records>
+	<columns primarykey="feedtrialsdet_id">
+		<column name="feedtrialsdet_id" field="feedtrialsdet_id" title="feedtrialsdet_id.label" class="grid2of10 column"></column>
+		<column name="feedtrialshead_id" field="feedtrialshead_id" title="feedtrialshead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="farmer_gender" field="farmer_gender" title="farmer_gender.label" class="grid2of10 column"></column>
+		<column name="num_goats" field="num_goats" title="num_goats.label" class="grid2of10 column"></column>
+		<column name="feed_type" field="feed_type" title="feed_type.label" class="grid2of10 column"></column>
+		<column name="feed_form" field="feed_form" title="feed_form.label" class="grid2of10 column"></column>
+		<column name="amount_given" field="amount_given" title="amount_given.label" class="grid2of10 column"></column>
+		<column name="amount_eaten" field="amount_eaten" title="amount_eaten.label" class="grid2of10 column"></column>
+		<column name="feed_interval" field="feed_interval" title="feed_interval.label" class="grid2of10 column"></column>
+		<column name="feed_source" field="feed_source" title="feed_source.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="assetsdet" title="assetsdet.label" primarykey="assetsdet_id">
+	<field name="assetshead_id" type="int" length="11">
+		<element name="assetshead_id" type="select" label="assetshead_id.label" placeholder="assetshead_id.placeholder" lookup="lkpassetshead" display="assetshead_des" value="assetshead_id"></element>
+	</field>
+	<field name="supp_name" type="varchar" length="120">
+		<element name="supp_name" type="text" label="supp_name.label" placeholder="supp_name.placeholder"></element>
+	</field>
+	<field name="equip_name" type="int" length="120">
+		<element name="equip_name" type="text" label="equip_name.label" placeholder="equip_name.placeholder"></element>
+	</field>
+	<field name="prch_name" type="date">
+		<element name="prch_name" type="text" label="prch_name.label" placeholder="prch_name.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="qty_prch" type="int" length="11">
+		<element name="qty_prch" type="text" label="qty_prch.label" placeholder="qty_prch.placeholder"></element>
+	</field>
+	<field name="prch_price" type="decimal" length="11" precision="3">
+		<element name="prch_price" type="text" label="prch_price.label" placeholder="prch_price.placeholder"></element>
+	</field>
+	<field name="asset_value" type="decimal" length="11" precision="3">
+		<element name="asset_value" type="text" label="asset_value.label" placeholder="asset_value.placeholder"></element>
+	</field>
+	<field name="allocated_to" type="varchar" length="120">
+		<element name="allocated_to" type="text" label="allocated_to.label" placeholder="allocated_to.placeholder"></element>
+	</field>
+	<field name="assetcond_id" type="int" length="11">
+		<element name="assetcond_id" type="select" label="assetcond_id.label" placeholder="assetcond_id.placeholder" lookup="lkpassetcond" display="assetcond_des" value="assetcond_id"></element>
+	</field>
+	<field name="asset_location" type="varchar" length="45">
+		<element name="asset_location" type="text" label="asset_location.label" placeholder="asset_location.placeholder"></element>
+	</field>
+	<field name="received_by" type="int" length="120">
+		<element name="received_by" type="text" label="received_by.label" placeholder="received_by.placeholder"></element>
+	</field>
+	<field name="date_received" type="date">
+		<element name="date_received" type="text" label="date_received.label" placeholder="date_received.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="disposed" type="tinyint" length="1">
+		<element name="disposed" type="text" label="disposed.label" placeholder="disposed.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

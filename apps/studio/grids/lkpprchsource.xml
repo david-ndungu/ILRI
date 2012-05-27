@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpprchsource" title="lkpprchsource.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>prchsource_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`prchsource_id` = %d</search>
+	</records>
+	<columns primarykey="prchsource_id">
+		<column name="prchsource_id" field="prchsource_id" title="prchsource_id.label" class="grid2of10 column"></column>
+		<column name="prchsource_des" field="prchsource_des" title="prchsource_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

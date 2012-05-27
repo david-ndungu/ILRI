@@ -125,6 +125,7 @@ class Storage {
 		if(!$statement->execute()){
 			throw new BaseException($this->resource->error);
 		}
+		return $this->resource->affected_rows;
 	}
 	
 	protected function updateStatement($arguments){

@@ -1,5 +1,4 @@
 core.control.extend('form', function(){
-	var control = this;
 	var _private = {
 		html: new Object(),
 		source: new String(),
@@ -8,6 +7,8 @@ core.control.extend('form', function(){
 		command: new String(),
 		grid: new String(),
 		sandbox: new sandbox(),
+		primarykey: 0,
+		formObject: new Object(),
 		getTemplate: function(){
 			var that = this;
 			$.ajax({
@@ -20,26 +21,15 @@ core.control.extend('form', function(){
 				async: false
 			});			
 		},
-		initSubmit: function(){
-			var that = this;
-			var control = this.html.find('form');
-			control.unbind('submit').submit(function(event){
-				event.preventDefault();
-				that.ajaxPost(function(){
-					that.sandbox.fire({type: 'navigation.primary', data: that.grid});
-				});
-			});
-		},
 		ajaxPost: function(){
 			var control = this;
-			var parameters = this.html.find('form').serialize()+'&command='+this.command;; 
+			var parameters = this.formObject.serialize()+'&command='+this.command+'&primarykey='+this.primarykey.toString();
 			$.ajax({
 				type: 'POST',
 				data: parameters,
 				url: control.source,
 				complete: arguments[0],
-				dataType: 'json',
-				async: true
+				dataType: 'json'
 			});			
 		}		
 	};
@@ -48,22 +38,26 @@ core.control.extend('form', function(){
 				if(!arguments.length) return;
 				_private.source = arguments[0];
 				_private.getTemplate();
-				this.clearForm();
+				this.isCreator();
 			},
 			getHTML: function(){
-				_private.initSubmit();
 				return _private.html;
 			},
 			setRecord: function(record){
-				_private.record = record;
-			},
-			populateRecord: function(){
 				var template = new String(_private.template);
-				var html = control.render(template, [_private.record]);
-				_private.html = $('form', html).removeClass('primaryContent').addClass('column').addClass('grid10of10').css({display: 'none'});
+				var text = this.render(template, record);
+				_private.html = $('form', text).removeClass('primaryContent').addClass('column').addClass('grid10of10').css({display: 'none'});
+				$('select', _private.html).each(function(){
+					var name = $(this).attr('name');
+					var value = record[0] ? parseInt(record[0][name]) : false;
+					if(value){
+						$(this).val(value);
+					}
+				});
+				this.isUpdator();
 			},
 			clearForm: function(){
-				_private.html.find('input[type="text"], input[type="password"], textarea').val('lorem ipsum');
+				_private.html.find('input[type="text"], input[type="password"], textarea').val('');
 			},
 			setGrid: function(source){
 				_private.grid = source;
@@ -73,6 +67,56 @@ core.control.extend('form', function(){
 			},
 			getSource: function(){
 				return _private.source;
+			},
+			setPrimaryKey: function(ID){
+				var that = this;
+				_private.primarykey = ID;
+				$.ajax({
+					type: 'POST',
+					data: {command: "select", primarykey: ID},
+					url: _private.source,
+					complete: function(){
+						that.setRecord(jQuery.parseJSON(arguments[0].responseText));
+					},
+					dataType: 'json',
+					async: false
+				});
+			},
+			isCreator: function(){
+				this.setCommand('insert');
+				_private.formObject = _private.html.find('form');
+				_private.formObject.unbind('submit').submit(function(event){
+					event.preventDefault();
+					_private.ajaxPost(function(){
+						_private.sandbox.fire({type: 'navigation.primary', data: _private.grid});
+					});
+				});
+			},
+			isUpdator: function(){
+				this.setCommand("update");
+				_private.formObject = _private.html;
+				_private.formObject.unbind('submit').submit(function(event){
+					event.preventDefault();
+					_private.ajaxPost(function(){
+						_private.html.slideUp();
+						var data = {};
+						_private.html.find('textarea, input').each(function(){
+							var element = $(this);
+							var name = element.attr('name');
+							data[name] = element.val();
+						});
+						_private.html.find('select').each(function(){
+							var element = $(this);
+							var name = element.attr('name');
+							data[name] = element.find('option:selected').text();
+						});
+						_private.html.siblings('div').each(function(event){
+							var column = $(this);
+							var name = column.attr('name');
+							column.html(data[name]);
+						});
+					});
+				});				
 			}
 	};
 	for(i in _public){

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="weightgaindet" title="weightgaindet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>weightgaindet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`weightgaindet_id` = %d</search>
+	</records>
+	<columns primarykey="weightgaindet_id">
+		<column name="weightgaindet_id" field="weightgaindet_id" title="weightgaindet_id.label" class="grid2of10 column"></column>
+		<column name="weightgainhead_id" field="weightgainhead_id" title="weightgainhead_id.label" class="grid2of10 column"></column>
+		<column name="kid_number" field="kid_number" title="kid_number.label" class="grid2of10 column"></column>
+		<column name="period_id" field="period_id" title="period_id.label" class="grid2of10 column"></column>
+		<column name="kid_weight" field="kid_weight" title="kid_weight.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

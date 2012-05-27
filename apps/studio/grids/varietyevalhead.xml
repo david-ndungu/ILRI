@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="varietyevalhead" title="varietyevalhead.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>varietyevalhead_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`varietyevalhead_id` = %d</search>
+	</records>
+	<columns primarykey="varietyevalhead_id">
+		<column name="varietyevalhead_id" field="varietyevalhead_id" title="varietyevalhead_id.label" class="grid2of10 column"></column>
+		<column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="ward_name" field="ward_name" title="ward_name.label" class="grid2of10 column"></column>
+		<column name="subvillage_name" field="subvillage_name" title="subvillage_name.label" class="grid2of10 column"></column>
+		<column name="evaluation_date" field="evaluation_date" title="evaluation_date.label" class="grid2of10 column"></column>
+		<column name="season" field="season" title="season.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

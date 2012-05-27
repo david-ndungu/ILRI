@@ -24,7 +24,7 @@
     <label index="password.label">Password</label>
     <label index="password.confirm.label">Confirm Password</label>
     <label index="password.current.label">Current Password</label>
-    <label index="assethead.label">Inventory of assets</label>
+    <label index="assetshead.label">Inventory of assets</label>
     <label index="assethead.form">Asset head</label>
     <label index="recorder.label">Recorder name</label>
     <label index="recorder.placeholder">e.g John Smith</label>

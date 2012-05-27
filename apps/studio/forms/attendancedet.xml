@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="attendancedet" title="attendancedet.label" primarykey="attendancedet_id">
+	<field name="attendancehead_id" type="int" length="11">
+		<element name="attendancehead_id" type="select" label="attendancehead_id.label" placeholder="attendancehead_id.placeholder" lookup="lkpattendancehead" display="attendancehead_des" value="attendancehead_id"></element>
+	</field>
+	<field name="participant_name" type="varchar" length="120">
+		<element name="participant_name" type="text" label="participant_name.label" placeholder="participant_name.placeholder"></element>
+	</field>
+	<field name="gender_id" type="int" length="11">
+		<element name="gender_id" type="select" label="gender_id.label" placeholder="gender_id.placeholder" lookup="lkpgender" display="gender_des" value="gender_id"></element>
+	</field>
+	<field name="institution_name" type="varchar" length="120">
+		<element name="institution_name" type="text" label="institution_name.label" placeholder="institution_name.placeholder"></element>
+	</field>
+	<field name="position_id" type="int" length="11">
+		<element name="position_id" type="select" label="position_id.label" placeholder="position_id.placeholder" lookup="lkpposition" display="position_des" value="position_id"></element>
+	</field>
+	<field name="participant_phone" type="varchar" length="45">
+		<element name="participant_phone" type="text" label="participant_phone.label" placeholder="participant_phone.placeholder"></element>
+	</field>
+	<field name="participant_email" type="varchar" length="120">
+		<element name="participant_email" type="text" label="participant_email.label" placeholder="participant_email.placeholder"></element>
+	</field>
+	<field name="participant_signed" type="tinyint" length="1">
+		<element name="participant_signed" type="text" label="participant_signed.label" placeholder="participant_signed.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

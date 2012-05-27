@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="cassavademodet" title="cassavademodet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>cassavademodet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`cassavademodet_id` = %d</search>
+	</records>
+	<columns primarykey="cassavademodet_id">
+		<column name="cassavademodet_id" field="cassavademodet_id" title="cassavademodet_id.label" class="grid2of10 column"></column>
+		<column name="cassavademohead_id" field="cassavademohead_id" title="cassavademohead_id.label" class="grid2of10 column"></column>
+		<column name="variety_id" field="variety_id" title="variety_id.label" class="grid2of10 column"></column>
+		<column name="plot_size" field="plot_size" title="plot_size.label" class="grid2of10 column"></column>
+		<column name="plotsunit_id" field="plotsunit_id" title="plotsunit_id.label" class="grid2of10 column"></column>
+		<column name="num_planted" field="num_planted" title="num_planted.label" class="grid2of10 column"></column>
+		<column name="num_germinated" field="num_germinated" title="num_germinated.label" class="grid2of10 column"></column>
+		<column name="date_planted" field="date_planted" title="date_planted.label" class="grid2of10 column"></column>
+		<column name="num_weedings" field="num_weedings" title="num_weedings.label" class="grid2of10 column"></column>
+		<column name="planting_height" field="planting_height" title="planting_height.label" class="grid2of10 column"></column>
+		<column name="harvest_date" field="harvest_date" title="harvest_date.label" class="grid2of10 column"></column>
+		<column name="amount_harvest" field="amount_harvest" title="amount_harvest.label" class="grid2of10 column"></column>
+		<column name="num_distributed" field="num_distributed" title="num_distributed.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

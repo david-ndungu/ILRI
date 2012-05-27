@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpgenaccept" title="lkpgenaccept.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>genaccept_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`genaccept_id` = %d</search>
+	</records>
+	<columns primarykey="genaccept_id">
+		<column name="genaccept_id" field="genaccept_id" title="genaccept_id.label" class="grid2of10 column"></column>
+		<column name="genaccept_des" field="genaccept_des" title="genaccept_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

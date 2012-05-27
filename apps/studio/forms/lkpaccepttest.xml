@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpaccepttest" title="lkpaccepttest.label" primarykey="accepttest_id">
+	<field name="accepttest_des" type="varchar" length="45">
+		<element name="accepttest_des" type="text" label="accepttest_des.label" placeholder="accepttest_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpdeathcause" title="lkpdeathcause.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>deathcause_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`deathcause_id` = %d</search>
+	</records>
+	<columns primarykey="deathcause_id">
+		<column name="deathcause_id" field="deathcause_id" title="deathcause_id.label" class="grid2of10 column"></column>
+		<column name="deathcause_des" field="deathcause_des" title="deathcause_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

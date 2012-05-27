@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpcommreceiver" title="lkpcommreceiver.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>receiver_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`receiver_id` = %d</search>
+	</records>
+	<columns primarykey="receiver_id">
+		<column name="receiver_id" field="receiver_id" title="receiver_id.label" class="grid2of10 column"></column>
+		<column name="receiver_des" field="receiver_des" title="receiver_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

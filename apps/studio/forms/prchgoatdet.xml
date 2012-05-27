@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="prchgoatdet" title="prchgoatdet.label" primarykey="prchgoatdet_id">
+	<field name="prchgoathead_id" type="int" length="11">
+		<element name="prchgoathead_id" type="select" label="prchgoathead_id.label" placeholder="prchgoathead_id.placeholder" lookup="lkpprchgoathead" display="prchgoathead_des" value="prchgoathead_id"></element>
+	</field>
+	<field name="goat_type" type="int" length="11">
+		<element name="goat_type" type="text" label="goat_type.label" placeholder="goat_type.placeholder"></element>
+	</field>
+	<field name="goat_sex" type="int" length="11">
+		<element name="goat_sex" type="text" label="goat_sex.label" placeholder="goat_sex.placeholder"></element>
+	</field>
+	<field name="goat_breed" type="int" length="11">
+		<element name="goat_breed" type="text" label="goat_breed.label" placeholder="goat_breed.placeholder"></element>
+	</field>
+	<field name="prch_price" type="decimal" length="11" precision="3">
+		<element name="prch_price" type="text" label="prch_price.label" placeholder="prch_price.placeholder"></element>
+	</field>
+	<field name="prch_source" type="int" length="11">
+		<element name="prch_source" type="text" label="prch_source.label" placeholder="prch_source.placeholder"></element>
+	</field>
+	<field name="animal_condition" type="int" length="11">
+		<element name="animal_condition" type="text" label="animal_condition.label" placeholder="animal_condition.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

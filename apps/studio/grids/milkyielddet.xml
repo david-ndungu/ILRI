@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="milkyielddet" title="milkyielddet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>milkyielddet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`milkyielddet_id` = %d</search>
+	</records>
+	<columns primarykey="milkyielddet_id">
+		<column name="milkyielddet_id" field="milkyielddet_id" title="milkyielddet_id.label" class="grid2of10 column"></column>
+		<column name="milkyieldhead_id" field="milkyieldhead_id" title="milkyieldhead_id.label" class="grid2of10 column"></column>
+		<column name="record_date" field="record_date" title="record_date.label" class="grid2of10 column"></column>
+		<column name="yield_qty" field="yield_qty" title="yield_qty.label" class="grid2of10 column"></column>
+		<column name="total_consumed" field="total_consumed" title="total_consumed.label" class="grid2of10 column"></column>
+		<column name="total_sold" field="total_sold" title="total_sold.label" class="grid2of10 column"></column>
+		<column name="where_sold" field="where_sold" title="where_sold.label" class="grid2of10 column"></column>
+		<column name="sale_price" field="sale_price" title="sale_price.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

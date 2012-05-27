@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkptreattype" title="lkptreattype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>treattype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`treattype_id` = %d</search>
+	</records>
+	<columns primarykey="treattype_id">
+		<column name="treattype_id" field="treattype_id" title="treattype_id.label" class="grid2of10 column"></column>
+		<column name="treattype_des" field="treattype_des" title="treattype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

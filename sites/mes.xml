@@ -66,7 +66,7 @@
 	        <user>everyone</user>
 	    </access>
 	</portal>
-	<portal type="html" template="dashboard.xsl">
+	<portal type="html" template="panel.xsl">
 	    <navigation group="primary" parent="root" name="dashboard" uri="/" label="dashboard.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
@@ -81,7 +81,7 @@
             <role>viewer</role>
         </access>	    	    
 	</portal>
-	<portal type="html" template="dashboard.xsl">
+	<portal type="html" template="panel.xsl">
 	    <navigation group="primary" parent="root" name="administration" uri="/administration" label="administration.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
@@ -92,7 +92,7 @@
             <role>administrator</role>
         </access>	    	    
 	</portal>
-	<portal type="html" template="dashboard.xsl">
+	<portal type="html" template="panel.xsl">
 	    <navigation group="primary" parent="administration" name="users" uri="/users" label="users.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
@@ -103,7 +103,8 @@
             <role>administrator</role>
         </access>	    	    
 	</portal>
-	<portal type="html" template="dashboard.xsl">
+	
+	<portal type="html" template="panel.xsl">
 	    <navigation group="primary" parent="root" name="maintenance" uri="/maintenance" label="maintenance.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
@@ -114,7 +115,426 @@
             <role>administrator</role>
         </access>	    	    
 	</portal>
-	<portal type="html" template="dashboard.xsl">
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpaccepttest" uri="/studio/grid/lkpaccepttest" label="lkpaccepttest.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpanimalcond" uri="/studio/grid/lkpanimalcond" label="lkpanimalcond.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpassetcond" uri="/studio/grid/lkpassetcond" label="lkpassetcond.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpcommreceiver" uri="/studio/grid/lkpcommreceiver" label="lkpcommreceiver.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpcommtype" uri="/studio/grid/lkpcommtype" label="lkpcommtype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>	
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpconstype" uri="/studio/grid/lkpconstype" label="lkpconstype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpcvvariety" uri="/studio/grid/lkpcvvariety" label="lkpcvvariety.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpdeathcause" uri="/studio/grid/lkpdeathcause" label="lkpdeathcause.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpdissign" uri="/studio/grid/lkpdissign" label="lkpdissign.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpdistrict" uri="/studio/grid/lkpdistrict" label="lkpdistrict.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpextmat" uri="/studio/grid/lkpextmat" label="lkpextmat.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpfeedsource" uri="/studio/grid/lkpfeedsource" label="lkpfeedsource.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpfeedtype" uri="/studio/grid/lkpfeedtype" label="lkpfeedtype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpfloortype" uri="/studio/grid/lkpfloortype" label="lkpfloortype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpgenaccept" uri="/studio/grid/lkpgenaccept" label="lkpgenaccept.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpgender" uri="/studio/grid/lkpgender" label="lkpgender.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpgoatbreed" uri="/studio/grid/lkpgoatbreed" label="lkpgoatbreed.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpgoattype" uri="/studio/grid/lkpgoattype" label="lkpgoattype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpkidtype" uri="/studio/grid/lkpkidtype" label="lkpkidtype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpleadership" uri="/studio/grid/lkpleadership" label="lkpleadership.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpmedsource" uri="/studio/grid/lkpmedsource" label="lkpmedsource.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpmeetintervals" uri="/studio/grid/lkpmeetintervals" label="lkpmeetintervals.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpperiod" uri="/studio/grid/lkpperiod" label="lkpperiod.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkppest" uri="/studio/grid/lkppest" label="lkppest.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpplotsunit" uri="/studio/grid/lkpplotsunit" label="lkpplotsunit.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpposition" uri="/studio/grid/lkpposition" label="lkpposition.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpprchsource" uri="/studio/grid/lkpprchsource" label="lkpprchsource.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkprooftype" uri="/studio/grid/lkprooftype" label="lkprooftype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpsaleoutlet" uri="/studio/grid/lkpsaleoutlet" label="lkpsaleoutlet.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpsaletype" uri="/studio/grid/lkpsaletype" label="lkpsaletype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpsampletype" uri="/studio/grid/lkpsampletype" label="lkpsampletype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpsppartsold" uri="/studio/grid/lkpsppartsold" label="lkpsppartsold.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpspvariety" uri="/studio/grid/lkpspvariety" label="lkpspvariety.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkptreattype" uri="/studio/grid/lkptreattype" label="lkptreattype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkptubergrow" uri="/studio/grid/lkptubergrow" label="lkptubergrow.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpvillage" uri="/studio/grid/lkpvillage" label="lkpvillage.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpwalltype" uri="/studio/grid/lkpwalltype" label="lkpwalltype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+	<portal type="raw">
+	    <navigation group="primary" parent="maintenance" name="lkpyieldtype" uri="/studio/grid/lkpyieldtype" label="lkpyieldtype.label"></navigation>
+	    <portlet module="studio" controller="GridController">
+	        <access>
+	            <role>administrator</role>
+	        </access>
+	    </portlet>
+        <access>
+            <role>administrator</role>
+        </access>	    	    
+	</portal>
+																									
+	<portal type="html" template="panel.xsl">
 	    <navigation group="primary" parent="root" name="content" uri="/content" label="content.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
@@ -140,7 +560,7 @@
             <role>editor</role>
         </access>	    	    
 	</portal>
-	<portal type="html" template="dashboard.xsl">
+	<portal type="html" template="panel.xsl">
 	    <navigation group="primary" parent="root" name="statistics" uri="/statistics" label="statistics.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
@@ -155,7 +575,7 @@
             <role>viewer</role>
         </access>	    	    
 	</portal>
-	<portal type="html" template="dashboard.xsl">
+	<portal type="html" template="panel.xsl">
 	    <navigation group="primary" parent="root" name="settings" uri="/settings" label="settings.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>

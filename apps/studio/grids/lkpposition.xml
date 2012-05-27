@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpposition" title="lkpposition.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>position_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`position_id` = %d</search>
+	</records>
+	<columns primarykey="position_id">
+		<column name="position_id" field="position_id" title="position_id.label" class="grid2of10 column"></column>
+		<column name="position_des" field="position_des" title="position_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

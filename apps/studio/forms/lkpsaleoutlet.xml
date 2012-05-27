@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpsaleoutlet" title="lkpsaleoutlet.label" primarykey="saleoutlet_id">
+	<field name="saleoutlet_des" type="varchar" length="45">
+		<element name="saleoutlet_des" type="text" label="saleoutlet_des.label" placeholder="saleoutlet_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="breedgoatsdet" title="breedgoatsdet.label" primarykey="breedgoatsdet_id">
+	<field name="breedgoatshead_id" type="int" length="11">
+		<element name="breedgoatshead_id" type="select" label="breedgoatshead_id.label" placeholder="breedgoatshead_id.placeholder" lookup="lkpbreedgoatshead" display="breedgoatshead_des" value="breedgoatshead_id"></element>
+	</field>
+	<field name="farmer_name" type="varchar" length="120">
+		<element name="farmer_name" type="text" label="farmer_name.label" placeholder="farmer_name.placeholder"></element>
+	</field>
+	<field name="farmer_gender" type="int" length="11">
+		<element name="farmer_gender" type="text" label="farmer_gender.label" placeholder="farmer_gender.placeholder"></element>
+	</field>
+	<field name="num_dam" type="int" length="11">
+		<element name="num_dam" type="text" label="num_dam.label" placeholder="num_dam.placeholder"></element>
+	</field>
+	<field name="dam_breed" type="int" length="11">
+		<element name="dam_breed" type="text" label="dam_breed.label" placeholder="dam_breed.placeholder"></element>
+	</field>
+	<field name="dam_age" type="int" length="11">
+		<element name="dam_age" type="text" label="dam_age.label" placeholder="dam_age.placeholder"></element>
+	</field>
+	<field name="service_date" type="date">
+		<element name="service_date" type="text" label="service_date.label" placeholder="service_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="num_sire" type="int" length="11">
+		<element name="num_sire" type="text" label="num_sire.label" placeholder="num_sire.placeholder"></element>
+	</field>
+	<field name="kidding_date" type="date">
+		<element name="kidding_date" type="text" label="kidding_date.label" placeholder="kidding_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="kidtype_id" type="int" length="11">
+		<element name="kidtype_id" type="select" label="kidtype_id.label" placeholder="kidtype_id.placeholder" lookup="lkpkidtype" display="kidtype_des" value="kidtype_id"></element>
+	</field>
+	<field name="kid_sex" type="int" length="11">
+		<element name="kid_sex" type="text" label="kid_sex.label" placeholder="kid_sex.placeholder"></element>
+	</field>
+	<field name="birth_weight" type="decimal" length="11" precision="3">
+		<element name="birth_weight" type="text" label="birth_weight.label" placeholder="birth_weight.placeholder"></element>
+	</field>
+	<field name="nextserv_date" type="date">
+		<element name="nextserv_date" type="text" label="nextserv_date.label" placeholder="nextserv_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

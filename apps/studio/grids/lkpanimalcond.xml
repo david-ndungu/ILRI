@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpanimalcond" title="lkpanimalcond.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>animalcond_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`animalcond_id` = %d</search>
+	</records>
+	<columns primarykey="animalcond_id">
+		<column name="animalcond_id" field="animalcond_id" title="animalcond_id.label" class="grid2of10 column"></column>
+		<column name="animalcond_des" field="animalcond_des" title="animalcond_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

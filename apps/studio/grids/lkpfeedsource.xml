@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpfeedsource" title="lkpfeedsource.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>feedsource_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`feedsource_id` = %d</search>
+	</records>
+	<columns primarykey="feedsource_id">
+		<column name="feedsource_id" field="feedsource_id" title="feedsource_id.label" class="grid2of10 column"></column>
+		<column name="feedsource_des" field="feedsource_des" title="feedsource_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

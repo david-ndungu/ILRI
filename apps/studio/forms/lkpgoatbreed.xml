@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpgoatbreed" title="lkpgoatbreed.label" primarykey="goatbreed_id">
+	<field name="goatbreed_de" type="varchar" length="45">
+		<element name="goatbreed_de" type="text" label="goatbreed_de.label" placeholder="goatbreed_de.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

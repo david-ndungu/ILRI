@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpfeedsource" title="lkpfeedsource.label" primarykey="feedsource_id">
+	<field name="feedsource_des" type="varchar" length="45">
+		<element name="feedsource_des" type="text" label="feedsource_des.label" placeholder="feedsource_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

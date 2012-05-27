@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="communicationdet" title="communicationdet.label" primarykey="communicationdet_id">
+	<field name="communicationhead_id" type="int" length="11">
+		<element name="communicationhead_id" type="select" label="communicationhead_id.label" placeholder="communicationhead_id.placeholder" lookup="lkpcommunicationhead" display="communicationhead_des" value="communicationhead_id"></element>
+	</field>
+	<field name="communication_item" type="varchar" length="120">
+		<element name="communication_item" type="text" label="communication_item.label" placeholder="communication_item.placeholder"></element>
+	</field>
+	<field name="communication_qty" type="decimal" length="11" precision="3">
+		<element name="communication_qty" type="text" label="communication_qty.label" placeholder="communication_qty.placeholder"></element>
+	</field>
+	<field name="commtype_id" type="int" length="11">
+		<element name="commtype_id" type="select" label="commtype_id.label" placeholder="commtype_id.placeholder" lookup="lkpcommtype" display="commtype_des" value="commtype_id"></element>
+	</field>
+	<field name="communication_date" type="date">
+		<element name="communication_date" type="text" label="communication_date.label" placeholder="communication_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="receiver_id" type="int" length="11">
+		<element name="receiver_id" type="select" label="receiver_id.label" placeholder="receiver_id.placeholder" lookup="lkpreceiver" display="receiver_des" value="receiver_id"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

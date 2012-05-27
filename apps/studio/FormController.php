@@ -15,10 +15,22 @@ class FormController extends \apps\Application {
 	}
 
 	public function doPost(){
+		if(!array_key_exists('command', $_POST)) return;
 		try {
 			require_once("models/FormModel.php");
 			$form = new FormModel($this);
-			return $form->createRecord();
+			switch(trim($_POST['command'])){
+				case "insert":
+					return $form->createRecord();
+					break;
+				case "update":
+					return $form->updateRecord();
+					break;
+				case "select":
+					return $form->selectRecord();
+					break;
+			}
+			
 		}catch(\apps\ApplicationException $e){
 			$this->onError($e);
 		}

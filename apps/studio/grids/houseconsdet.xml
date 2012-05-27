@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="houseconsdet" title="houseconsdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>houseconsdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`houseconsdet_id` = %d</search>
+	</records>
+	<columns primarykey="houseconsdet_id">
+		<column name="houseconsdet_id" field="houseconsdet_id" title="houseconsdet_id.label" class="grid2of10 column"></column>
+		<column name="houseconshead_id" field="houseconshead_id" title="houseconshead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="farmer_gender" field="farmer_gender" title="farmer_gender.label" class="grid2of10 column"></column>
+		<column name="constype_id" field="constype_id" title="constype_id.label" class="grid2of10 column"></column>
+		<column name="floortype_id" field="floortype_id" title="floortype_id.label" class="grid2of10 column"></column>
+		<column name="floor_cost" field="floor_cost" title="floor_cost.label" class="grid2of10 column"></column>
+		<column name="roottype_id" field="roottype_id" title="roottype_id.label" class="grid2of10 column"></column>
+		<column name="roof_cost" field="roof_cost" title="roof_cost.label" class="grid2of10 column"></column>
+		<column name="walltype_id" field="walltype_id" title="walltype_id.label" class="grid2of10 column"></column>
+		<column name="wall_cost" field="wall_cost" title="wall_cost.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

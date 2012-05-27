@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="goatprodgrpdet" title="goatprodgrpdet.label" primarykey="goatprodgrpdet_id">
+	<field name="goatprodhead_id" type="int" length="11">
+		<element name="goatprodhead_id" type="select" label="goatprodhead_id.label" placeholder="goatprodhead_id.placeholder" lookup="lkpgoatprodhead" display="goatprodhead_des" value="goatprodhead_id"></element>
+	</field>
+	<field name="member_name" type="varchar" length="120">
+		<element name="member_name" type="text" label="member_name.label" placeholder="member_name.placeholder"></element>
+	</field>
+	<field name="gender_id" type="int" length="11">
+		<element name="gender_id" type="select" label="gender_id.label" placeholder="gender_id.placeholder" lookup="lkpgender" display="gender_des" value="gender_id"></element>
+	</field>
+	<field name="leadership_id" type="int" length="11">
+		<element name="leadership_id" type="select" label="leadership_id.label" placeholder="leadership_id.placeholder" lookup="lkpleadership" display="leadership_des" value="leadership_id"></element>
+	</field>
+	<field name="meetintervals" type="int" length="11">
+		<element name="meetintervals" type="text" label="meetintervals.label" placeholder="meetintervals.placeholder"></element>
+	</field>
+	<field name="feepaid" type="tinyint" length="1">
+		<element name="feepaid" type="text" label="feepaid.label" placeholder="feepaid.placeholder"></element>
+	</field>
+	<field name="howmuch" type="decimal" length="11" precision="3">
+		<element name="howmuch" type="text" label="howmuch.label" placeholder="howmuch.placeholder"></element>
+	</field>
+	<field name="receivedgoat" type="tinyint" length="1">
+		<element name="receivedgoat" type="text" label="receivedgoat.label" placeholder="receivedgoat.placeholder"></element>
+	</field>
+	<field name="tubergrow" type="int" length="11">
+		<element name="tubergrow" type="text" label="tubergrow.label" placeholder="tubergrow.placeholder"></element>
+	</field>
+	<field name="feeding" type="tinyint" length="1">
+		<element name="feeding" type="text" label="feeding.label" placeholder="feeding.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

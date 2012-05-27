@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpdissign" title="lkpdissign.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>dissign_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`dissign_id` = %d</search>
+	</records>
+	<columns primarykey="dissign_id">
+		<column name="dissign_id" field="dissign_id" title="dissign_id.label" class="grid2of10 column"></column>
+		<column name="dissign_des" field="dissign_des" title="dissign_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

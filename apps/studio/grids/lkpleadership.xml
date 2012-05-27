@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpleadership" title="lkpleadership.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>leadership_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`leadership_id` = %d</search>
+	</records>
+	<columns primarykey="leadership_id">
+		<column name="leadership_id" field="leadership_id" title="leadership_id.label" class="grid2of10 column"></column>
+		<column name="leadership_des" field="leadership_des" title="leadership_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

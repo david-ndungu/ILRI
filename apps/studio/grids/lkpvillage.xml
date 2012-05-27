@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpvillage" title="lkpvillage.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>village_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`village_id` = %d</search>
+	</records>
+	<columns primarykey="village_id">
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_des" field="village_des" title="village_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

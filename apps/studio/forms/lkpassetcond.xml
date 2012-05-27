@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpassetcond" title="lkpassetcond.label" primarykey="assetcond_id">
+	<field name="assetcond_des" type="varchar" length="45">
+		<element name="assetcond_des" type="text" label="assetcond_des.label" placeholder="assetcond_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

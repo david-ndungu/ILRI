@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpdistrict" title="lkpdistrict.label" primarykey="district_id">
+	<field name="district_des" type="varchar" length="45">
+		<element name="district_des" type="text" label="district_des.label" placeholder="district_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

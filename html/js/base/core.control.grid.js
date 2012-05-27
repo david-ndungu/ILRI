@@ -141,19 +141,17 @@ core.control.extend('grid', function(){
 				var that = this;
 				var rows = $('.gridContent .gridContentRecord', this.html);
 				rows.unbind('mousedown').mousedown(function(event){
-					if($('form', this).length) return;
-					var primarykey = parseInt($(this).attr('title'));
-					var record = that.findRecord(primarykey);
-					if(record){
-						that.form.setRecord(record);
-						that.form.populateRecord();
+					$('.gridContent .gridContentRecord').not(this).find('form').slideUp();
+					var openForm = $('form', this);
+					if(openForm.length) {
+						openForm.slideDown();
+					}else{
+						var primarykey = parseInt($(this).attr('title'));
+						that.form.setPrimaryKey(primarykey);
 						var form = that.form.getHTML();
 						$('.column:last-child', this).after(form);
 						form.slideDown();
 					}
-					$('.gridContent .gridContentRecord').not(this).find('form').slideUp(function(){
-						$(this).remove();
-					});
 				});
 			},
 			findRecord: function(primarykey){

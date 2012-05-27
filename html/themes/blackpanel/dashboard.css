@@ -167,7 +167,7 @@
 	display: block;
 }
 
-.primaryContent label span {
+.primaryContent label span, .gridContentRecord label span{
 	width:18%;
 	margin:0 1%;
 }
@@ -176,12 +176,17 @@ label[name="submit"] {
 	margin:0 0 0 21%;
 }
 
-.primaryContent input[type="text"], .primaryContent textarea,  .primaryContent input[type="password"] {
+.primaryContent input[type="text"], 
+.gridContentRecord input[type="text"], 
+.primaryContent textarea, 
+.gridContentRecord textarea, 
+.primaryContent input[type="password"]
+.gridContentRecord input[type="password"] {
 	width:74%;
 	margin:0 1%;
 }
 
-input[type="text"].datepicker, .primaryContent select {
+input[type="text"].datepicker, .primaryContent select, .gridContentRecord select {
 	width:18%;
 	margin:0 1%;
 }
@@ -257,6 +262,7 @@ input[type="text"].datepicker, .primaryContent select {
 }
 
 .gridContentRecord {
+	cursor:text;
 	border-bottom: 1px solid #F0F0F0;
 }
 

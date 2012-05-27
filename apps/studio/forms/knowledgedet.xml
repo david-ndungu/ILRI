@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="knowledgedet" title="knowledgedet.label" primarykey="knowledgedet_id">
+	<field name="knowledgehead_id" type="int" length="11">
+		<element name="knowledgehead_id" type="select" label="knowledgehead_id.label" placeholder="knowledgehead_id.placeholder" lookup="lkpknowledgehead" display="knowledgehead_des" value="knowledgehead_id"></element>
+	</field>
+	<field name="farmer_name" type="varchar" length="120">
+		<element name="farmer_name" type="text" label="farmer_name.label" placeholder="farmer_name.placeholder"></element>
+	</field>
+	<field name="farmer_gender" type="int" length="11">
+		<element name="farmer_gender" type="text" label="farmer_gender.label" placeholder="farmer_gender.placeholder"></element>
+	</field>
+	<field name="disease_types" type="varchar" length="255">
+		<element name="disease_types" type="text" label="disease_types.label" placeholder="disease_types.placeholder"></element>
+	</field>
+	<field name="treatment_used" type="int" length="11">
+		<element name="treatment_used" type="text" label="treatment_used.label" placeholder="treatment_used.placeholder"></element>
+	</field>
+	<field name="medicine_used" type="varchar" length="120">
+		<element name="medicine_used" type="text" label="medicine_used.label" placeholder="medicine_used.placeholder"></element>
+	</field>
+	<field name="medicine_source" type="int" length="11">
+		<element name="medicine_source" type="text" label="medicine_source.label" placeholder="medicine_source.placeholder"></element>
+	</field>
+	<field name="processing_type" type="varchar" length="120">
+		<element name="processing_type" type="text" label="processing_type.label" placeholder="processing_type.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

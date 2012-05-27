@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpfloortype" title="lkpfloortype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>floortype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`floortype_id` = %d</search>
+	</records>
+	<columns primarykey="floortype_id">
+		<column name="floortype_id" field="floortype_id" title="floortype_id.label" class="grid2of10 column"></column>
+		<column name="floortype_des" field="floortype_des" title="floortype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="cassavademodet" title="cassavademodet.label" primarykey="cassavademodet_id">
+	<field name="cassavademohead_id" type="int" length="11">
+		<element name="cassavademohead_id" type="select" label="cassavademohead_id.label" placeholder="cassavademohead_id.placeholder" lookup="lkpcassavademohead" display="cassavademohead_des" value="cassavademohead_id"></element>
+	</field>
+	<field name="variety_id" type="int" length="11">
+		<element name="variety_id" type="select" label="variety_id.label" placeholder="variety_id.placeholder" lookup="lkpvariety" display="variety_des" value="variety_id"></element>
+	</field>
+	<field name="plot_size" type="decimal" length="7" precision="3">
+		<element name="plot_size" type="text" label="plot_size.label" placeholder="plot_size.placeholder"></element>
+	</field>
+	<field name="plotsunit_id" type="int" length="11">
+		<element name="plotsunit_id" type="select" label="plotsunit_id.label" placeholder="plotsunit_id.placeholder" lookup="lkpplotsunit" display="plotsunit_des" value="plotsunit_id"></element>
+	</field>
+	<field name="num_planted" type="int" length="11">
+		<element name="num_planted" type="text" label="num_planted.label" placeholder="num_planted.placeholder"></element>
+	</field>
+	<field name="num_germinated" type="int" length="11">
+		<element name="num_germinated" type="text" label="num_germinated.label" placeholder="num_germinated.placeholder"></element>
+	</field>
+	<field name="date_planted" type="date">
+		<element name="date_planted" type="text" label="date_planted.label" placeholder="date_planted.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="num_weedings" type="int" length="11">
+		<element name="num_weedings" type="text" label="num_weedings.label" placeholder="num_weedings.placeholder"></element>
+	</field>
+	<field name="planting_height" type="decimal" length="7" precision="3">
+		<element name="planting_height" type="text" label="planting_height.label" placeholder="planting_height.placeholder"></element>
+	</field>
+	<field name="harvest_date" type="date">
+		<element name="harvest_date" type="text" label="harvest_date.label" placeholder="harvest_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="amount_harvest" type="decimal" length="11" precision="3">
+		<element name="amount_harvest" type="text" label="amount_harvest.label" placeholder="amount_harvest.placeholder"></element>
+	</field>
+	<field name="num_distributed" type="int" length="11">
+		<element name="num_distributed" type="text" label="num_distributed.label" placeholder="num_distributed.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="goatprodgrphead" title="goatprodgrphead.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>goatprodgrphead_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`goatprodgrphead_id` = %d</search>
+	</records>
+	<columns primarykey="goatprodgrphead_id">
+		<column name="goatprodgrphead_id" field="goatprodgrphead_id" title="goatprodgrphead_id.label" class="grid2of10 column"></column>
+		<column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="group_name" field="group_name" title="group_name.label" class="grid2of10 column"></column>
+		<column name="group_obj" field="group_obj" title="group_obj.label" class="grid2of10 column"></column>
+		<column name="ward_name" field="ward_name" title="ward_name.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

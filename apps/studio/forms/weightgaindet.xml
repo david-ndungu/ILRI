@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="weightgaindet" title="weightgaindet.label" primarykey="weightgaindet_id">
+	<field name="weightgainhead_id" type="int" length="11">
+		<element name="weightgainhead_id" type="select" label="weightgainhead_id.label" placeholder="weightgainhead_id.placeholder" lookup="lkpweightgainhead" display="weightgainhead_des" value="weightgainhead_id"></element>
+	</field>
+	<field name="kid_number" type="int" length="11">
+		<element name="kid_number" type="text" label="kid_number.label" placeholder="kid_number.placeholder"></element>
+	</field>
+	<field name="period_id" type="int" length="11">
+		<element name="period_id" type="select" label="period_id.label" placeholder="period_id.placeholder" lookup="lkpperiod" display="period_des" value="period_id"></element>
+	</field>
+	<field name="kid_weight" type="decimal" length="11" precision="3">
+		<element name="kid_weight" type="text" label="kid_weight.label" placeholder="kid_weight.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

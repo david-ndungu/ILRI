@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpkidtype" title="lkpkidtype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>kidtype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`kidtype_id` = %d</search>
+	</records>
+	<columns primarykey="kidtype_id">
+		<column name="kidtype_id" field="kidtype_id" title="kidtype_id.label" class="grid2of10 column"></column>
+		<column name="kidtype_des" field="kidtype_des" title="kidtype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

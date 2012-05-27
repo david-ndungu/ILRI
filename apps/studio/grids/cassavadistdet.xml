@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="cassavadistdet" title="cassavadistdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>cassavadistdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`cassavadistdet_id` = %d</search>
+	</records>
+	<columns primarykey="cassavadistdet_id">
+		<column name="cassavadistdet_id" field="cassavadistdet_id" title="cassavadistdet_id.label" class="grid2of10 column"></column>
+		<column name="cassavadisthead_id" field="cassavadisthead_id" title="cassavadisthead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="farmer_gender" field="farmer_gender" title="farmer_gender.label" class="grid2of10 column"></column>
+		<column name="village_name" field="village_name" title="village_name.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

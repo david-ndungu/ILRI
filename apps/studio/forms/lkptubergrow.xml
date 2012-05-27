@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkptubergrow" title="lkptubergrow.label" primarykey="tubergrow_id">
+	<field name="tubergrow_des" type="varchar" length="45">
+		<element name="tubergrow_des" type="text" label="tubergrow_des.label" placeholder="tubergrow_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

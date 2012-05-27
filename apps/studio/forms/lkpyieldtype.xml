@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpyieldtype" title="lkpyieldtype.label" primarykey="yieldtype_id">
+	<field name="yieldtype_des" type="varchar" length="45">
+		<element name="yieldtype_des" type="text" label="yieldtype_des.label" placeholder="yieldtype_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

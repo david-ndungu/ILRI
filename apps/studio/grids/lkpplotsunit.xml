@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpplotsunit" title="lkpplotsunit.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>plotsunit_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`plotsunit_id` = %d</search>
+	</records>
+	<columns primarykey="plotsunit_id">
+		<column name="plotsunit_id" field="plotsunit_id" title="plotsunit_id.label" class="grid2of10 column"></column>
+		<column name="plotsunit_des" field="plotsunit_des" title="plotsunit_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

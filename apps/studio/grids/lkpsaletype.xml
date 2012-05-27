@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpsaletype" title="lkpsaletype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>saletype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`saletype_id` = %d</search>
+	</records>
+	<columns primarykey="saletype_id">
+		<column name="saletype_id" field="saletype_id" title="saletype_id.label" class="grid2of10 column"></column>
+		<column name="saletype_des" field="saletype_des" title="saletype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

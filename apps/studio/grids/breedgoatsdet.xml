@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="breedgoatsdet" title="breedgoatsdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>breedgoatsdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`breedgoatsdet_id` = %d</search>
+	</records>
+	<columns primarykey="breedgoatsdet_id">
+		<column name="breedgoatsdet_id" field="breedgoatsdet_id" title="breedgoatsdet_id.label" class="grid2of10 column"></column>
+		<column name="breedgoatshead_id" field="breedgoatshead_id" title="breedgoatshead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="farmer_gender" field="farmer_gender" title="farmer_gender.label" class="grid2of10 column"></column>
+		<column name="num_dam" field="num_dam" title="num_dam.label" class="grid2of10 column"></column>
+		<column name="dam_breed" field="dam_breed" title="dam_breed.label" class="grid2of10 column"></column>
+		<column name="dam_age" field="dam_age" title="dam_age.label" class="grid2of10 column"></column>
+		<column name="service_date" field="service_date" title="service_date.label" class="grid2of10 column"></column>
+		<column name="num_sire" field="num_sire" title="num_sire.label" class="grid2of10 column"></column>
+		<column name="kidding_date" field="kidding_date" title="kidding_date.label" class="grid2of10 column"></column>
+		<column name="kidtype_id" field="kidtype_id" title="kidtype_id.label" class="grid2of10 column"></column>
+		<column name="kid_sex" field="kid_sex" title="kid_sex.label" class="grid2of10 column"></column>
+		<column name="birth_weight" field="birth_weight" title="birth_weight.label" class="grid2of10 column"></column>
+		<column name="nextserv_date" field="nextserv_date" title="nextserv_date.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

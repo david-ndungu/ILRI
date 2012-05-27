@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="breedgoatshead" title="breedgoatshead.label" primarykey="breedgoatshead_id">
+	<field name="upload_date" type="varchar" length="45">
+		<element name="upload_date" type="text" label="upload_date.label" placeholder="upload_date.placeholder"></element>
+	</field>
+	<field name="district_id" type="int" length="11">
+		<element name="district_id" type="select" label="district_id.label" placeholder="district_id.placeholder" lookup="lkpdistrict" display="district_des" value="district_id"></element>
+	</field>
+	<field name="village_id" type="int" length="11">
+		<element name="village_id" type="select" label="village_id.label" placeholder="village_id.placeholder" lookup="lkpvillage" display="village_des" value="village_id"></element>
+	</field>
+	<field name="ward_name" type="varchar" length="45">
+		<element name="ward_name" type="text" label="ward_name.label" placeholder="ward_name.placeholder"></element>
+	</field>
+	<field name="farmer_gender" type="int" length="11">
+		<element name="farmer_gender" type="text" label="farmer_gender.label" placeholder="farmer_gender.placeholder"></element>
+	</field>
+	<field name="farmer_name" type="varchar" length="120">
+		<element name="farmer_name" type="text" label="farmer_name.label" placeholder="farmer_name.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

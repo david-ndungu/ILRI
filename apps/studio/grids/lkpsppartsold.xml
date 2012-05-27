@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpsppartsold" title="lkpsppartsold.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>sppartsold_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`sppartsold_id` = %d</search>
+	</records>
+	<columns primarykey="sppartsold_id">
+		<column name="sppartsold_id" field="sppartsold_id" title="sppartsold_id.label" class="grid2of10 column"></column>
+		<column name="sppartsold_des" field="sppartsold_des" title="sppartsold_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

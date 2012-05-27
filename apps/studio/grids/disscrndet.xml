@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="disscrndet" title="disscrndet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>disscrndet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`disscrndet_id` = %d</search>
+	</records>
+	<columns primarykey="disscrndet_id">
+		<column name="disscrndet_id" field="disscrndet_id" title="disscrndet_id.label" class="grid2of10 column"></column>
+		<column name="disscrnhead_id" field="disscrnhead_id" title="disscrnhead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="farmer_gender" field="farmer_gender" title="farmer_gender.label" class="grid2of10 column"></column>
+		<column name="num_goats" field="num_goats" title="num_goats.label" class="grid2of10 column"></column>
+		<column name="disease_signs" field="disease_signs" title="disease_signs.label" class="grid2of10 column"></column>
+		<column name="signs_duration" field="signs_duration" title="signs_duration.label" class="grid2of10 column"></column>
+		<column name="death_number" field="death_number" title="death_number.label" class="grid2of10 column"></column>
+		<column name="death_cause" field="death_cause" title="death_cause.label" class="grid2of10 column"></column>
+		<column name="treatment_type" field="treatment_type" title="treatment_type.label" class="grid2of10 column"></column>
+		<column name="treatment_person" field="treatment_person" title="treatment_person.label" class="grid2of10 column"></column>
+		<column name="sample_type" field="sample_type" title="sample_type.label" class="grid2of10 column"></column>
+		<column name="num_samples" field="num_samples" title="num_samples.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

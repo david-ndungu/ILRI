@@ -85,7 +85,6 @@ class Assembly {
 			$theme = $settings['theme'];
 			$xslt = new \XsltProcessor();
 			$xslt->importStylesheet(simplexml_load_file("$base/themes/$theme/$template"));
-// 			print_r($this->toXML());exit;
 			$data = simplexml_load_string($this->toXML());
 			$html = $xslt->transformToXML($data);
 			return $html;

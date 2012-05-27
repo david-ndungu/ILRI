@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="fielddemodet" title="fielddemodet.label" primarykey="fielddemodet_id">
+	<field name="fielddemohead_id" type="int" length="11">
+		<element name="fielddemohead_id" type="select" label="fielddemohead_id.label" placeholder="fielddemohead_id.placeholder" lookup="lkpfielddemohead" display="fielddemohead_des" value="fielddemohead_id"></element>
+	</field>
+	<field name="fielddemo_date" type="date">
+		<element name="fielddemo_date" type="text" label="fielddemo_date.label" placeholder="fielddemo_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="participant_name" type="varchar" length="120">
+		<element name="participant_name" type="text" label="participant_name.label" placeholder="participant_name.placeholder"></element>
+	</field>
+	<field name="participant_village" type="varchar" length="120">
+		<element name="participant_village" type="text" label="participant_village.label" placeholder="participant_village.placeholder"></element>
+	</field>
+	<field name="participant_gender" type="int" length="11">
+		<element name="participant_gender" type="text" label="participant_gender.label" placeholder="participant_gender.placeholder"></element>
+	</field>
+	<field name="extension_materials" type="int" length="11">
+		<element name="extension_materials" type="text" label="extension_materials.label" placeholder="extension_materials.placeholder"></element>
+	</field>
+	<field name="number_given" type="decimal" length="7" precision="3">
+		<element name="number_given" type="text" label="number_given.label" placeholder="number_given.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

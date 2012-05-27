@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="milkyieldhead" title="milkyieldhead.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>milkyieldhead_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`milkyieldhead_id` = %d</search>
+	</records>
+	<columns primarykey="milkyieldhead_id">
+		<column name="milkyieldhead_id" field="milkyieldhead_id" title="milkyieldhead_id.label" class="grid2of10 column"></column>
+		<column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="ward_name" field="ward_name" title="ward_name.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="doe_number" field="doe_number" title="doe_number.label" class="grid2of10 column"></column>
+		<column name="total_doe" field="total_doe" title="total_doe.label" class="grid2of10 column"></column>
+		<column name="yield_date" field="yield_date" title="yield_date.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="swpmultipdet" title="swpmultipdet.label" primarykey="swpmultipdet_id">
+	<field name="swpmultiphead_id" type="int" length="11">
+		<element name="swpmultiphead_id" type="select" label="swpmultiphead_id.label" placeholder="swpmultiphead_id.placeholder" lookup="lkpswpmultiphead" display="swpmultiphead_des" value="swpmultiphead_id"></element>
+	</field>
+	<field name="plot_number" type="varchar" length="45">
+		<element name="plot_number" type="text" label="plot_number.label" placeholder="plot_number.placeholder"></element>
+	</field>
+	<field name="plot_size" type="decimal" length="7" precision="3">
+		<element name="plot_size" type="text" label="plot_size.label" placeholder="plot_size.placeholder"></element>
+	</field>
+	<field name="plotsunit_id" type="int" length="11">
+		<element name="plotsunit_id" type="select" label="plotsunit_id.label" placeholder="plotsunit_id.placeholder" lookup="lkpplotsunit" display="plotsunit_des" value="plotsunit_id"></element>
+	</field>
+	<field name="variety_id" type="int" length="11">
+		<element name="variety_id" type="select" label="variety_id.label" placeholder="variety_id.placeholder" lookup="lkpvariety" display="variety_des" value="variety_id"></element>
+	</field>
+	<field name="date_planted" type="date">
+		<element name="date_planted" type="text" label="date_planted.label" placeholder="date_planted.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="num_planted" type="int" length="11">
+		<element name="num_planted" type="text" label="num_planted.label" placeholder="num_planted.placeholder"></element>
+	</field>
+	<field name="num_germinated" type="int" length="11">
+		<element name="num_germinated" type="text" label="num_germinated.label" placeholder="num_germinated.placeholder"></element>
+	</field>
+	<field name="num_weedings" type="int" length="11">
+		<element name="num_weedings" type="text" label="num_weedings.label" placeholder="num_weedings.placeholder"></element>
+	</field>
+	<field name="number_planted" type="int" length="11">
+		<element name="number_planted" type="text" label="number_planted.label" placeholder="number_planted.placeholder"></element>
+	</field>
+	<field name="planting_height" type="decimal" length="11" precision="3">
+		<element name="planting_height" type="text" label="planting_height.label" placeholder="planting_height.placeholder"></element>
+	</field>
+	<field name="harvest_date" type="date">
+		<element name="harvest_date" type="text" label="harvest_date.label" placeholder="harvest_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="amount_harvest" type="decimal" length="11" precision="3">
+		<element name="amount_harvest" type="text" label="amount_harvest.label" placeholder="amount_harvest.placeholder"></element>
+	</field>
+	<field name="sppartsold_id" type="int" length="11">
+		<element name="sppartsold_id" type="select" label="sppartsold_id.label" placeholder="sppartsold_id.placeholder" lookup="lkpsppartsold" display="sppartsold_des" value="sppartsold_id"></element>
+	</field>
+	<field name="saletype_id" type="int" length="11">
+		<element name="saletype_id" type="select" label="saletype_id.label" placeholder="saletype_id.placeholder" lookup="lkpsaletype" display="saletype_des" value="saletype_id"></element>
+	</field>
+	<field name="num_sold" type="decimal" length="11" precision="3">
+		<element name="num_sold" type="text" label="num_sold.label" placeholder="num_sold.placeholder"></element>
+	</field>
+	<field name="num_distributed" type="decimal" length="11" precision="3">
+		<element name="num_distributed" type="text" label="num_distributed.label" placeholder="num_distributed.placeholder"></element>
+	</field>
+	<field name="sale_price" type="decimal" length="11" precision="3">
+		<element name="sale_price" type="text" label="sale_price.label" placeholder="sale_price.placeholder"></element>
+	</field>
+	<field name="saleoutlet" type="int" length="11">
+		<element name="saleoutlet" type="text" label="saleoutlet.label" placeholder="saleoutlet.placeholder"></element>
+	</field>
+	<field name="sold_qty" type="decimal" length="11" precision="3">
+		<element name="sold_qty" type="text" label="sold_qty.label" placeholder="sold_qty.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

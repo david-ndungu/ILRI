@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="prchgoatdet" title="prchgoatdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>prchgoatdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`prchgoatdet_id` = %d</search>
+	</records>
+	<columns primarykey="prchgoatdet_id">
+		<column name="prchgoatdet_id" field="prchgoatdet_id" title="prchgoatdet_id.label" class="grid2of10 column"></column>
+		<column name="prchgoathead_id" field="prchgoathead_id" title="prchgoathead_id.label" class="grid2of10 column"></column>
+		<column name="goat_type" field="goat_type" title="goat_type.label" class="grid2of10 column"></column>
+		<column name="goat_sex" field="goat_sex" title="goat_sex.label" class="grid2of10 column"></column>
+		<column name="goat_breed" field="goat_breed" title="goat_breed.label" class="grid2of10 column"></column>
+		<column name="prch_price" field="prch_price" title="prch_price.label" class="grid2of10 column"></column>
+		<column name="prch_source" field="prch_source" title="prch_source.label" class="grid2of10 column"></column>
+		<column name="animal_condition" field="animal_condition" title="animal_condition.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

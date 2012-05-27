@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkprooftype" title="lkprooftype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>rooftype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`rooftype_id` = %d</search>
+	</records>
+	<columns primarykey="rooftype_id">
+		<column name="rooftype_id" field="rooftype_id" title="rooftype_id.label" class="grid2of10 column"></column>
+		<column name="rooftype_des" field="rooftype_des" title="rooftype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

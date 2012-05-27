@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="attendancehead" title="attendancehead.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>attendancehead_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`attendancehead_id` = %d</search>
+	</records>
+	<columns primarykey="attendancehead_id">
+		<column name="attendancehead_id" field="attendancehead_id" title="attendancehead_id.label" class="grid2of10 column"></column>
+		<column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="subvillage_name" field="subvillage_name" title="subvillage_name.label" class="grid2of10 column"></column>
+		<column name="facilitator_name" field="facilitator_name" title="facilitator_name.label" class="grid2of10 column"></column>
+		<column name="venue_name" field="venue_name" title="venue_name.label" class="grid2of10 column"></column>
+		<column name="meeting_date" field="meeting_date" title="meeting_date.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

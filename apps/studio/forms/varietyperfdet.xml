@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="varietyperfdet" title="varietyperfdet.label" primarykey="varietyperfdet_id">
+	<field name="varietyperfhead_id" type="int" length="11">
+		<element name="varietyperfhead_id" type="select" label="varietyperfhead_id.label" placeholder="varietyperfhead_id.placeholder" lookup="lkpvarietyperfhead" display="varietyperfhead_des" value="varietyperfhead_id"></element>
+	</field>
+	<field name="farmer_name" type="varchar" length="120">
+		<element name="farmer_name" type="text" label="farmer_name.label" placeholder="farmer_name.placeholder"></element>
+	</field>
+	<field name="farmer_gender" type="int" length="11">
+		<element name="farmer_gender" type="text" label="farmer_gender.label" placeholder="farmer_gender.placeholder"></element>
+	</field>
+	<field name="plot_size" type="decimal" length="11" precision="3">
+		<element name="plot_size" type="text" label="plot_size.label" placeholder="plot_size.placeholder"></element>
+	</field>
+	<field name="plotsize_unit" type="int" length="11">
+		<element name="plotsize_unit" type="text" label="plotsize_unit.label" placeholder="plotsize_unit.placeholder"></element>
+	</field>
+	<field name="variety_type" type="int" length="11">
+		<element name="variety_type" type="text" label="variety_type.label" placeholder="variety_type.placeholder"></element>
+	</field>
+	<field name="planting_date" type="date">
+		<element name="planting_date" type="text" label="planting_date.label" placeholder="planting_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="num_planted" type="int" length="11">
+		<element name="num_planted" type="text" label="num_planted.label" placeholder="num_planted.placeholder"></element>
+	</field>
+	<field name="num_germinated" type="int" length="11">
+		<element name="num_germinated" type="text" label="num_germinated.label" placeholder="num_germinated.placeholder"></element>
+	</field>
+	<field name="num_weedings" type="int" length="11">
+		<element name="num_weedings" type="text" label="num_weedings.label" placeholder="num_weedings.placeholder"></element>
+	</field>
+	<field name="pest_id" type="int" length="11">
+		<element name="pest_id" type="select" label="pest_id.label" placeholder="pest_id.placeholder" lookup="lkppest" display="pest_des" value="pest_id"></element>
+	</field>
+	<field name="harvest_date" type="date">
+		<element name="harvest_date" type="text" label="harvest_date.label" placeholder="harvest_date.placeholder">
+<class>datepicker</class>
+</element>
+	</field>
+	<field name="yield_qty" type="decimal" length="11" precision="3">
+		<element name="yield_qty" type="text" label="yield_qty.label" placeholder="yield_qty.placeholder"></element>
+	</field>
+	<field name="weight_leaf" type="decimal" length="11" precision="3">
+		<element name="weight_leaf" type="text" label="weight_leaf.label" placeholder="weight_leaf.placeholder"></element>
+	</field>
+	<field name="accepttest_id" type="int" length="11">
+		<element name="accepttest_id" type="select" label="accepttest_id.label" placeholder="accepttest_id.placeholder" lookup="lkpaccepttest" display="accepttest_des" value="accepttest_id"></element>
+	</field>
+	<field name="acceptable" type="tinyint" length="1">
+		<element name="acceptable" type="text" label="acceptable.label" placeholder="acceptable.placeholder"></element>
+	</field>
+	<field name="genaccept_id" type="int" length="11">
+		<element name="genaccept_id" type="select" label="genaccept_id.label" placeholder="genaccept_id.placeholder" lookup="lkpgenaccept" display="genaccept_des" value="genaccept_id"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

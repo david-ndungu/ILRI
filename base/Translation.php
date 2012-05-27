@@ -19,8 +19,12 @@ class Translation {
 	
 	public function translate($index=NULL){
 		$key = (string) $index;
-		if(strlen($key)<1) return NULL;
-		return (string) @$this->translations[$key];
+		if(strlen($key) < 1) return NULL;
+		if(array_key_exists($key, $this->translations)){
+			return (string) @$this->translations[$key]; 
+		} else {
+			return $key;
+		}
 	}
 	
 	public function init($data){

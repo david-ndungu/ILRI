@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="feedtrialsdet" title="feedtrialsdet.label" primarykey="feedtrialsdet_id">
+	<field name="feedtrialshead_id" type="int" length="11">
+		<element name="feedtrialshead_id" type="select" label="feedtrialshead_id.label" placeholder="feedtrialshead_id.placeholder" lookup="lkpfeedtrialshead" display="feedtrialshead_des" value="feedtrialshead_id"></element>
+	</field>
+	<field name="farmer_name" type="varchar" length="120">
+		<element name="farmer_name" type="text" label="farmer_name.label" placeholder="farmer_name.placeholder"></element>
+	</field>
+	<field name="farmer_gender" type="int" length="11">
+		<element name="farmer_gender" type="text" label="farmer_gender.label" placeholder="farmer_gender.placeholder"></element>
+	</field>
+	<field name="num_goats" type="int" length="11">
+		<element name="num_goats" type="text" label="num_goats.label" placeholder="num_goats.placeholder"></element>
+	</field>
+	<field name="feed_type" type="int" length="11">
+		<element name="feed_type" type="text" label="feed_type.label" placeholder="feed_type.placeholder"></element>
+	</field>
+	<field name="feed_form" type="varchar" length="45">
+		<element name="feed_form" type="text" label="feed_form.label" placeholder="feed_form.placeholder"></element>
+	</field>
+	<field name="amount_given" type="decimal" length="11" precision="3">
+		<element name="amount_given" type="text" label="amount_given.label" placeholder="amount_given.placeholder"></element>
+	</field>
+	<field name="amount_eaten" type="decimal" length="11" precision="3">
+		<element name="amount_eaten" type="text" label="amount_eaten.label" placeholder="amount_eaten.placeholder"></element>
+	</field>
+	<field name="feed_interval" type="int" length="11">
+		<element name="feed_interval" type="text" label="feed_interval.label" placeholder="feed_interval.placeholder"></element>
+	</field>
+	<field name="feed_source" type="int" length="11">
+		<element name="feed_source" type="text" label="feed_source.label" placeholder="feed_source.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="trainingdet" title="trainingdet.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>trainingdet_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`trainingdet_id` = %d</search>
+	</records>
+	<columns primarykey="trainingdet_id">
+		<column name="trainingdet_id" field="trainingdet_id" title="trainingdet_id.label" class="grid2of10 column"></column>
+		<column name="traininghead_id" field="traininghead_id" title="traininghead_id.label" class="grid2of10 column"></column>
+		<column name="training_topic" field="training_topic" title="training_topic.label" class="grid2of10 column"></column>
+		<column name="training_scale" field="training_scale" title="training_scale.label" class="grid2of10 column"></column>
+		<column name="training_comments" field="training_comments" title="training_comments.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

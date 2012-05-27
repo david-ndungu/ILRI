@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkppest" title="lkppest.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>pest_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`pest_id` = %d</search>
+	</records>
+	<columns primarykey="pest_id">
+		<column name="pest_id" field="pest_id" title="pest_id.label" class="grid2of10 column"></column>
+		<column name="pest_des" field="pest_des" title="pest_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

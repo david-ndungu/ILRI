@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpcommreceiver" title="lkpcommreceiver.label" primarykey="receiver_id">
+	<field name="receiver_des" type="varchar" length="45">
+		<element name="receiver_des" type="text" label="receiver_des.label" placeholder="receiver_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

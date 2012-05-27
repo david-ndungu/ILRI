@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="epidemidet" title="epidemidet.label" primarykey="epidemidet_id">
+	<field name="epidemihead_id" type="varchar" length="45">
+		<element name="epidemihead_id" type="select" label="epidemihead_id.label" placeholder="epidemihead_id.placeholder" lookup="lkpepidemihead" display="epidemihead_des" value="epidemihead_id"></element>
+	</field>
+	<field name="reporter_name" type="varchar" length="120">
+		<element name="reporter_name" type="text" label="reporter_name.label" placeholder="reporter_name.placeholder"></element>
+	</field>
+	<field name="farmer_name" type="varchar" length="120">
+		<element name="farmer_name" type="text" label="farmer_name.label" placeholder="farmer_name.placeholder"></element>
+	</field>
+	<field name="farmer_gender" type="int" length="11">
+		<element name="farmer_gender" type="text" label="farmer_gender.label" placeholder="farmer_gender.placeholder"></element>
+	</field>
+	<field name="disease_signs" type="int" length="11">
+		<element name="disease_signs" type="text" label="disease_signs.label" placeholder="disease_signs.placeholder"></element>
+	</field>
+	<field name="disease_month" type="int" length="11">
+		<element name="disease_month" type="text" label="disease_month.label" placeholder="disease_month.placeholder"></element>
+	</field>
+	<field name="daeth_incidence" type="tinyint" length="1">
+		<element name="daeth_incidence" type="text" label="daeth_incidence.label" placeholder="daeth_incidence.placeholder"></element>
+	</field>
+	<field name="death_cause" type="int" length="11">
+		<element name="death_cause" type="text" label="death_cause.label" placeholder="death_cause.placeholder"></element>
+	</field>
+	<field name="treatment_type" type="int" length="11">
+		<element name="treatment_type" type="text" label="treatment_type.label" placeholder="treatment_type.placeholder"></element>
+	</field>
+	<field name="treatment_person" type="varchar" length="120">
+		<element name="treatment_person" type="text" label="treatment_person.label" placeholder="treatment_person.placeholder"></element>
+	</field>
+	<field name="disease_control" type="int" length="11">
+		<element name="disease_control" type="text" label="disease_control.label" placeholder="disease_control.placeholder"></element>
+	</field>
+	<field name="sample_type" type="int" length="11">
+		<element name="sample_type" type="text" label="sample_type.label" placeholder="sample_type.placeholder"></element>
+	</field>
+	<field name="num_samples" type="int" length="11">
+		<element name="num_samples" type="text" label="num_samples.label" placeholder="num_samples.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

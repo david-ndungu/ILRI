@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="traininghead" title="traininghead.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>traininghead_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`traininghead_id` = %d</search>
+	</records>
+	<columns primarykey="traininghead_id">
+		<column name="traininghead_id" field="traininghead_id" title="traininghead_id.label" class="grid2of10 column"></column>
+		<column name="upload_date" field="upload_date" title="upload_date.label" class="grid2of10 column"></column>
+		<column name="district_id" field="district_id" title="district_id.label" class="grid2of10 column"></column>
+		<column name="village_id" field="village_id" title="village_id.label" class="grid2of10 column"></column>
+		<column name="training_topic" field="training_topic" title="training_topic.label" class="grid2of10 column"></column>
+		<column name="ward_name" field="ward_name" title="ward_name.label" class="grid2of10 column"></column>
+		<column name="subvillage_name" field="subvillage_name" title="subvillage_name.label" class="grid2of10 column"></column>
+		<column name="facilitator_name" field="facilitator_name" title="facilitator_name.label" class="grid2of10 column"></column>
+		<column name="participant_name" field="participant_name" title="participant_name.label" class="grid2of10 column"></column>
+		<column name="participant_group" field="participant_group" title="participant_group.label" class="grid2of10 column"></column>
+		<column name="training_date" field="training_date" title="training_date.label" class="grid2of10 column"></column>
+		<column name="participant_gender" field="participant_gender" title="participant_gender.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

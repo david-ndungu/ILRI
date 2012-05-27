@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="lkpanimalcond" title="lkpanimalcond.label" primarykey="animalcond_id">
+	<field name="animalcond_des" type="varchar" length="45">
+		<element name="animalcond_des" type="text" label="animalcond_des.label" placeholder="animalcond_des.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

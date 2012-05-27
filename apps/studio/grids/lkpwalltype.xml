@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="lkpwalltype" title="lkpwalltype.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>walltype_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`walltype_id` = %d</search>
+	</records>
+	<columns primarykey="walltype_id">
+		<column name="walltype_id" field="walltype_id" title="walltype_id.label" class="grid2of10 column"></column>
+		<column name="walltype_des" field="walltype_des" title="walltype_des.label" class="grid2of10 column"></column>
+	</columns>
+</grid>

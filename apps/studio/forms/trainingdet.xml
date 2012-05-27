@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="trainingdet" title="trainingdet.label" primarykey="trainingdet_id">
+	<field name="traininghead_id" type="int" length="11">
+		<element name="traininghead_id" type="select" label="traininghead_id.label" placeholder="traininghead_id.placeholder" lookup="lkptraininghead" display="traininghead_des" value="traininghead_id"></element>
+	</field>
+	<field name="training_topic" type="varchar" length="120">
+		<element name="training_topic" type="text" label="training_topic.label" placeholder="training_topic.placeholder"></element>
+	</field>
+	<field name="training_scale" type="int" length="11">
+		<element name="training_scale" type="text" label="training_scale.label" placeholder="training_scale.placeholder"></element>
+	</field>
+	<field name="training_comments" type="varchar" length="120">
+		<element name="training_comments" type="text" label="training_comments.label" placeholder="training_comments.placeholder"></element>
+	</field>
+	<field name="submit">
+		<element name="action" type="submit" value="action.submit"></element>
+	</field>
+	<field name="reset">
+		<element name="action" type="reset" value="action.reset"></element>
+	</field>
+</form>

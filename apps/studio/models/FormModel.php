@@ -230,10 +230,7 @@ class FormModel {
 	
 	public function createRecord(){
 		$record['table'] = (string) $this->definition->attributes()->name;		
-		$fields = $this->getFieldsetFields();
-		if(is_null($fields)) {
-			$fields = $this->getFields();
-		}
+		$fields = $this->getFields();
 		if(is_null($fields)) {
 			throw new \apps\ApplicationException('Fields not defined for '.$this->name);
 		}
@@ -253,23 +250,66 @@ class FormModel {
 			throw new \apps\ApplicationException($e->getMessage());
 		}
 	}
+	
+	public function selectRecord(){
+		if(!array_key_exists('primarykey', $_POST)) return;
+		$storage = $this->controller->getStorage();
+		$value = $storage->sanitize($_POST['primarykey']);
+		$key = (string) $this->definition->attributes()->primarykey;
+		$table = (string) $this->definition->attributes()->name;
+		$columns = $this->getColumns();
+		$sql = sprintf("SELECT %s FROM `%s` WHERE `%s` = %d", join(", ", $columns), $table, $key, $value);
+		$rows = $storage->query($sql);
+		return json_encode($rows, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+	}
+	
+	public function updateRecord(){
+		if(!array_key_exists('primarykey', $_POST)) return;
+		$storage = $this->controller->getStorage();
+		$columns = $this->getColumns();
+		$key = (string) $this->definition->attributes()->primarykey;
+		$update['table'] = (string) $this->definition->attributes()->name;
+		$update['constraints'][$key] = $storage->sanitize($_POST['primarykey']);
+		foreach ($columns as $column) {
+			$update['content'][$column] = $this->postVariable($column);
+		}
+		$result['success'] = $storage->update($update);
+		return json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+	}
+	
+	protected function getColumns(){
+		$fields = $this->getFields();
+		foreach($fields as $field){
+			$type = (string) $field->attributes()->type;
+			if(strlen($type)){
+				$columns[] = (string) $field->attributes()->name;
+			}
+		}
+		return $columns;
+	}
+	
+	protected function getFields(){
+		if(property_exists($this->definition, "fieldset")){
+			foreach($this->definition->fieldset as $fieldset){
+				foreach($fieldset->field as $field){
+					$fields[] = $field;
+				}
+			}
+			return $fields;
+		} else if (property_exists($this->definition, "field")) {
+			foreach ($this->definition->field as $field) {
+				$fields[] = $field;
+			}
+			return $fields;
+		} else {
+			throw new \apps\ApplicationException("No fields defined for form : ".$this->name);
+		}
+	}
+	
 	protected function postVariable($key){
 		return array_key_exists($key, $_POST) ? $_POST[$key] : NULL;
 	}
-		protected function getFieldsetFields(){
-		foreach($this->definition->fieldset as $fieldset){
-			foreach($fieldset as $field){
-				$fields[] = $field;
-			}
-		}
-		return isset($fields) ? $fields : NULL;
-	}
-	protected function getFields(){
-		foreach($this->definition->field as $field){
-			$fields[] = $field;
-		}
-		return isset($fields) ? $fields : NULL;
-	}
+
 }
 
 ?>

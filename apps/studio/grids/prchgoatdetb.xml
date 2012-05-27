@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="prchgoatdetb" title="prchgoatdetb.label">
+	<records>
+		<leftjoin></leftjoin>
+		<ordercolumn>prchgoatdetb_id</ordercolumn>
+		<orderdirection>desc</orderdirection>
+		<search parameters="1">`prchgoatdetb_id` = %d</search>
+	</records>
+	<columns primarykey="prchgoatdetb_id">
+		<column name="prchgoatdetb_id" field="prchgoatdetb_id" title="prchgoatdetb_id.label" class="grid2of10 column"></column>
+		<column name="prchgoathead_id" field="prchgoathead_id" title="prchgoathead_id.label" class="grid2of10 column"></column>
+		<column name="farmer_name" field="farmer_name" title="farmer_name.label" class="grid2of10 column"></column>
+		<column name="memberofgroup" field="memberofgroup" title="memberofgroup.label" class="grid2of10 column"></column>
+		<column name="goat_type" field="goat_type" title="goat_type.label" class="grid2of10 column"></column>
+		<column name="district_name" field="district_name" title="district_name.label" class="grid2of10 column"></column>
+		<column name="village_name" field="village_name" title="village_name.label" class="grid2of10 column"></column>
+		<column name="subvillage_name" field="subvillage_name" title="subvillage_name.label" class="grid2of10 column"></column>
+	</columns>
+</grid>
