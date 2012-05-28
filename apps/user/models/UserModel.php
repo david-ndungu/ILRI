@@ -55,6 +55,7 @@ class UserModel extends \base\User {
 		try {
 			$storage = $this->controller->getSandbox()->getService('storage');
 			unset($this->input['passwordconfirm']);
+			unset($this->input['passwordcurrent']);
 			$storage->insert(array('table' => 'user', 'content' => $this->input));
 			$this->setID($storage->getInsertID());
 			$this->setUser($this->input);

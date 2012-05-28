@@ -4303,3 +4303,6 @@ Stack trace:
 [27-May-2012 16:25:32 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
 [27-May-2012 16:25:48 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
 [27-May-2012 16:44:56 UTC] PHP Warning:  SimpleXMLElement::addChild(): Element name is required in /var/www/ILRI/base/Assembly.php on line 75
+[28-May-2012 13:06:41 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /var/www/ILRI/base/Session.php on line 68
+[28-May-2012 13:12:36 UTC] PHP Notice:  Undefined index: isGuest in /var/www/ILRI/base/User.php on line 57
+[28-May-2012 13:13:23 UTC] PHP Notice:  Undefined index: isGuest in /var/www/ILRI/base/User.php on line 57

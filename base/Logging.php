@@ -32,9 +32,9 @@ class Logging {
 	protected function logMeta() {
 		$user = $this->sandbox->getService('user')->getUser();
 		if($user['isGuest'] == 'Yes'){
-			$user['guest'] = $user['ID'];
+			$log['guest'] = $user['ID'];
 		} else {
-			$user['user'] = $user['ID'];
+			$log['user'] = $user['ID'];
 		}
 		$log['resource'] = $this->sandbox->getMeta('URI');
 		$log['IP'] = $_SERVER['REMOTE_ADDR'];

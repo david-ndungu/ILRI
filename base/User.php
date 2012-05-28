@@ -26,7 +26,7 @@ class User {
 		if(is_null($user)){
 			$user = $this->createGuest();
 		} else {
-			$this->isGuest(false);
+			$this->isGuest('No');
 		}
 		$this->setUser($user);
 		$this->sandbox->getService('session')->write('user', $this->getUser());
@@ -43,7 +43,7 @@ class User {
 		$user['login'] = 'guest-'.$user['ID'];
 		$user['roles'] = NULL;
 		$user['email'] = NULL;
-		$this->isGuest(true);
+		$user['isGuest'] = 'Yes';
 		return $user;
 	}
 	
@@ -54,6 +54,7 @@ class User {
 		$this->setLogin($user['login']);
 		$this->setRoles($user['roles']);
 		$this->setCreationTime($user['creationTime']);
+		$this->isGuest($user['isGuest']);
 	}
 	
 	public function setID($ID) {
@@ -68,9 +69,7 @@ class User {
 		if(is_null($guest)){
 			return $this->guest;
 		} else {
-			if(is_bool($guest)) {
-				$this->guest = $guest;
-			}
+			$this->guest = $guest;
 		}
 	}
 	
@@ -126,7 +125,7 @@ class User {
 					'password' => $this->getPassword(),
 					'roles' => $this->getRoles(),
 					'creationTime' => $this->getCreationTime(),
-					'isGuest' => ($this->isGuest() ? 'Yes' : 'No')
+					'isGuest' => $this->isGuest()
 					);
 	}
 	

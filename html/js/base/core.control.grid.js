@@ -217,7 +217,6 @@ core.control.extend('grid', function(){
 			},			
 			getRecords: function(){
 				_private.ajaxPost('browse', function(){
-					console.info(arguments[0].responseText);
 					_private.records = jQuery.parseJSON(arguments[0].responseText);
 				});
 			},

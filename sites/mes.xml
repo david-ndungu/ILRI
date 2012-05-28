@@ -67,45 +67,7 @@
 	    </access>
 	</portal>
 	<portal type="html" template="panel.xsl">
-	    <navigation group="primary" parent="root" name="dashboard" uri="/" label="dashboard.label"></navigation>
-	    <portlet module="studio" controller="NavigationController">
-	        <access>
-	            <role>administrator</role>
-	            <role>editor</role>
-	            <role>viewer</role>
-	        </access>
-	    </portlet>
-        <access>
-            <role>administrator</role>
-            <role>editor</role>
-            <role>viewer</role>
-        </access>	    	    
-	</portal>
-	<portal type="html" template="panel.xsl">
-	    <navigation group="primary" parent="root" name="administration" uri="/administration" label="administration.label"></navigation>
-	    <portlet module="studio" controller="NavigationController">
-	        <access>
-	            <role>administrator</role>
-	        </access>
-	    </portlet>
-        <access>
-            <role>administrator</role>
-        </access>	    	    
-	</portal>
-	<portal type="html" template="panel.xsl">
-	    <navigation group="primary" parent="administration" name="users" uri="/users" label="users.label"></navigation>
-	    <portlet module="studio" controller="NavigationController">
-	        <access>
-	            <role>administrator</role>
-	        </access>
-	    </portlet>
-        <access>
-            <role>administrator</role>
-        </access>	    	    
-	</portal>
-	
-	<portal type="html" template="panel.xsl">
-	    <navigation group="primary" parent="root" name="maintenance" uri="/maintenance" label="maintenance.label"></navigation>
+	    <navigation group="primary" parent="root" name="maintenance" uri="/" label="maintenance.label"></navigation>
 	    <portlet module="studio" controller="NavigationController">
 	        <access>
 	            <role>administrator</role>
@@ -558,32 +520,6 @@
         <access>
             <role>administrator</role>
             <role>editor</role>
-        </access>	    	    
-	</portal>
-	<portal type="html" template="panel.xsl">
-	    <navigation group="primary" parent="root" name="statistics" uri="/statistics" label="statistics.label"></navigation>
-	    <portlet module="studio" controller="NavigationController">
-	        <access>
-	            <role>administrator</role>
-	            <role>editor</role>
-	            <role>viewer</role>
-	        </access>
-	    </portlet>
-        <access>
-            <role>administrator</role>
-            <role>editor</role>
-            <role>viewer</role>
-        </access>	    	    
-	</portal>
-	<portal type="html" template="panel.xsl">
-	    <navigation group="primary" parent="root" name="settings" uri="/settings" label="settings.label"></navigation>
-	    <portlet module="studio" controller="NavigationController">
-	        <access>
-	            <role>administrator</role>
-	        </access>
-	    </portlet>
-        <access>
-            <role>administrator</role>
         </access>	    	    
 	</portal>
 </package>
