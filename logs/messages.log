@@ -4302,3 +4302,4 @@ Stack trace:
 [27-May-2012 16:19:29 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
 [27-May-2012 16:25:32 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
 [27-May-2012 16:25:48 UTC] PHP Strict Standards:  Only variables should be passed by reference in /var/www/ILRI/base/Routing.php on line 26
+[27-May-2012 16:44:56 UTC] PHP Warning:  SimpleXMLElement::addChild(): Element name is required in /var/www/ILRI/base/Assembly.php on line 75

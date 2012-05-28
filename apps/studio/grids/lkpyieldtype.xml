@@ -7,7 +7,7 @@
 		<search parameters="1">`yieldtype_id` = %d</search>
 	</records>
 	<columns primarykey="yieldtype_id">
-		<column name="yieldtype_id" field="yieldtype_id" title="yieldtype_id.label" class="grid2of10 column"></column>
-		<column name="yieldtype_des" field="yieldtype_des" title="yieldtype_des.label" class="grid2of10 column"></column>
+		<column name="yieldtype_id" field="yieldtype_id" title="id.label" class="grid1of10 column"></column>
+		<column name="yieldtype_des" field="yieldtype_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

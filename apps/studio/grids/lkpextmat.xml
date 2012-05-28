@@ -7,7 +7,7 @@
 		<search parameters="1">`extmat_id` = %d</search>
 	</records>
 	<columns primarykey="extmat_id">
-		<column name="extmat_id" field="extmat_id" title="extmat_id.label" class="grid2of10 column"></column>
-		<column name="extmat_des" field="extmat_des" title="extmat_des.label" class="grid2of10 column"></column>
+		<column name="extmat_id" field="extmat_id" title="id.label" class="grid1of10 column"></column>
+		<column name="extmat_des" field="extmat_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

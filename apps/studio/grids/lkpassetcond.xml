@@ -7,7 +7,7 @@
 		<search parameters="1">`assetcond_id` = %d</search>
 	</records>
 	<columns primarykey="assetcond_id">
-		<column name="assetcond_id" field="assetcond_id" title="assetcond_id.label" class="grid2of10 column"></column>
-		<column name="assetcond_des" field="assetcond_des" title="assetcond_des.label" class="grid2of10 column"></column>
+		<column name="assetcond_id" field="assetcond_id" title="id.label" class="grid1of10 column"></column>
+		<column name="assetcond_des" field="assetcond_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

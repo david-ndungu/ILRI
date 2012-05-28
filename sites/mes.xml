@@ -548,7 +548,7 @@
         </access>	    	    
 	</portal>
 	<portal type="raw">
-	    <navigation group="primary" parent="content" name="assethead" uri="/studio/grid/assethead" label="assethead.label"></navigation>
+	    <navigation group="primary" parent="content" name="assethead" uri="/studio/grid/assethead" label="assetshead.label"></navigation>
 	    <portlet module="studio" controller="GridController">
 	        <access>
 	            <role>administrator</role>

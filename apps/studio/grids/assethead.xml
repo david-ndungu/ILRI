@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grid name="assetshead" title="assethead.label">
+<grid name="assetshead" title="assetshead.label">
     <records>
         <leftjoin>lkpdistrict on (assetshead.district_id = lkpdistrict.district_id)</leftjoin>
         <leftjoin>lkpvillage on (assetshead.village_id = lkpvillage.village_id)</leftjoin>

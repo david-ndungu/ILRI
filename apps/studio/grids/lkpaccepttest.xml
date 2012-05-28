@@ -7,7 +7,7 @@
 		<search parameters="1">`accepttest_id` = %d</search>
 	</records>
 	<columns primarykey="accepttest_id">
-		<column name="accepttest_id" field="accepttest_id" title="accepttest_id.label" class="grid2of10 column"></column>
-		<column name="accepttest_des" field="accepttest_des" title="accepttest_des.label" class="grid8of10 column"></column>
+		<column name="accepttest_id" field="accepttest_id" title="id.label" class="grid1of10 column"></column>
+		<column name="accepttest_des" field="accepttest_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

@@ -7,7 +7,7 @@
 		<search parameters="1">`medsource_id` = %d</search>
 	</records>
 	<columns primarykey="medsource_id">
-		<column name="medsource_id" field="medsource_id" title="medsource_id.label" class="grid2of10 column"></column>
-		<column name="medsource_des" field="medsource_des" title="medsource_des.label" class="grid2of10 column"></column>
+		<column name="medsource_id" field="medsource_id" title="id.label" class="grid1of10 column"></column>
+		<column name="medsource_des" field="medsource_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

@@ -7,7 +7,7 @@
 		<search parameters="1">`saleoutlet_id` = %d</search>
 	</records>
 	<columns primarykey="saleoutlet_id">
-		<column name="saleoutlet_id" field="saleoutlet_id" title="saleoutlet_id.label" class="grid2of10 column"></column>
-		<column name="saleoutlet_des" field="saleoutlet_des" title="saleoutlet_des.label" class="grid2of10 column"></column>
+		<column name="saleoutlet_id" field="saleoutlet_id" title="id.label" class="grid1of10 column"></column>
+		<column name="saleoutlet_des" field="saleoutlet_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

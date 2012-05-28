@@ -7,7 +7,7 @@
 		<search parameters="1">`feedtype_id` = %d</search>
 	</records>
 	<columns primarykey="feedtype_id">
-		<column name="feedtype_id" field="feedtype_id" title="feedtype_id.label" class="grid2of10 column"></column>
-		<column name="feedtype_des" field="feedtype_des" title="feedtype_des.label" class="grid2of10 column"></column>
+		<column name="feedtype_id" field="feedtype_id" title="id.label" class="grid1of10 column"></column>
+		<column name="feedtype_des" field="feedtype_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

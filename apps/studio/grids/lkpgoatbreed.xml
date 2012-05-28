@@ -7,7 +7,7 @@
 		<search parameters="1">`goatbreed_id` = %d</search>
 	</records>
 	<columns primarykey="goatbreed_id">
-		<column name="goatbreed_id" field="goatbreed_id" title="goatbreed_id.label" class="grid2of10 column"></column>
-		<column name="goatbreed_de" field="goatbreed_de" title="goatbreed_de.label" class="grid2of10 column"></column>
+		<column name="goatbreed_id" field="goatbreed_id" title="id.label" class="grid1of10 column"></column>
+		<column name="goatbreed_de" field="goatbreed_de" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

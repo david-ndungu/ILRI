@@ -7,7 +7,7 @@
 		<search parameters="1">`plotsunit_id` = %d</search>
 	</records>
 	<columns primarykey="plotsunit_id">
-		<column name="plotsunit_id" field="plotsunit_id" title="plotsunit_id.label" class="grid2of10 column"></column>
-		<column name="plotsunit_des" field="plotsunit_des" title="plotsunit_des.label" class="grid2of10 column"></column>
+		<column name="plotsunit_id" field="plotsunit_id" title="id.label" class="grid1of10 column"></column>
+		<column name="plotsunit_des" field="plotsunit_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

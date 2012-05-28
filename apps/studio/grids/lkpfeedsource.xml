@@ -7,7 +7,7 @@
 		<search parameters="1">`feedsource_id` = %d</search>
 	</records>
 	<columns primarykey="feedsource_id">
-		<column name="feedsource_id" field="feedsource_id" title="feedsource_id.label" class="grid2of10 column"></column>
-		<column name="feedsource_des" field="feedsource_des" title="feedsource_des.label" class="grid2of10 column"></column>
+		<column name="feedsource_id" field="feedsource_id" title="id.label" class="grid1of10 column"></column>
+		<column name="feedsource_des" field="feedsource_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

@@ -55,7 +55,8 @@ class FormModel {
 	public function asHTML(){
 		$html[] = "\r";
 		$action = is_null($this->action) ? $this->controller->getSandbox()->getMeta('URI') : $this->action;
-		$html[] = '<h2 class="primaryHead gradientSilver">'.$this->controller->translate((string) $this->definition->attributes()->title).'</h2>';
+		$h2 = $this->controller->translate((string) $this->definition->attributes()->title);
+		$html[] = '<h2 class="primaryHead gradientSilver"><span class="column grid10of10">'.$h2.'</span></h2>';
 		$html[] = '<form name="'.(string) $this->definition->attributes()->name.'" action="'.$this->action.'" method="POST" class="primaryContent">';
 		if(property_exists($this->definition, "fieldset")){
 			foreach($this->definition as $fieldset){

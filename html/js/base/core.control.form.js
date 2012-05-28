@@ -57,7 +57,12 @@ core.control.extend('form', function(){
 				this.isUpdator();
 			},
 			clearForm: function(){
-				_private.html.find('input[type="text"], input[type="password"], textarea').val('');
+				_private.html.find('input[type="text"], input[type="password"], textarea').each(function(){
+					var pattern = /{{([^}]*)}}/g;
+					var element = $(this);
+					var value = element.val();
+					element.val(value.replace(pattern, ''));
+				});
 			},
 			setGrid: function(source){
 				_private.grid = source;
@@ -91,6 +96,7 @@ core.control.extend('form', function(){
 						_private.sandbox.fire({type: 'navigation.primary', data: _private.grid});
 					});
 				});
+				this.clearForm();
 			},
 			isUpdator: function(){
 				this.setCommand("update");

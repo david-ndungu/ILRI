@@ -7,7 +7,7 @@
 		<search parameters="1">`deathcause_id` = %d</search>
 	</records>
 	<columns primarykey="deathcause_id">
-		<column name="deathcause_id" field="deathcause_id" title="deathcause_id.label" class="grid2of10 column"></column>
-		<column name="deathcause_des" field="deathcause_des" title="deathcause_des.label" class="grid2of10 column"></column>
+		<column name="deathcause_id" field="deathcause_id" title="id.label" class="grid1of10 column"></column>
+		<column name="deathcause_des" field="deathcause_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

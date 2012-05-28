@@ -7,7 +7,7 @@
 		<search parameters="1">`leadership_id` = %d</search>
 	</records>
 	<columns primarykey="leadership_id">
-		<column name="leadership_id" field="leadership_id" title="leadership_id.label" class="grid2of10 column"></column>
-		<column name="leadership_des" field="leadership_des" title="leadership_des.label" class="grid2of10 column"></column>
+		<column name="leadership_id" field="leadership_id" title="id.label" class="grid1of10 column"></column>
+		<column name="leadership_des" field="leadership_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

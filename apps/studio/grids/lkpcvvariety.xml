@@ -7,7 +7,7 @@
 		<search parameters="1">`variety_id` = %d</search>
 	</records>
 	<columns primarykey="variety_id">
-		<column name="variety_id" field="variety_id" title="variety_id.label" class="grid2of10 column"></column>
-		<column name="variety_des" field="variety_des" title="variety_des.label" class="grid2of10 column"></column>
+		<column name="variety_id" field="variety_id" title="id.label" class="grid1of10 column"></column>
+		<column name="variety_des" field="variety_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

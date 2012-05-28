@@ -11,7 +11,13 @@ core.control  = {
 		var pattern = /{{([^}]*)}}/g;
 		html= html.replace(pattern, function(tag){
 			var key = tag.replace('{{', '').replace('}}', '');
-			return record[key] ? record[key] : ' ';
+			var value = record[key];
+			if(typeof value == 'string') {
+				if(value.length === 0) {
+					return ' ';
+				}
+			}
+			return value;
 		});
 		return html;			
 	},

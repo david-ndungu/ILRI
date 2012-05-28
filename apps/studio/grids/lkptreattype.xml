@@ -7,7 +7,7 @@
 		<search parameters="1">`treattype_id` = %d</search>
 	</records>
 	<columns primarykey="treattype_id">
-		<column name="treattype_id" field="treattype_id" title="treattype_id.label" class="grid2of10 column"></column>
-		<column name="treattype_des" field="treattype_des" title="treattype_des.label" class="grid2of10 column"></column>
+		<column name="treattype_id" field="treattype_id" title="id.label" class="grid1of10 column"></column>
+		<column name="treattype_des" field="treattype_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

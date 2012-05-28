@@ -8,7 +8,7 @@ core.control.extend('grid', function(){
 			html: new Object(),
 			records: new Object(),
 			offset: 0,
-			limit: 25,
+			limit: 20,
 			search: new String(),
 			page: 1,
 			sortdirection: new String(),
@@ -217,6 +217,7 @@ core.control.extend('grid', function(){
 			},			
 			getRecords: function(){
 				_private.ajaxPost('browse', function(){
+					console.info(arguments[0].responseText);
 					_private.records = jQuery.parseJSON(arguments[0].responseText);
 				});
 			},

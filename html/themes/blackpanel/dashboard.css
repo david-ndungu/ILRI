@@ -15,12 +15,16 @@
 }
 
 .pageHeader {
+	position:fixed;
+	right: 160px;
+	left: 160px;
 	color:#fff;
 	padding: 5px 0;
 	top: 0;
 	-webkit-border-radius: 0 0 4px 4px;
 	-moz-border-radius: 0 0 4px 4px;
 	border-radius: 0 0 4px 4px;
+	z-index:100;
 }
 
 .pageHeader h1 {
@@ -57,7 +61,7 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 40px;
+	top: 35px;
 	bottom: 0;
 	margin: 10px 0;
 	-webkit-border-radius: 4px;
@@ -67,26 +71,28 @@
 }
 
 .pageContentNavigation,.pageContentContent {
-	position: absolute;
-	top: 0;
-	bottom: 0;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 
 .pageContentNavigation {
+	position: absolute;
+	top: 0;
+	bottom: 0;
 	background: url(images/bg.png) 0 0 repeat scroll #888;
 	width: 240px;
 }
 
 .pageContentContent {
+	position: fixed;
+	left: 160px;
+	right: 160px;
 	background:#f9f9f9;
 	overflow : hidden;
-	bottom: 0;
-	top: 0;
-	right: 0;
-	left: 250px;
+	bottom: 10px;
+	top:45px;
+	left: 410px;
 	overflow: hidden;
 }
 
@@ -160,9 +166,6 @@
 }
 
 .gridHeader,.gridColumns,.gridContent,.gridFooter, .primaryHead, .primaryContent {
-	position: absolute;
-	left: 0;
-	right: 0;
 	width: 100%;
 	display: block;
 }
@@ -192,11 +195,10 @@ input[type="text"].datepicker, .primaryContent select, .gridContentRecord select
 }
 
 .gridHeader, .primaryHead {
-	top: 0;
 	-webkit-border-radius: 4px 4px 0 0;
 	-moz-border-radius: 4px 4px 0 0;
 	border-radius: 4px 4px 0 0;
-	border-bottom: 1px solid #bfbfbf;
+	border-bottom: 1px solid #cfcfcf;
 	z-index:11;
 }
 
@@ -205,8 +207,15 @@ input[type="text"].datepicker, .primaryContent select, .gridContentRecord select
 }
 
 .primaryHead {
-	width:auto;
-	padding:15px 10px;
+	right:0;
+	left:0;
+	top:0;
+	position:absolute;
+	padding:15px 0;
+}
+
+.primaryContent {
+	
 }
 
 .gridColumns {
@@ -214,8 +223,7 @@ input[type="text"].datepicker, .primaryContent select, .gridContentRecord select
 	cursor: pointer;
 	width: 100%;
 	display: block;
-	border-top: 1px solid #bfbfbf;
-	border-bottom: 1px solid #bfbfbf;
+	border-bottom: 1px solid #cfcfcf;
 	font-size:.875em;
 }
 
@@ -250,8 +258,11 @@ input[type="text"].datepicker, .primaryContent select, .gridContentRecord select
 }
 
 .gridContent, .primaryContent {
-	bottom: 40px;
-	top: 66px;
+	position:absolute;
+	bottom:41px;
+	top:69px;
+	left:0;
+	right:0;
 	overflow: auto;
 	background:#fff;
 	z-index:10;
@@ -264,6 +275,14 @@ input[type="text"].datepicker, .primaryContent select, .gridContentRecord select
 .gridContentRecord {
 	cursor:text;
 	border-bottom: 1px solid #F0F0F0;
+}
+
+.grid .grid1of10{
+	text-align:center;
+}
+
+.gridContentRecord:last-child {
+	border-bottom:0 none;
 }
 
 .gridContentRecord:hover {
@@ -280,10 +299,13 @@ input[type="text"].datepicker, .primaryContent select, .gridContentRecord select
 	font-size:.875em;
 	bottom: 0;
 	padding: 6px 0 3px 0;
-	border-top: 1px solid #d8d8d8;
 	-webkit-border-radius: 0 0 4px 4px;
 	-moz-border-radius: 0 0 4px 4px;
 	border-radius: 0 0 4px 4px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	left:0;
 }
 
 .gridFooter ul {

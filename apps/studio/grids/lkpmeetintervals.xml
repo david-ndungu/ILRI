@@ -7,7 +7,7 @@
 		<search parameters="1">`meetintervals_id` = %d</search>
 	</records>
 	<columns primarykey="meetintervals_id">
-		<column name="meetintervals_id" field="meetintervals_id" title="meetintervals_id.label" class="grid2of10 column"></column>
-		<column name="meetintervals_des" field="meetintervals_des" title="meetintervals_des.label" class="grid2of10 column"></column>
+		<column name="meetintervals_id" field="meetintervals_id" title="id.label" class="grid1of10 column"></column>
+		<column name="meetintervals_des" field="meetintervals_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

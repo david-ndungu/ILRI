@@ -7,7 +7,7 @@
 		<search parameters="1">`tubergrow_id` = %d</search>
 	</records>
 	<columns primarykey="tubergrow_id">
-		<column name="tubergrow_id" field="tubergrow_id" title="tubergrow_id.label" class="grid2of10 column"></column>
-		<column name="tubergrow_des" field="tubergrow_des" title="tubergrow_des.label" class="grid2of10 column"></column>
+		<column name="tubergrow_id" field="tubergrow_id" title="id.label" class="grid1of10 column"></column>
+		<column name="tubergrow_des" field="tubergrow_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

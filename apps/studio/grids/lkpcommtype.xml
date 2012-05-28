@@ -7,7 +7,7 @@
 		<search parameters="1">`commtype_id` = %d</search>
 	</records>
 	<columns primarykey="commtype_id">
-		<column name="commtype_id" field="commtype_id" title="commtype_id.label" class="grid2of10 column"></column>
-		<column name="commtype_des" field="commtype_des" title="commtype_des.label" class="grid2of10 column"></column>
+		<column name="commtype_id" field="commtype_id" title="id.label" class="grid1of10 column"></column>
+		<column name="commtype_des" field="commtype_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

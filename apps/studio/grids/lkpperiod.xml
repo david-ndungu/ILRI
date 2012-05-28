@@ -7,7 +7,7 @@
 		<search parameters="1">`period_id` = %d</search>
 	</records>
 	<columns primarykey="period_id">
-		<column name="period_id" field="period_id" title="period_id.label" class="grid2of10 column"></column>
-		<column name="period_des" field="period_des" title="period_des.label" class="grid2of10 column"></column>
+		<column name="period_id" field="period_id" title="id.label" class="grid1of10 column"></column>
+		<column name="period_des" field="period_des" title="description.label" class="grid9of10 column"></column>
 	</columns>
 </grid>

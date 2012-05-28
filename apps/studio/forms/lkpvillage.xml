@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form name="lkpvillage" title="lkpvillage.label" primarykey="village_id">
 	<field name="district_id" type="int" length="11">
-		<element name="district_id" type="select" label="district_id.label" placeholder="district_id.placeholder" lookup="lkpdistrict" display="district_des" value="district_id"></element>
+		<element name="district_id" type="select" label="district.label" placeholder="district.placeholder" lookup="lkpdistrict" display="district_des" value="district_id"></element>
 	</field>
 	<field name="village_des" type="varchar" length="45">
-		<element name="village_des" type="text" label="village_des.label" placeholder="village_des.placeholder"></element>
+		<element name="village_des" type="text" label="village_des.label" placeholder="village.placeholder"></element>
 	</field>
 	<field name="submit">
 		<element name="action" type="submit" value="action.submit"></element>
