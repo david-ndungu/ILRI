@@ -23,7 +23,7 @@ class Translation {
 		if(array_key_exists($key, $this->translations)){
 			return (string) @$this->translations[$key]; 
 		} else {
-			return $key;
+			return "";
 		}
 	}
 	
